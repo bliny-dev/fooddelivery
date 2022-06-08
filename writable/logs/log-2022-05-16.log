@@ -1,0 +1,343 @@
+CRITICAL - 2022-05-16 17:56:34 --> Undefined index: nome
+#0 /var/www/html/food/app/Controllers/Carrinho.php(234): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->especial()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 18:00:49 --> Cannot use object of type App\Entities\Medida as array
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->especial()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-16 18:03:05 --> Trying to get property 'nome' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(234): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->especial()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 18:04:02 --> Trying to get property 'nome' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(234): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->especial()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 18:09:05 --> Undefined variable: especificacaoProduto
+#0 /var/www/html/food/app/Controllers/Carrinho.php(237): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->especial()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 19:17:35 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(80): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:18:45 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:19:12 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:25:45 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:27:38 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:27:41 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:28:15 --> Call to undefined method CodeIgniter\Session\Session::delete()
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-16 19:29:27 --> A non well formed numeric value encountered
+#0 /var/www/html/food/app/Views/Carrinho/index.php(81): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-16 19:30:00 --> Undefined variable: bairro
+#0 /var/www/html/food/app/Controllers/Carrinho.php(109): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 21:05:16 --> count(): Parameter must be an array or an object that implements Countable
+#0 /var/www/html/food/app/Views/layout/principal_web.php(462): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/View/View.php(226): CodeIgniter\View\View->render()
+#4 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#5 /var/www/html/food/app/Controllers/Carrinho.php(36): view()
+#6 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->index()
+#7 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#11 {main}
+CRITICAL - 2022-05-16 21:43:01 --> Undefined variable: validacao
+#0 /var/www/html/food/app/Controllers/Carrinho.php(405): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 21:43:21 --> Undefined variable: validacao
+#0 /var/www/html/food/app/Controllers/Carrinho.php(405): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 21:44:33 --> Undefined variable: validacao
+#0 /var/www/html/food/app/Controllers/Carrinho.php(405): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 21:45:15 --> Undefined variable: validacao
+#0 /var/www/html/food/app/Controllers/Carrinho.php(405): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 21:46:39 --> Undefined variable: validacao
+#0 /var/www/html/food/app/Controllers/Carrinho.php(405): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 22:02:21 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(427): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 22:03:46 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(427): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 22:04:04 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(427): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:04:51 --> Trying to get property 'cep' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(421): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:08:17 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:09:04 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:10:50 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:13:32 --> Illegal string offset 'bairro'
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:25:43 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:36:56 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:42:27 --> Trying to get property 'bairro' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:43:13 --> Trying to get property 'cep' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:43:21 --> Trying to get property 'cep' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:44:59 --> Trying to get property 'cep' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:49:53 --> Use of undefined constant nul - assumed 'nul' (this will throw an Error in a future version of PHP)
+#0 /var/www/html/food/app/Controllers/Carrinho.php(436): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:50:31 --> Use of undefined constant nul - assumed 'nul' (this will throw an Error in a future version of PHP)
+#0 /var/www/html/food/app/Controllers/Carrinho.php(436): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:51:56 --> Undefined property: stdClass::$bairro
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:54:15 --> Undefined property: stdClass::$bairro
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-16 23:54:49 --> Undefined property: stdClass::$bairro
+#0 /var/www/html/food/app/Controllers/Carrinho.php(429): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}

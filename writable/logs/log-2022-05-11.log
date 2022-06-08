@@ -1,0 +1,298 @@
+CRITICAL - 2022-05-11 00:43:03 --> Undefined variable: extra
+#0 /var/www/html/food/app/Views/Admin/Extras/form.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/View/View.php(424): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Views/Admin/Bairros/criar.php(41): CodeIgniter\View\View->include()
+#5 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#6 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#8 /var/www/html/food/app/Controllers/Admin/Bairros.php(57): view()
+#9 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->criar()
+#10 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#13 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#14 {main}
+CRITICAL - 2022-05-11 01:22:44 --> Undefined variable: validacao
+#0 /var/www/html/food/app/Controllers/Admin/Bairros.php(157): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-11 01:23:19 --> Undefined variable: valicacao
+#0 /var/www/html/food/app/Controllers/Admin/Bairros.php(156): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-11 01:32:14 --> Argument 1 passed to consultaCep() must be of the type string, array given, called in /var/www/html/food/app/Controllers/Admin/Bairros.php on line 165
+#0 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-11 01:33:07 --> Argument 1 passed to consultaCep() must be of the type string, array given, called in /var/www/html/food/app/Controllers/Admin/Bairros.php on line 165
+#0 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-11 01:34:52 --> Undefined variable: curl_setopt
+#0 /var/www/html/food/app/Helpers/consulta_cep_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-11 01:35:39 --> Undefined variable: curl_setopt
+#0 /var/www/html/food/app/Helpers/consulta_cep_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-11 01:36:26 --> Undefined variable: curl_setopt_array
+#0 /var/www/html/food/app/Helpers/consulta_cep_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-11 01:44:16 --> Undefined variable: curl_setopt
+#0 /var/www/html/food/app/Helpers/consulta_cep_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-11 01:44:40 --> Undefined variable: curl_setopt
+#0 /var/www/html/food/app/Helpers/consulta_cep_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-11 01:46:46 --> Undefined variable: curl_setopt
+#0 /var/www/html/food/app/Helpers/consulta_cep_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Bairros.php(165): consultaCep()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->consultaCep()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-11 01:55:18 --> Call to undefined method App\Controllers\Admin\Bairros::buscaExtraOu404()
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->excluir()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-11 01:56:52 --> Arquivo inválido: Admin/Bairro/excluir.php
+#0 /var/www/html/food/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /var/www/html/food/app/Controllers/Admin/Bairros.php(201): view()
+#3 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->excluir()
+#4 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#5 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#6 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#8 {main}
+CRITICAL - 2022-05-11 01:57:04 --> Undefined variable: extra
+#0 /var/www/html/food/app/Views/Admin/Bairros/excluir.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Admin/Bairros.php(201): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->excluir()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-11 02:11:33 --> equal não é uma regra válida.
+#0 /var/www/html/food/system/Validation/Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound()
+#1 /var/www/html/food/system/Validation/Validation.php(157): CodeIgniter\Validation\Validation->processRules()
+#2 /var/www/html/food/system/BaseModel.php(1347): CodeIgniter\Validation\Validation->run()
+#3 /var/www/html/food/system/BaseModel.php(707): CodeIgniter\BaseModel->validate()
+#4 /var/www/html/food/system/Model.php(625): CodeIgniter\BaseModel->insert()
+#5 /var/www/html/food/system/BaseModel.php(658): CodeIgniter\Model->insert()
+#6 /var/www/html/food/app/Controllers/Admin/Bairros.php(65): CodeIgniter\BaseModel->save()
+#7 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Bairros->cadastrar()
+#8 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#12 {main}
+ERROR - 2022-05-11 02:42:38 --> Table 'delivery.expediente' doesn't exist
+CRITICAL - 2022-05-11 03:08:30 --> Undefined property: App\Controllers\Admin\Expedientes::$entregadorModel
+#0 /var/www/html/food/app/Controllers/Admin/Expedientes.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Expedientes->expedientes()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-11 03:08:48 --> Arquivo inválido: Admin/Expedientes/expediente.php
+#0 /var/www/html/food/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /var/www/html/food/app/Controllers/Admin/Expedientes.php(23): view()
+#3 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Expedientes->expedientes()
+#4 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#5 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#6 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#8 {main}
+CRITICAL - 2022-05-11 03:09:14 --> Undefined variable: expedientes
+#0 /var/www/html/food/app/Views/Admin/Expedientes/expedientes.php(51): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Admin/Expedientes.php(23): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Expedientes->expedientes()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-11 19:43:46 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in /var/www/html/food/system/Model.php on line 728 and at least 2 expected
+#0 /var/www/html/food/system/Model.php(728): CodeIgniter\Database\BaseBuilder->join()
+#1 /var/www/html/food/app/Models/CategoriaModel.php(74): CodeIgniter\Model->__call()
+#2 /var/www/html/food/app/Controllers/Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#3 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#4 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#5 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#6 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#8 {main}
+ERROR - 2022-05-11 19:44:21 --> Unknown column 'categoria.id' in 'group statement'
+CRITICAL - 2022-05-11 19:44:21 --> Unknown column 'categoria.id' in 'group statement'
+#0 /var/www/html/food/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/food/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/food/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/food/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/food/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/food/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/food/app/Models/CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/food/app/Controllers/Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#8 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#9 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#13 {main}
+CRITICAL - 2022-05-11 20:00:02 --> Use of undefined constant categoria - assumed 'categoria' (this will throw an Error in a future version of PHP)
+#0 /var/www/html/food/app/Views/Home/index.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Home.php(23): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-11 20:04:27 --> Undefined property: App\Controllers\Home::$ProdutoModel
+#0 /var/www/html/food/app/Controllers/Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-11 20:04:44 --> Call to a member function join() on string
+#0 /var/www/html/food/app/Controllers/Home.php(21): App\Models\ProdutoModel->buscaProdutosWebHome()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+ERROR - 2022-05-11 20:05:30 --> Unknown column 'produtos_especificacoes' in 'field list'
+CRITICAL - 2022-05-11 20:05:30 --> Unknown column 'produtos_especificacoes' in 'field list'
+#0 /var/www/html/food/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/food/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/food/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/food/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/food/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/food/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/food/app/Models/ProdutoModel.php(95): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/food/app/Controllers/Home.php(21): App\Models\ProdutoModel->buscaProdutosWebHome()
+#8 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#9 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#13 {main}
+ERROR - 2022-05-11 20:06:06 --> Unknown column 'produtos_especificacoes' in 'field list'
+CRITICAL - 2022-05-11 20:06:06 --> Unknown column 'produtos_especificacoes' in 'field list'
+#0 /var/www/html/food/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/food/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/food/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/food/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/food/system/Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/food/system/BaseModel.php(584): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/food/app/Models/ProdutoModel.php(95): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/food/app/Controllers/Home.php(21): App\Models\ProdutoModel->buscaProdutosWebHome()
+#8 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#9 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#12 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#13 {main}
+CRITICAL - 2022-05-11 20:21:03 --> Undefined variable: categoria
+#0 /var/www/html/food/app/Views/Home/index.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Home.php(24): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-11 21:16:06 --> Invalid escape context provided.
+#0 /var/www/html/food/app/Views/Home/index.php(62): esc()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Home.php(24): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Home->index()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-11 22:41:39 --> Undefined variable: categorias
+#0 /var/www/html/food/app/Views/Produto/detalhes.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Produto.php(26): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Produto->detalhes()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}

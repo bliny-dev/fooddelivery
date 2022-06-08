@@ -1,0 +1,48 @@
+CRITICAL - 2022-05-13 02:49:18 --> Undefined variable: validation
+#0 /var/www/html/food/app/Controllers/Carrinho.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-13 02:50:40 --> Undefined property: App\Controllers\Carrinho::$validation
+#0 /var/www/html/food/app/Controllers/Carrinho.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-13 02:53:42 --> Undefined property: App\Controllers\Carrinho::$validation
+#0 /var/www/html/food/app/Controllers/Carrinho.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-13 02:54:03 --> Undefined property: App\Controllers\Carrinho::$validation
+#0 /var/www/html/food/app/Controllers/Carrinho.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-13 02:54:38 --> Undefined property: App\Controllers\Carrinho::$valicacao
+#0 /var/www/html/food/app/Controllers/Carrinho.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-13 23:55:13 --> Trying to get property 'nome' of non-object
+#0 /var/www/html/food/app/Controllers/Carrinho.php(93): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Carrinho->adicionar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}

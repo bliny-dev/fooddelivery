@@ -1,0 +1,32 @@
+CRITICAL - 2022-05-15 15:55:12 --> Argument 1 passed to App\Models\MedidaModel::exibeValor() must be of the type int, string given, called in /var/www/html/food/app/Controllers/Produto.php on line 162
+#0 /var/www/html/food/app/Controllers/Produto.php(162): App\Models\MedidaModel->exibeValor()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Produto->exibeValor()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-15 16:30:59 --> Argument 1 passed to App\Models\MedidaModel::exibeValor() must be of the type int, string given, called in /var/www/html/food/app/Controllers/Produto.php on line 164
+#0 /var/www/html/food/app/Controllers/Produto.php(164): App\Models\MedidaModel->exibeValor()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Produto->exibeValor()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-15 16:33:26 --> Argument 1 passed to App\Models\MedidaModel::exibeValor() must be of the type int, string given, called in /var/www/html/food/app/Controllers/Produto.php on line 164
+#0 /var/www/html/food/app/Controllers/Produto.php(164): App\Models\MedidaModel->exibeValor()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Produto->exibeValor()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-15 16:37:24 --> Argument 1 passed to App\Models\MedidaModel::exibeValor() must be of the type int, string given, called in /var/www/html/food/app/Controllers/Produto.php on line 164
+#0 /var/www/html/food/app/Controllers/Produto.php(164): App\Models\MedidaModel->exibeValor()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Produto->exibeValor()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}

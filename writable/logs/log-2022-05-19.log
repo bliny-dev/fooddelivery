@@ -1,0 +1,314 @@
+CRITICAL - 2022-05-19 00:20:03 --> Undefined property: App\Controllers\Admin\Pedidos::$produtosModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->index()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:20:28 --> Call to undefined method App\Models\PedidoModel::listarTodosOsPedidos
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(22): CodeIgniter\Model->__call()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->index()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:30:33 --> Call to undefined method App\Controllers\Admin\Pedidos::buscaMedidaOu404()
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-19 00:30:46 --> Undefined property: App\Controllers\Admin\Pedidos::$pedidoModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:30:49 --> Undefined property: App\Controllers\Admin\Pedidos::$pedidoModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:31:12 --> Undefined property: App\Controllers\Admin\Pedidos::$pedidoModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:31:42 --> Undefined property: App\Controllers\Admin\Pedidos::$pedidoModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:32:51 --> Undefined property: App\Controllers\Admin\Pedidos::$pedidoModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:32:51 --> Undefined property: App\Controllers\Admin\Pedidos::$pedidoModel
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+ERROR - 2022-05-19 00:33:49 --> Unknown column 'nome' in 'field list'
+CRITICAL - 2022-05-19 00:33:49 --> Unknown column 'nome' in 'field list'
+#0 /var/www/html/food/system/Database/MySQLi/Connection.php(292): mysqli->query()
+#1 /var/www/html/food/system/Database/BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/food/system/Database/BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/food/system/Database/BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/food/system/Model.php(728): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/food/app/Models/PedidoModel.php(45): CodeIgniter\Model->__call()
+#6 /var/www/html/food/app/Controllers/Admin/Pedidos.php(36): App\Models\PedidoModel->procurar()
+#7 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#8 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#12 {main}
+CRITICAL - 2022-05-19 00:34:29 --> Undefined property: stdClass::$pedido
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:35:00 --> Use of undefined constant pedidos - assumed 'pedidos' (this will throw an Error in a future version of PHP)
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:35:45 --> Call to undefined method App\Controllers\Admin\Pedidos::buscaMedidaOu404()
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-19 00:37:51 --> Call to undefined method App\Controllers\Admin\Pedidos::buscaMedidaOu404()
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-19 00:37:55 --> Call to undefined method App\Controllers\Admin\Pedidos::buscaMedidaOu404()
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-19 00:38:13 --> Undefined variable: id
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(68): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Pedidos.php(52): App\Controllers\Admin\Pedidos->buscaPedidoOu404()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-19 00:38:34 --> Use of undefined constant codigo - assumed 'codigo' (this will throw an Error in a future version of PHP)
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(68): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Controllers/Admin/Pedidos.php(52): App\Controllers\Admin\Pedidos->buscaPedidoOu404()
+#2 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#3 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#7 {main}
+CRITICAL - 2022-05-19 00:39:41 --> Undefined variable: pedido
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:39:57 --> Arquivo inválido: Admin/Pedidos/show.php
+#0 /var/www/html/food/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /var/www/html/food/app/Controllers/Admin/Pedidos.php(59): view()
+#3 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#4 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#5 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#6 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#8 {main}
+CRITICAL - 2022-05-19 00:47:55 --> Undefined variable: codigoPedido
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:48:39 --> Call to undefined method App\Models\PedidoModel::buscaPedidoOu404
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(52): CodeIgniter\Model->__call()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:49:13 --> Call to undefined method App\Models\PedidoModel::buscaPedidoOu404
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(52): CodeIgniter\Model->__call()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 00:50:53 --> Undefined variable: bairro
+#0 /var/www/html/food/app/Views/Admin/Pedidos/show.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Admin/Pedidos.php(59): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-19 18:47:16 --> Undefined variable: entregador
+#0 /var/www/html/food/app/Views/Admin/Pedidos/editar.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Admin/Pedidos.php(84): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->editar()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-19 18:47:30 --> Trying to get property 'id' of non-object
+#0 /var/www/html/food/app/Views/Admin/Pedidos/editar.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#2 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#4 /var/www/html/food/app/Controllers/Admin/Pedidos.php(84): view()
+#5 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->editar()
+#6 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#10 {main}
+CRITICAL - 2022-05-19 19:07:02 --> Undefined variable: medida
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(108): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 19:13:54 --> Undefined variable: medida
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(122): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 19:15:01 --> Undefined variable: medida
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(122): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 19:30:29 --> syntax error, unexpected 'dd' (T_STRING)
+#0 /var/www/html/food/system/Router/Router.php(175): CodeIgniter\Router\Router->autoRoute()
+#1 /var/www/html/food/system/CodeIgniter.php(726): CodeIgniter\Router\Router->handle()
+#2 /var/www/html/food/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 19:37:46 --> Call to a member function save() on null
+#0 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#1 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#5 {main}
+CRITICAL - 2022-05-19 20:06:47 --> Trying to get property 'id' of non-object
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(151): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 21:07:53 --> Arquivo inválido: Admin/Pedidos/pedido_foi_entregue_email.php
+#0 /var/www/html/food/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#2 /var/www/html/food/app/Controllers/Admin/Pedidos.php(203): view()
+#3 /var/www/html/food/app/Controllers/Admin/Pedidos.php(160): App\Controllers\Admin\Pedidos->enviaEmailPedidoFoiEntregue()
+#4 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#5 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#9 {main}
+CRITICAL - 2022-05-19 21:19:10 --> Class 'App\Models\PedidoProduto' not found
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(145): App\Controllers\Admin\Pedidos->insereProdutosDoPedido()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->atualizar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 21:50:58 --> Invalid argument supplied for foreach()
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 21:51:02 --> Invalid argument supplied for foreach()
+#0 /var/www/html/food/app/Controllers/Admin/Pedidos.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Pedidos->procurar()
+#2 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#6 {main}
+CRITICAL - 2022-05-19 23:55:40 --> number_format() expects parameter 1 to be float, object given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/food/app/Views/Admin/Home/index.php(33): number_format()
+#2 /var/www/html/food/system/View/View.php(210): include('/var/www/html/f...')
+#3 /var/www/html/food/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 /var/www/html/food/system/Common.php(1089): CodeIgniter\View\View->render()
+#5 /var/www/html/food/app/Controllers/Admin/Home.php(22): view()
+#6 /var/www/html/food/system/CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#7 /var/www/html/food/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/food/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/food/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#10 /var/www/html/food/system/Commands/Server/rewrite.php(43): require_once('/var/www/html/f...')
+#11 {main}
