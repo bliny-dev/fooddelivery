@@ -7,6 +7,13 @@
 
 <?php echo $this->endSection(); ?>
 
+<!-- Aqui enviamos para o template principal o título da page -->
+<?php echo $this->section('titulo_page'); ?>
+
+  <?php echo $titulo_page; ?>
+
+<?php echo $this->endSection(); ?>
+
 
 <!-- Aqui enviamos para o template principal os estilos -->
 <?php echo $this->section('estilos'); ?>
@@ -18,202 +25,154 @@
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
 
-<div class="row">
-  <div class="col-md-12 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body dashboard-tabs p-0">
-        <div class="tab-content py-0 px-0">
-          <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
-            <div class="d-flex flex-wrap justify-content-xl-between">
-              <div class="d-flex d-xl-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                <i class="mdi mdi-currency-usd icon-lg mr-3 text-primary"></i>
-                <div class="d-flex flex-column justify-content-around">
-                  <small class="mb-1 text-muted">Pedidos entregues
+  <main>
+    <section class="mb-4">
 
-                    <span class="badge badge-pill badge-primary"><?php echo $valorPedidosEntregues->total; ?></span>
+        <div class="container-fluid">
 
-                  </small>
-                  <h5 class="mr-2 mb-0">R$&nbsp;<?php echo number_format($valorPedidosEntregues->valor_pedido, 2); ?></h5>
-                </div>
-              </div>
-              <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
-                <div class="d-flex flex-column justify-content-around">
-                  <small class="mb-1 text-muted">Pedidos cancelados
+            <div class="row">
+                <div class="col-12 d-lg-flex" >
 
-                    <span class="badge badge-pill badge-danger"><?php echo $valorPedidosCancelados->total; ?></span>
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex">
+                            <div class="col-2 d-flex align-items-center justify-content-center px-2">
+                                <span class="fs-1 las la-dollar-sign text-primary"></span>
+                            </div>
 
-                  </small>
-                  <h5 class="mr-2 mb-0">R$&nbsp;<?php echo number_format($valorPedidosCancelados->valor_pedido, 2); ?></h5>
+                            <div class="col-10 px-3 d-lg-block d-md-flex justify-content-between" >
+                                
+                                <div class="d-md-flex">
+                                    <span class="me-2">Pedidos entregues: </span>
+                                    <span class="text-primary fw-bold  rounded-circle">2</span>
+                                </div>
+
+                                <h4> <strong>R$</strong> 10.30</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex">
+                            <div class="col-2 d-flex align-items-center justify-content-center px-2">
+                                <span class="fs-1 las la-dollar-sign text-danger"></span>
+                            </div>
+
+                            <div class="col-10 px-3 d-lg-block d-md-flex justify-content-between" >
+                                
+                                <div class="d-md-flex">
+                                    <span class="me-2">Pedidos cancelados: </span>
+                                    <span class="text-danger fw-bold  rounded-circle">2</span>
+                                </div>
+
+                                <h4> <strong>R$</strong> 10.30</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex">
+                            <div class="col-2 d-flex align-items-center justify-content-center px-2">
+                                <span class="fs-1 las la-users text-success"></span>
+                            </div>
+
+                            <div class="col-10 px-3 d-lg-block d-md-flex justify-content-between" >
+                                
+                                <div class="d-md-flex">
+                                    <span class="me-2">Clientes ativos: </span>
+                                </div>
+
+                                <h4>0</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex">
+                            <div class="col-2 d-flex align-items-center justify-content-center px-2">
+                                <span class="fs-1 las la-motorcycle text-warning"></span>
+                            </div>
+
+                            <div class="col-10 px-3 d-lg-block d-md-flex justify-content-between" >
+                                
+                                <div class="d-md-flex">
+                                    <span class="me-2">Entregadores ativos: </span>
+                                </div>
+
+                                <h4>0</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    
                 </div>
-              </div>
-              <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                <i class="mdi mdi-account-multiple mr-3 icon-lg text-success"></i>
-                <div class="d-flex flex-column justify-content-around">
-                  <small class="mb-1 text-muted">Clientes ativos</small>
-                  <h5 class="mr-2 mb-0"><?php echo $totalClientesAtivos; ?></h5>
-                </div>
-              </div>
-              <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                <i class="mdi mdi-motorbike mr-3 icon-lg text-warning"></i>
-                <div class="d-flex flex-column justify-content-around">
-                  <small class="mb-1 text-muted">Entregadores ativos</small>
-                  <h5 class="mr-2 mb-0"><?php echo $totalEntregadoresAtivos; ?></h5>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
+    
+    </section>
 
-  <div class="col-md-12 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body">
+    <section class="mb-4">
 
-        <?php $expedienteHoje = expedienteHoje(); ?>
+        <div class="container-fluid">
 
-        <?php if($expedienteHoje->situacao == false): ?>
+            <div class="row border border-2 rounded-3 shadow  p-3">
+                <div class="col-12 d-flex justify-content-center">
+                    <h5>Listando últimos pedidos</h5>
+                </div>
 
-          <h5 class="text-info"><i class="mdi mdi-calendar-alert"></i>&nbsp;Hoje é <?php echo esc($expedienteHoje->dia_descricao); ?> e estamos fechados. Portanto, não há novos pedidos.</h5>
-
-        <?php else: ?>
-
-          <div id="atualiza">
-
-            <?php if(!isset($novosPedidos)): ?>
-
-              <h5 class="text-info">Não há novos pedidos no momento <?php echo date('d/m/Y H:i:s'); ?></h5>
-
-              <?php else: ?>
-
-              <h6><i class="mdi mdi-shopping text-primary"></i>&nbsp;Novos pedidos realizados</h6>
-
-              <hr class="boder-primary">
-
-              <div id="atualiza" class="table-responsive">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>Código do pedido</th>
-                      <th>Valor</th>
-                      <th>Data do pedido</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                      <?php foreach ($novosPedidos as $pedido): ?>
-                        <tr>
-                          <td>
-                            <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
-                              <?php echo $pedido->codigo; ?>
-                            </a>
-                          </td>
-                          <td>R$&nbsp<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></td>
-                          <td><?php echo $pedido->criado_em->humanize(); ?></td>
-                        </tr>
-                      <?php endforeach; ?>
-
-                  </tbody>
-                </table>  
-              </div>
-
-              <?php endif; ?>
-          
+                <div class="col-12 mb-2">
+                    <div class="col-12 border border-2 rounded-3  me-1 p-2 d-flex justify-content-between">
+                        <span class="fs-5">23459</span>
+                        <span class="fs-5">23459</span>
+                        <span class="fs-5">23459</span>
+                    </div>
+                </div> 
+                
             </div>
-          
-        <?php endif; ?>
+        </div>
+    
+    </section>
 
-      </div>
-    </div>
-  </div>
-</div>
+    <section class="mb-4">
 
-<div class="row">
+        <div class="container-fluid">
 
-  <div class="col-md-4 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <p class="card-title">Produtos + vendidos</p>
-        <ul class="list-arrow">
-          
-          <?php if (empty($produtosMaisVendidos)): ?>
+            <div class="row">
+                <div class="col-12 d-lg-flex" >
 
-            <p class="card-title text-info">Não há dados para exibir no momento</p>
+                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex justify-content-center">
+                            <h5>Produtos + vendidos</h5>
+                        </div>
+                    </div> 
 
-          <?php else: ?>
+                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex justify-content-center">
+                            <h5>Clientes ativos</h5>
+                        </div>
+                    </div> 
 
-            <?php foreach($produtosMaisVendidos as $produto): ?>
+                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                        <div class="d-flex justify-content-center">
+                            <h5>Entregadores ativos</h5>
+                        </div>
+                    </div>
 
-              <li class="mb-2">
-                <?php echo word_limiter($produto->produto); ?>
-                <span class="badge badge-pill badge-primary float-right"><?php echo esc($produto->quantidade); ?></span>
-              </li>
-            
-            <?php endforeach; ?>
-          <?php endif; ?>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
 
-  <div class="col-md-4 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <p class="card-title">Top clientes</p>
-        <ul class="list-arrow">
-          
-          <?php if (empty($clientesMaisAssiduos)): ?>
+  </main>
 
-            <p class="card-title text-info">Não há dados para exibir no momento</p>
-
-          <?php else: ?>
-            
-            <?php foreach($clientesMaisAssiduos as $cliente): ?>
-
-              <li class="mb-2">
-                <?php echo esc($cliente->nome); ?>
-                <span class="badge badge-pill badge-success float-right"><?php echo esc($cliente->pedidos); ?></span>
-              </li>
-            
-            <?php endforeach; ?>
-          <?php endif; ?>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 grid-margin stretch-card">
-    <div class="card">
-      <div class="card-body">
-        <p class="card-title">Top entregadores</p>
-        <ul class="list-unstyled">
-          
-          <?php if (empty($entregadoresMaisAssiduos)): ?>
-
-            <p class="card-title text-info">Não há dados para exibir no momento</p>
-
-          <?php else: ?>
-            
-            <?php foreach($entregadoresMaisAssiduos as $entregador): ?>
-
-              <li class="mb-2">
-                <img class="rounded-circle" width="40" src="<?php echo site_url("admin/entregadores/imagem/$entregador->imagem"); ?>" alt="<?php echo esc($entregador->nome) ?>"/>
-                <?php echo esc($entregador->nome); ?>
-                <span class="badge badge-pill badge-warning float-right"><?php echo esc($entregador->entregas); ?></span>
-              </li>
-            
-            <?php endforeach; ?>
-          <?php endif; ?>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-
-</div>
 
 <?php echo $this->endSection(); ?>
 

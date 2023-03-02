@@ -17,6 +17,7 @@ class Extras extends BaseController
     {
         $data = [
             'titulo' => 'Listando os extras dos produtos',
+            'titulo_page'     => 'Extras',
             'extras' => $this->extraModel->withDeleted(true)->paginate(10),
             'pager' => $this->extraModel->pager,
         ];
@@ -63,8 +64,8 @@ class Extras extends BaseController
             $extra = new Extra($this->request->getPost());
 
             if ($this->extraModel->save($extra)) {
-                return redirect()->to(site_url("admin/extras/show/" . $this->extraModel->getInsertID()))
-                                ->with('sucesso', "Extra $extra->nome cadastrado com sucesso!");
+                return redirect()->back()
+                                 ->with('sucesso', "Extra $extra->nome cadastrado com sucesso!");
             } else {
                 return redirect()->back()->with('errors_model', $this->extraModel->errors())
                                         ->with('atencao', "Por favor, verifique os erros abaixo.")
@@ -83,6 +84,7 @@ class Extras extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o extra $extra->nome",
+            'titulo_page'     => 'Detalhes de extra',
             'extra' => $extra,
         ];
 

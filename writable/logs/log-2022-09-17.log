@@ -1,0 +1,36 @@
+ERROR - 2022-09-17 03:54:51 --> Table 'usuarios' already exists
+ERROR - 2022-09-17 03:55:31 --> Tablespace for table '`food`.`migrations`' exists. Please DISCARD the tablespace before IMPORT
+ERROR - 2022-09-17 04:00:39 --> Table 'fooddelivery.pedidos' doesn't exist
+CRITICAL - 2022-09-17 04:00:39 --> Table 'fooddelivery.pedidos' doesn't exist
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\fooddelivery\app\Models\PedidoModel.php(97): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Home.php(25): App\Models\PedidoModel->valorPedidosEntregues()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-09-17 04:06:48 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652445869_6ae404761d0a3f59fdb1.jpg): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 186, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Produto.php(186): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Produto->imagem('1652445869_6ae4...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-09-17 04:06:48 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 186, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Produto.php(186): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Produto->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produto))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}

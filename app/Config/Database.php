@@ -33,9 +33,9 @@ class Database extends Config
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-        'username' => '',
+        'username' => 'root',
         'password' => '',
-        'database' => '',
+        'database' => 'delivery',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -43,7 +43,7 @@ class Database extends Config
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
-        'encrypt'  => false,
+        'encrypt'  => false,  
         'compress' => false,
         'strictOn' => true, // Para hospedar
         'failover' => [],

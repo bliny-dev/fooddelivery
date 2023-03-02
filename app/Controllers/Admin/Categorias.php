@@ -17,7 +17,8 @@ class Categorias extends BaseController
     {
         $data = [
             'titulo'     => 'Listando as categorias',
-            'categorias' => $this->categoriaModel->withDeleted(true)->paginate(10),
+            'titulo_page'     => 'Categorias',
+            'categorias' => $this->categoriaModel->withDeleted(true)->paginate(9),
             'pager'      => $this->categoriaModel->pager,
         ];
 
@@ -63,7 +64,7 @@ class Categorias extends BaseController
             $categoria = new Categoria($this->request->getPost());
 
             if ($this->categoriaModel->save($categoria)) {
-                return redirect()->to(site_url("admin/categorias/show/" . $this->categoriaModel->getInsertID()))
+                return redirect()->back()
                                 ->with('sucesso', "Categoria $categoria->nome cadastrada com sucesso!");
             } else {
                 return redirect()->back()->with('errors_model', $this->categoriaModel->errors())
@@ -82,7 +83,8 @@ class Categorias extends BaseController
         $categoria = $this->buscaCategoriaOu404($id);
 
         $data = [
-            'titulo'     => "Detalhando a categoria $categoria->nome",
+            'titulo'     => "categoria $categoria->nome",
+            'titulo_page'     => "Categoria",
             'categoria' => $categoria,
         ];
 

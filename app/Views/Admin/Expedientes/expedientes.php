@@ -20,76 +20,87 @@
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
 
-<div class="row">
-  <div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
+
+
+  <!-- Novo card de categorias -->
+  <div class="card text-center mt-3">
       <div class="card-body">
         <h4 class="card-title"><?php echo $titulo ?></h4>
+        
+        <div class="container-fluid ">
+          <div class="row d-flex col-12">
+            <?php echo form_open(site_url("admin/expedientes"), ['class' => 'form-row']) ?>
 
-        <?php if (session()->has('errors_model')): ?>
-          <ul>
-            <?php foreach (session('errors_model') as $error): ?>
-              <li class="text-danger"><?php echo $error ?></li>
-            <?php endforeach; ?>
-          </ul>
-        <?php endif; ?>
-
-        <?php echo form_open(site_url("admin/expedientes"), ['class' => 'form-row']) ?>
-
-          <div class="table-responsive">
-
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Dia</th>
-                  <th>Abertura</th>
-                  <th>Fechamento</th>
-                  <th>Situação</th>
-                </tr>
-              </thead>
-              <tbody>
+              <div class="accordion accordion-flush my-4" id="accordionFlushExample">
+                
                 <?php foreach ($expedientes as $dia): ?>
-                  <tr>
-                    <td class="form-group col-md-3">
-                      <input type="text" name="dia_descricao[]", class="form-control" placeholder="" value="<?php echo esc($dia->dia_descricao); ?>" readonly=""/>
-                    </td>
+                  
+                  <div class="accordion-item ">
+                    <h2 class="accordion-header" id="flush-heading<?php echo $dia->id; ?>">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $dia->id; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $dia->id; ?>">
+                        <strong>
+                          <?php echo $dia->dia_descricao; ?>
+                        </strong>
+                      </button>
+                    </h2>
+                    <div id="flush-collapse<?php echo $dia->id; ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?php echo $dia->id; ?>" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-12 d-md-flex justify-content-center">
 
-                    <td class="form-group col-md-3">
-                      <input type="time" name="abertura[]", class="form-control" placeholder="" value="<?php echo esc($dia->abertura); ?>" required/>
-                    </td>
+                            <div class="form-group col-12 col-md-2 m-2 ">
+                              <input type="text" name="dia_descricao[]", class="form-control" placeholder="" value="<?php echo esc($dia->dia_descricao); ?>" readonly=""/>
+                            </div>
 
-                    <td class="form-group col-md-3">
-                      <input type="time" name="fechamento[]", class="form-control" placeholder="" value="<?php echo esc($dia->fechamento); ?>" required/>
-                    </td>
+                            <div class="col-12 col-md-2 m-2">
+                              <input type="time" name="abertura[]", class="form-control" placeholder="" value="<?php echo esc($dia->abertura); ?>" required/>
+                            </div>
 
-                    <td class="form-group col-md-3">
+                            <div class="col-12 col-md-2 m-2">
+                              <input type="time" name="fechamento[]", class="form-control" placeholder="" value="<?php echo esc($dia->fechamento); ?>" required/>
+                            </div>
 
-                      <select class="form-control" name="situacao[]" required>
-                        <option value="1" <?php echo ($dia->situacao == true ? 'selected' : ''); ?>>Aberto</option>
-                        <option value="0" <?php echo ($dia->situacao == false ? 'selected' : ''); ?>>Fechado</option>
-                      </select>
+                            <div class="col-12 col-md-2 m-2">
+                              <select class="form-control" name="situacao[]" required>
+                                <option value="1" <?php echo ($dia->situacao == true ? 'selected' : ''); ?>>Aberto</option>
+                                <option value="0" <?php echo ($dia->situacao == false ? 'selected' : ''); ?>>Fechado</option>
+                              </select>
+                            </div>
 
-                    </td>
-                    
-                  </tr>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
                 <?php endforeach; ?>
-              </tbody>
-              
-            </table>
 
-            <button type="submit" class="btn btn-primary btn-sm mr-2">
-              <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
-              Salvar
-            </button>
+              </div>
 
           </div>
 
-        <?php echo form_close(); ?>
+          <div class="row">
+            <!-- btn Save -->
+            <div class="d-flex justify-content-center mb-2">
+              <strong>
+                <span class="text-danger"> OBS: </span> 
+                Sempre que 
+                <span class="text-danger">ALTERAR</span> 
+                um expediente clique em salvar para a alteração ser realizada
+              </strong>
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+              <button type="submit" class="btn btn-success">
+                Salvar
+              </button>
+            </div>
+          </div>
+
+          <?php echo form_close(); ?>
+        </div>
 
       </div>
-    </div>
-  </div>
-</div>
+    </div> 
 
 <?php echo $this->endSection(); ?>
 

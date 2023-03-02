@@ -1,0 +1,119 @@
+CRITICAL - 2023-01-02 14:27:18 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\fooddelivery\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\fooddelivery\spark(45): require('C:\\xampp\\htdocs...')
+#4 {main}
+ERROR - 2023-01-02 10:29:19 --> Error connecting to the database: Unknown database 'foodbd'
+ERROR - 2023-01-02 10:29:41 --> Error connecting to the database: Unknown database 'foodbd'
+CRITICAL - 2023-01-02 10:29:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'foodbd'
+#0 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#2 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-01-02 10:29:43 --> Error connecting to the database: Unknown database 'foodbd'
+CRITICAL - 2023-01-02 10:29:43 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'foodbd'
+#0 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#2 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2023-01-02 10:32:53 --> Table 'foodbd.migrations' doesn't exist in engine
+ERROR - 2023-01-02 10:32:59 --> Table 'foodbd.categorias' doesn't exist in engine
+CRITICAL - 2023-01-02 10:32:59 --> Table 'foodbd.categorias' doesn't exist in engine
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2023-01-02 10:35:25 --> Table 'foodbd.categorias' doesn't exist in engine
+CRITICAL - 2023-01-02 10:35:25 --> Table 'foodbd.categorias' doesn't exist in engine
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2023-01-02 11:11:31 --> Table 'foodbd.migrations' doesn't exist in engine
+ERROR - 2023-01-02 11:11:38 --> Table 'foodbd.categorias' doesn't exist in engine
+CRITICAL - 2023-01-02 11:11:38 --> Table 'foodbd.categorias' doesn't exist in engine
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2023-01-02 11:11:40 --> Table 'foodbd.categorias' doesn't exist in engine
+CRITICAL - 2023-01-02 11:11:40 --> Table 'foodbd.categorias' doesn't exist in engine
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2023-01-02 11:11:40 --> Table 'foodbd.categorias' doesn't exist in engine
+CRITICAL - 2023-01-02 11:11:40 --> Table 'foodbd.categorias' doesn't exist in engine
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\fooddelivery\app\Models\CategoriaModel.php(76): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\fooddelivery\app\Controllers\Home.php(20): App\Models\CategoriaModel->buscaCategoriasWebHome()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}

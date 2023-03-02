@@ -17,6 +17,7 @@ class Medidas extends BaseController
     {
         $data = [
             'titulo' => 'Listando as medidas dos produtos',
+            'titulo_page'     => 'Medidas',
             'medidas' => $this->medidaModel->withDeleted(true)->paginate(10),
             'pager' => $this->medidaModel->pager,
         ];
@@ -63,8 +64,8 @@ class Medidas extends BaseController
             $medida = new Medida($this->request->getPost());
 
             if ($this->medidaModel->save($medida)) {
-                return redirect()->to(site_url("admin/medidas/show/" . $this->medidaModel->getInsertID()))
-                                ->with('sucesso', "Medida $medida->nome cadastrada com sucesso!");
+                return redirect()->back()
+                                 ->with('sucesso', "Medida $medida->nome cadastrada com sucesso!");
             } else {
                 return redirect()->back()->with('errors_model', $this->medidaModel->errors())
                                         ->with('atencao', "Por favor, verifique os erros abaixo.")
@@ -83,6 +84,7 @@ class Medidas extends BaseController
 
         $data = [
             'titulo'     => "Detalhando a medida $medida->nome",
+            'titulo_page'     => 'Detalhes de medida',
             'medida' => $medida,
         ];
 

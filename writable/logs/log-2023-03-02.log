@@ -1,0 +1,192 @@
+ERROR - 2023-03-02 07:34:11 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+CRITICAL - 2023-03-02 07:34:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+#0 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\fooddelivery\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\fooddelivery\app\Helpers\empresa_helper.php(19): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\fooddelivery\app\Views\layout\principal_web.php(235): expedienteHoje()
+#6 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\fooddelivery\system\View\View.php(226): CodeIgniter\View\View->render('layout/principa...', Array, true)
+#9 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Login/novo', Array, true)
+#10 C:\xampp\htdocs\fooddelivery\app\Controllers\Login.php(16): view('Login/novo', Array)
+#11 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Login->novo()
+#12 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#13 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2023-03-02 07:36:33 --> Undefined variable: titulo_page
+#0 C:\xampp\htdocs\fooddelivery\app\Views\Admin\Pedidos\show.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 13, Array)
+#1 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pedidos/s...', Array, true)
+#4 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Pedidos.php(62): view('Admin/Pedidos/s...', Array)
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Pedidos->show('25098741')
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pedidos))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-03-02 08:25:08 --> Undefined variable: entregadores
+#0 C:\xampp\htdocs\fooddelivery\app\Views\Admin\Pedidos\index.php(279): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 279, Array)
+#1 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pedidos/i...', Array, true)
+#4 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Pedidos.php(29): view('Admin/Pedidos/i...', Array)
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Pedidos->index()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pedidos))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-03-02 08:25:11 --> Undefined variable: entregadores
+#0 C:\xampp\htdocs\fooddelivery\app\Views\Admin\Pedidos\index.php(279): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 279, Array)
+#1 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pedidos/i...', Array, true)
+#4 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Pedidos.php(29): view('Admin/Pedidos/i...', Array)
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Pedidos->index()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pedidos))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-03-02 08:26:16 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2023-03-02 08:37:12 --> Undefined variable: entregadores
+#0 C:\xampp\htdocs\fooddelivery\app\Views\Admin\Pedidos\index.php(279): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 279, Array)
+#1 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pedidos/i...', Array, true)
+#4 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Pedidos.php(29): view('Admin/Pedidos/i...', Array)
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Pedidos->index()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pedidos))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-03-02 08:37:31 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2023-03-02 15:36:19 --> Undefined variable: novosPedidos
+#0 C:\xampp\htdocs\fooddelivery\app\Views\Admin\Home\index.php(130): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 130, Array)
+#1 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/inde...', Array, true)
+#4 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Home.php(41): view('Admin/Home/inde...', Array)
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-03-02 15:42:02 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2023-03-02 15:42:19 --> Field 'imagem' doesn't have a default value
+CRITICAL - 2023-03-02 15:42:19 --> Field 'imagem' doesn't have a default value
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fooddelivery\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(658): CodeIgniter\Model->insert(Object(App\Entities\Produto), false)
+#8 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(81): CodeIgniter\BaseModel->save(Object(App\Entities\Produto))
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->cadastrar()
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#11 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-02 15:45:09 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2023-03-02 15:45:35 --> Field 'imagem' doesn't have a default value
+CRITICAL - 2023-03-02 15:45:35 --> Field 'imagem' doesn't have a default value
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fooddelivery\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(658): CodeIgniter\Model->insert(Object(App\Entities\Produto), false)
+#8 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(81): CodeIgniter\BaseModel->save(Object(App\Entities\Produto))
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->cadastrar()
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#11 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-02 15:51:46 --> optional não é uma regra válida.
+#0 C:\xampp\htdocs\fooddelivery\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('optional')
+#1 C:\xampp\htdocs\fooddelivery\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('imagem', 'imagem', NULL, Array, Array)
+#2 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(1347): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
+#3 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(707): CodeIgniter\BaseModel->validate(Array)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(658): CodeIgniter\Model->insert(Object(App\Entities\Produto), false)
+#6 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(81): CodeIgniter\BaseModel->save(Object(App\Entities\Produto))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->cadastrar()
+#8 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2023-03-02 15:52:05 --> Field 'imagem' doesn't have a default value
+CRITICAL - 2023-03-02 15:52:05 --> Field 'imagem' doesn't have a default value
+#0 C:\xampp\htdocs\fooddelivery\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\fooddelivery\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\fooddelivery\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\fooddelivery\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fooddelivery\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(658): CodeIgniter\Model->insert(Object(App\Entities\Produto), false)
+#8 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(81): CodeIgniter\BaseModel->save(Object(App\Entities\Produto))
+#9 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->cadastrar()
+#10 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#11 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-03-02 15:54:03 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}

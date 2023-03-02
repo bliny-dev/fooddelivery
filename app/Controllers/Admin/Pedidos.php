@@ -21,6 +21,7 @@ class Pedidos extends BaseController
         
         $data = [
             'titulo' => 'Pedidos realizados',
+            'titulo_page' => 'Pedidos',
             'pedidos' => $this->pedidoModel->listaTodosOsPedidos(),
             'pager' => $this->pedidoModel->pager,
         ];
@@ -55,6 +56,7 @@ class Pedidos extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o pedido $pedido->codigo",
+            'titulo_page' => 'Pedidos',
             'pedido' => $pedido,
         ];
 

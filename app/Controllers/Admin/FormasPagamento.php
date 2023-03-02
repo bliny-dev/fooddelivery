@@ -8,7 +8,7 @@ use App\Entities\FormaPagamento;
 class FormasPagamento extends BaseController
 {
     private $formaPagamentoModel;
-
+ 
     public function __construct() {
         $this->formaPagamentoModel = new \App\Models\FormaPagamentoModel();
     }
@@ -17,6 +17,7 @@ class FormasPagamento extends BaseController
     {
         $data = [
             'titulo' => 'Listando as formas de pagamento',
+            'titulo_page'     => 'Formas de pagamento',
             'formas' => $this->formaPagamentoModel->withDeleted(true)->paginate(10),
             'pager' => $this->formaPagamentoModel->pager,
         ];
@@ -63,7 +64,7 @@ class FormasPagamento extends BaseController
             $formaPagamento = new FormaPagamento($this->request->getPost());
 
             if ($this->formaPagamentoModel->save($formaPagamento)) {
-                return redirect()->to(site_url("admin/formas/show/" . $this->formaPagamentoModel->getInsertID()))
+                return redirect()->back()
                                 ->with('sucesso', "Forma de pagamento $formaPagamento->nome cadastrada com sucesso!");
             } else {
                 return redirect()->back()->with('errors_model', $this->formaPagamentoModel->errors())
@@ -83,6 +84,7 @@ class FormasPagamento extends BaseController
 
         $data = [
             'titulo'     => "Detalhando a forma de pagamento $formaPagamento->nome",
+            'titulo_page'     => 'Formas de pagamento',
             'forma' => $formaPagamento,
         ];
 

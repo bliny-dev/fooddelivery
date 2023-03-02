@@ -17,6 +17,7 @@ class Bairros extends BaseController
     {
         $data = [
             'titulo' => 'Listando os bairros atendidos',
+            'titulo_page'     => 'Bairros',
             'bairros' => $this->bairroModel->withDeleted(true)->paginate(10),
             'pager' => $this->bairroModel->pager,
         ];
@@ -83,6 +84,7 @@ class Bairros extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o bairro $bairro->nome",
+            'titulo_page'     => 'Lista de Bairros',
             'bairro' => $bairro,
         ];
 

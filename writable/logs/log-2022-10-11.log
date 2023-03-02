@@ -1,0 +1,94 @@
+CRITICAL - 2022-10-11 08:29:21 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652445869_6ae404761d0a3f59fdb1.jpg): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652445869_6ae4...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-10-11 08:29:21 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/produtos/1652700632_3047adb82e800c4429b9.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Produtos.php(248): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Produtos->imagem('1652700632_3047...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Produtos))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-10-11 08:29:40 --> finfo::file(C:\xampp\htdocs\fooddelivery\writable\uploads/entregadores/1652294712_c4a8c82f02498c5a5cf2.jfif): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo::file(C:\\...', 'C:\\xampp\\htdocs...', 234, Array)
+#1 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Entregadores.php(234): finfo->file('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Entregadores->imagem('1652294712_c4a8...')
+#3 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Entregadores))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-10-11 08:36:16 --> Undefined variable: titulo_page
+#0 C:\xampp\htdocs\fooddelivery\app\Views\Admin\Medidas\index.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 13, Array)
+#1 C:\xampp\htdocs\fooddelivery\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\fooddelivery\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\fooddelivery\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Medidas/i...', Array, true)
+#4 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Medidas.php(24): view('Admin/Medidas/i...', Array)
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Medidas->index()
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Medidas))
+#7 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-10-11 09:27:41 --> Não há dados para update.
+#0 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\fooddelivery\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Medida))
+#3 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Medidas.php(130): CodeIgniter\BaseModel->save(Object(App\Entities\Medida))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Medidas->atualizar('1')
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Medidas))
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-10-11 09:27:55 --> Não há dados para update.
+#0 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\fooddelivery\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Medida))
+#3 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Medidas.php(130): CodeIgniter\BaseModel->save(Object(App\Entities\Medida))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Medidas->atualizar('1')
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Medidas))
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-10-11 09:28:32 --> Não há dados para update.
+#0 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\fooddelivery\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Medida))
+#3 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Medidas.php(130): CodeIgniter\BaseModel->save(Object(App\Entities\Medida))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Medidas->atualizar('1')
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Medidas))
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-10-11 09:28:42 --> Não há dados para update.
+#0 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\fooddelivery\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Medida))
+#3 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Medidas.php(130): CodeIgniter\BaseModel->save(Object(App\Entities\Medida))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Medidas->atualizar('1')
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Medidas))
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-10-11 09:29:20 --> Não há dados para update.
+#0 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\fooddelivery\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\fooddelivery\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Medida))
+#3 C:\xampp\htdocs\fooddelivery\app\Controllers\Admin\Medidas.php(130): CodeIgniter\BaseModel->save(Object(App\Entities\Medida))
+#4 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(832): App\Controllers\Admin\Medidas->atualizar('1')
+#5 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Medidas))
+#6 C:\xampp\htdocs\fooddelivery\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\fooddelivery\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\fooddelivery\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}

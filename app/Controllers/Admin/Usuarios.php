@@ -18,6 +18,7 @@ class Usuarios extends BaseController
     {
         $data = [
             'titulo' => 'Listando os usuários',
+            'titulo_page'     => 'Usuarios',
             'usuarios' => $this->usuarioModel->withDeleted(true)->paginate(10),
             'pager' => $this->usuarioModel->pager,
         ];
@@ -66,7 +67,7 @@ class Usuarios extends BaseController
             $usuario = new Usuario($this->request->getPost());
         
             if ($this->usuarioModel->protect(false)->save($usuario)) {
-                return redirect()->to(site_url("admin/usuarios/show/" . $this->usuarioModel->getInsertID()))
+                return redirect()->back()
                                 ->with('success', "Usuário $usuario->nome cadastrado com sucesso!");
             } else {
                 return redirect()->back()->with('errors_model', $this->usuarioModel->errors())
@@ -87,6 +88,7 @@ class Usuarios extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o usuário $usuario->nome",
+            'titulo_page'     => 'Detalhes',
             'usuario' => $usuario,
         ];
 

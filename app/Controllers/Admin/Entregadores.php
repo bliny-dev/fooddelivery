@@ -18,6 +18,7 @@ class Entregadores extends BaseController
     {
         $data = [
             'titulo' => 'Listando os entregadores',
+            'titulo_page'     => 'Entregadores',
             'entregadores' => $this->entregadorModel->withDeleted(true)->paginate(10),
             'pager' => $this->entregadorModel->pager,
         ];
@@ -66,7 +67,7 @@ class Entregadores extends BaseController
             $entregador = new Entregador($this->request->getPost());
         
             if ($this->entregadorModel->protect(false)->save($entregador)) {
-                return redirect()->to(site_url("admin/entregadores/show/" . $this->entregadorModel->getInsertID()))
+                return redirect()->back()
                                 ->with('success', "Entregador $entregador->nome cadastrado com sucesso!");
             } else {
                 return redirect()->back()->with('errors_model', $this->entregadorModel->errors())
@@ -87,6 +88,7 @@ class Entregadores extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o entregador $entregador->nome",
+            'titulo_page'     => 'Detalhes do Entregador',
             'entregador' => $entregador,
         ];
 

@@ -22,6 +22,7 @@ class Home extends BaseController
     {
         $data = [
             'titulo' => 'Home da área restrita',
+            'titulo_page' => 'Dashboard',
             'valorPedidosEntregues' => $this->pedidoModel->valorPedidosEntregues(),
             'valorPedidosCancelados' => $this->pedidoModel->valorPedidosCancelados(),
             'totalClientesAtivos' => $this->usuarioModel->recuperaTotalClientesAtivos(),
