@@ -176,7 +176,7 @@
 
 <?php echo $this->endSection(); ?>
 
-
+<!-- testando commit  -->
 <!-- Aqui enviamos para o template principal os scripts -->
 <?php echo $this->section('scripts'); ?>
 
