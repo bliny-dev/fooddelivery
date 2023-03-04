@@ -7,7 +7,7 @@ use App\Entities\Medida;
 
 class Medidas extends BaseController
 {
-    private $extraModel;
+    private $medidaModel;
 
     public function __construct() {
         $this->medidaModel = new \App\Models\MedidaModel();

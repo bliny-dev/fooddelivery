@@ -23,6 +23,7 @@ class Pedidos extends BaseController
             'titulo' => 'Pedidos realizados',
             'titulo_page' => 'Pedidos',
             'pedidos' => $this->pedidoModel->listaTodosOsPedidos(),
+            'entregadores' => $this->entregadorModel->select('id, nome')->where('ativo', true)->findAll(),
             'pager' => $this->pedidoModel->pager,
         ];
 
