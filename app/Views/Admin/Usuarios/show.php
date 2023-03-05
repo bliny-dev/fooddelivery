@@ -23,7 +23,7 @@
 
 <?php echo $this->endSection(); ?>
 
-
+ 
 
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
@@ -80,6 +80,16 @@
             <h4 class="card-title text-white"><?php echo esc($titulo); ?></h4>
           </div>
           <div class="card-body">
+            <!-- lista de erros de input -->
+            <?php if (session()->has('errors_model')): ?>
+              <ul>
+                <?php foreach (session('errors_model') as $error): ?>
+
+                    <li class="text-danger"><?php echo $error; ?></li>
+
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
 
             <p class="card-text">
               <span class="font-weight-bold">Nome:</span>
@@ -243,11 +253,12 @@
                         Salvar
                     </button>
 
-                    <button class="btn btn-light fw-bold" >Voltar</button>
+                    <?php echo form_close(); ?>
+
+                      <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
                     
                   </div>
 
-                  <?php echo form_close(); ?>
 
                 </div>
               </div>

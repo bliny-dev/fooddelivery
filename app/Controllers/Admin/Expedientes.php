@@ -37,6 +37,7 @@ class Expedientes extends BaseController
 
         $data = [
             'titulo' => 'Gerenciar o horário de funcionamento',
+            'titulo_page'     => 'Expedientes',
             'expedientes' => $this->expedienteModel->findAll(),
         ];
 

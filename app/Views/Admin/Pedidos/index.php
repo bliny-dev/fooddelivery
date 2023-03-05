@@ -37,6 +37,16 @@
           <input id="query" name="query" placeholder="Pesquise por um pedido.." class="form-control bg-light mt-5 mb-3">
         </div>
         
+        <!-- lista de erros de input -->
+        <?php if (session()->has('errors_model')): ?>
+          <ul>
+            <?php foreach (session('errors_model') as $error): ?>
+
+                <li class="text-danger"><?php echo $error; ?></li>
+
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
 
       <?php if(empty($pedidos)): ?> 
 
@@ -49,7 +59,7 @@
 
             <?php foreach ($pedidos as $pedido): ?>
 
-              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2">
+              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
                 <div class="card shadow" >
                   
                   <div class="card-body p-2">
@@ -174,6 +184,7 @@
                             <span class="font-weight-bold">Observações do pedido:</span>
                             <?php echo esc($pedido->observacoes); ?>
                           </p>
+
                           <?php if ($pedido->entregador_id != null): ?>
 
                           <p class="card-text">
@@ -182,6 +193,7 @@
                           </p>
                           
                           <?php endif; ?>
+                          
                           <ul class="list-group">
 
                           <?php $produtos = unserialize($pedido->produtos); ?>
@@ -269,25 +281,6 @@
                               </label>
                           </div>
 
-                                                    
-                          <div id="box_entregador" class="form-group d-none">
-
-                            <select name="entregador_id" class="form-control text-dark">
-
-                              <option value="">Escolha o entregador..</option>
-
-                              <?php foreach($entregadores as $entregador): ?>
-
-                              <option value="<?php echo $entregador->id; ?>" <?php echo $entregador->id == $pedido->entregador_id ? 'selected' : ''; ?>>
-                                <?php echo esc($entregador->nome); ?>
-                              </option>
-                              
-                              <?php endforeach; ?>
-
-                            </select>
-
-                          </div>
-
                           <div class="form-check form-check-flat form-check-primary mb-4">
                               <label class="form-check-label">
                                   <input type="radio" class="form-check-input situacao" name="situacao" value="2" <?php echo ($pedido->situacao == 2 ? 'checked' : ''); ?> />
@@ -309,15 +302,12 @@
                       
                           
                       <input id="btn_editar_pedido" type="submit" class="btn btn-success" value="Editar Pedido">
+                      <?php echo form_close(); ?>
 
-                      <a href="<?php echo site_url("admin/pedidos"); ?>" class="btn btn-light fw-bold">
-                          <i class="mdi mdi-arrow-left btn-icon-prepend"></i>  
-                          Voltar
-                      </a>
+                      <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
 
                       </div>
 
-                      <?php echo form_close(); ?>
 
                   </div>
                   </div>
@@ -482,7 +472,7 @@
 
   });
 
-</script>
+</script> 
 
 
 

@@ -7,6 +7,13 @@
 
 <?php echo $this->endSection(); ?>
 
+<!-- Aqui enviamos para o template principal o título da page -->
+<?php echo $this->section('titulo_page'); ?>
+
+  <?php echo $titulo_page; ?>
+
+<?php echo $this->endSection(); ?>
+
 
 <!-- Aqui enviamos para o template principal os estilos -->
 <?php echo $this->section('estilos'); ?>
@@ -20,7 +27,46 @@
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
 
+      <div class="content-wrapper">
 
+        <?php if (session()->has('sucesso')): ?>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Perfeito!</strong> <?php echo session('sucesso'); ?>
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <?php endif; ?>
+
+        <?php if (session()->has('info')): ?>
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Informação!</strong> <?php echo session('info'); ?>
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <?php endif; ?>
+
+        <?php if (session()->has('atencao')): ?>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Atenção!</strong> <?php echo session('atencao'); ?>
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <?php endif; ?>
+
+        <!-- Captura os erros de CSRF - Ação não permitida  -->
+        <?php if (session()->has('error')): ?>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Erro!</strong> <?php echo session('error'); ?>
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <?php endif; ?>
+
+</div>
 
   <!-- Novo card de categorias -->
   <div class="card text-center mt-3">

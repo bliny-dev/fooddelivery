@@ -78,6 +78,17 @@
         <div class="ui-widget">
           <input id="query" name="query" placeholder="Pesquise por um entregador.." class="form-control bg-light mt-5 mb-3">
         </div>
+
+        <!-- lista de erros de input -->
+        <?php if (session()->has('errors_model')): ?>
+          <ul>
+            <?php foreach (session('errors_model') as $error): ?>
+
+                <li class="text-danger"><?php echo $error; ?></li>
+
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
         
         <!-- btn cadastrar -->
         <div class="d-flex justify-content-center ">
@@ -105,7 +116,7 @@
 
             <?php foreach ($entregadores as $entregador): ?>
 
-              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2">
+              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
                 <div class="card shadow" >
                   
                   <div class="card-body p-2">
@@ -114,12 +125,25 @@
                   </div>
 
                     <?php if ($entregador->imagem): ?>
-
-                      <img src="<?php echo site_url("admin/entregadores/imagem/$entregador->imagem"); ?>"  class="image-fluid  perfil-entregador" alt="<?php echo esc($entregador->nome) ?>"/>
-
+                      <a 
+                          href="<?php echo site_url("admin/entregadores/editarimagem/$entregador->id"); ?>"
+                          data-bs-target="#ModaleditImage<?php echo $entregador->id; ?>" 
+                          data-bs-toggle="modal" 
+                          data-bs-dismiss="modal"
+                      >
+                        <img src="<?php echo site_url("admin/entregadores/imagem/$entregador->imagem"); ?>" class="image-fluid  perfil-entregador" alt="<?php echo esc($entregador->nome) ?>"/>
+                      </a>
                     <?php else: ?>
+                      <a 
+                          href="<?php echo site_url("admin/entregadores/editarimagem/$entregador->id"); ?>"
+                          data-bs-target="#ModaleditImage<?php echo $entregador->id; ?>" 
+                          data-bs-toggle="modal" 
+                          data-bs-dismiss="modal"
+                      >
                       <img src="<?php echo site_url('admin/images/entregador-sem-imagem.png'); ?>" class="image-fluid perfil-entregador" alt="Entregador sem imagem"/>
-                    <?php endif; ?>
+                      </a>
+
+                      <?php endif; ?>
 
                     <div class="d-block">
                       <span class="col-4 fw-bold text-nowrap bd-highlight">Nome:</span>
@@ -207,7 +231,7 @@
                             <?php if ($entregador->imagem && $entregador->deletado_em == null): ?>
                               <img class="card-img-top w-75" src="<?php echo site_url("admin/entregadores/imagem/$entregador->imagem") ?>" alt="<?php echo esc($entregador->nome) ?>">
                             <?php else: ?>
-                              <img class="card-img-top w-75" src="<?php echo site_url('admin/images/entregador-sem-imagem.png') ?>" alt="Produto sem imagem por enquanto..">
+                              <img class="card-img-top w-75" src="<?php echo site_url('admin/images/entregador-sem-imagem.png') ?>" alt="Entregador sem imagem por enquanto..">
                             <?php endif; ?>
 
                         </div>
@@ -393,15 +417,12 @@
                               <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                               Salvar
                           </button>
+                          <?php echo form_close(); ?>
 
-                          <a href="<?php echo site_url("admin/entregadores"); ?>" class="btn btn-light   btn-sm fw-bold">
-                          <i class="mdi mdi-arrow-left btn-icon-prepend "></i>  
-                          Voltar
-                          </a>  
+                          <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
                                                   
                       </div>
 
-                      <?php echo form_close(); ?>
 
                   </div>
                   </div>
@@ -449,15 +470,13 @@
                               <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                               Salvar
                           </button>
+                          <?php echo form_close(); ?>
 
-                          <a href="<?php echo site_url("admin/entregadores"); ?>" class="btn btn-light   btn-sm fw-bold">
-                          <i class="mdi mdi-arrow-left btn-icon-prepend "></i>  
-                          Voltar
-                          </a>  
+                          <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+ 
                                                   
                       </div>
 
-                      <?php echo form_close(); ?>
 
                   </div>
                   </div>
@@ -571,11 +590,11 @@
                             <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                             Salvar
                         </button>
+                        <?php echo form_close(); ?>
 
                         <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
                     </div>
 
-                    <?php echo form_close(); ?>
 
 
                     </div>

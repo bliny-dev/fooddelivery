@@ -88,7 +88,7 @@ class Entregadores extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o entregador $entregador->nome",
-            'titulo_page'     => 'Detalhes do Entregador',
+            'titulo_page'     => 'Entregador',
             'entregador' => $entregador,
         ];
 

@@ -81,6 +81,18 @@
           </div>
           <div class="card-body">
 
+              
+            <!-- lista de erros de input -->
+            <?php if (session()->has('errors_model')): ?>
+              <ul>
+                <?php foreach (session('errors_model') as $error): ?>
+
+                    <li class="text-danger"><?php echo $error; ?></li>
+
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+
             <div class="text-center">
 
               <?php if ($entregador->imagem && $entregador->deletado_em == null): ?>
@@ -211,7 +223,7 @@
                   <div class="form-group col-md-12">
                       <label for="nome">Nome</label>
                       <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($entregador->nome)); ?>">
-                  </div>
+                  </div> 
 
                   <div class="form-group col-md-12">
                       <label for="cpf">CPF</label>
@@ -266,13 +278,13 @@
                       <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                       Salvar
                   </button>
-                  
+                  <?php echo form_close(); ?>
+
                   <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button> 
 
                                           
                 </div>
 
-              <?php echo form_close(); ?>
 
             </div>
           </div>
@@ -321,13 +333,11 @@
                       Salvar
                   </button>
 
+                  <?php echo form_close(); ?>
+
                   <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button> 
-
-
-                                          
                 </div>
 
-              <?php echo form_close(); ?>
 
             </div>
           </div>

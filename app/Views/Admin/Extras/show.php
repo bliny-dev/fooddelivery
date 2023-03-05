@@ -17,7 +17,7 @@
 
 
 <!-- Aqui enviamos para o template principal os estilos -->
-<?php echo $this->section('estilos'); ?>
+<?php echo $this->section('estilos'); ?> 
 
 
 
@@ -80,6 +80,18 @@
             <h4 class="card-title text-white"><?php echo esc($titulo); ?></h4>
           </div>
           <div class="card-body">
+
+          
+            <!-- lista de erros de input -->
+            <?php if (session()->has('errors_model')): ?>
+              <ul>
+                <?php foreach (session('errors_model') as $error): ?>
+
+                    <li class="text-danger"><?php echo $error; ?></li>
+
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
 
             <p class="card-text">
               <span class="font-weight-bold">Nome:</span>
@@ -211,12 +223,12 @@
                         <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                         Salvar
                     </button>
+                    <?php echo form_close(); ?>
 
                     <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
                     
                   </div>
 
-                <?php echo form_close(); ?>
 
               </div>
             </div>

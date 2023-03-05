@@ -18,7 +18,7 @@ class Extras extends BaseController
         $data = [
             'titulo' => 'Listando os extras dos produtos',
             'titulo_page'     => 'Extras',
-            'extras' => $this->extraModel->withDeleted(true)->paginate(10),
+            'extras' => $this->extraModel->withDeleted(true)->paginate(9),
             'pager' => $this->extraModel->pager,
         ];
 
@@ -84,7 +84,7 @@ class Extras extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o extra $extra->nome",
-            'titulo_page'     => 'Detalhes de extra',
+            'titulo_page'     => 'Extra',
             'extra' => $extra,
         ];
 

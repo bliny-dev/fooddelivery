@@ -34,7 +34,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-      <?php endif; ?>
+      <?php endif; ?> 
 
       <?php if (session()->has('info')): ?>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -79,6 +79,18 @@
         <div class="ui-widget">
           <input id="query" name="query" placeholder="Pesquise por uma categoria.." class="form-control bg-light mt-5 mb-3">
         </div>
+
+        
+        <!-- lista de erros de input -->
+        <?php if (session()->has('errors_model')): ?>
+          <ul>
+            <?php foreach (session('errors_model') as $error): ?>
+
+                <li class="text-danger"><?php echo $error; ?></li>
+
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
         
         <!-- btn cadastrar -->
         <div class="d-flex justify-content-center ">
@@ -106,7 +118,7 @@
 
             <?php foreach ($categorias as $categoria): ?>
 
-              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2">
+              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
                 <div class="card shadow" >
                   
                   <div class="card-body p-2">
@@ -364,6 +376,8 @@
                     <h5 class="modal-title" id="exampleModalToggleLabel2">Cadastrar uma nova categoria</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
+                  
+     
                   <div class="modal-body">
 
                     <?php echo form_open("admin/categorias/cadastrar"); ?>

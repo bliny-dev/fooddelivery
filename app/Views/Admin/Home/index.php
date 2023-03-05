@@ -72,7 +72,6 @@
 
                         </div>
                     </div>
-
                     
                     <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
                         <div class="d-flex">
@@ -129,9 +128,9 @@
 
                 <div class="col-12 mb-2">
                     <div class="col-12 border border-2 rounded-3  me-1 p-2 d-flex justify-content-between">
-                        <span class="fs-5">23459</span>
-                        <span class="fs-5">23459</span>
-                        <span class="fs-5">23459</span>
+                        <span class="fs-5 me-1">23459</span>
+                        <span class="fs-5 me-1">23459</span>
+                        <span class="fs-5 me-1">23459</span>
                     </div>
                 </div> 
                 

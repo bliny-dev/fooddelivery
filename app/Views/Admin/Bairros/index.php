@@ -82,6 +82,17 @@
       <div class="ui-widget">
         <input id="query" name="query" placeholder="Pesquise por um bairro.." class="form-control bg-light mt-5 mb-3">
       </div>
+
+      <!-- lista de erros de input -->
+      <?php if (session()->has('errors_model')): ?>
+        <ul>
+          <?php foreach (session('errors_model') as $error): ?>
+
+              <li class="text-danger"><?php echo $error; ?></li>
+
+          <?php endforeach; ?>
+        </ul>
+      <?php endif; ?>
         
       <!-- btn cadastrar -->
       <div class="d-flex justify-content-center ">
@@ -104,12 +115,12 @@
 
       <?php else: ?>
 
-        <div class="container-fluid ">
+        <div class="container-fluid "> 
           <div class="row d-flex col-12">
 
             <?php foreach ($bairros as $bairro): ?>
 
-              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2">
+              <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
                 <div class="card shadow" >
                   <div class="card-body p-2">
 
@@ -349,12 +360,12 @@
                             <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                             Salvar
                         </button>
+                        <?php echo form_close(); ?>
 
                         <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
                         
                       </div>
 
-                    <?php echo form_close(); ?>
 
                   </div>
                 </div>
@@ -453,12 +464,12 @@
                         <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
                         Salvar
                     </button>
+                    <?php echo form_close(); ?>
 
                     <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
 
                   </div>
 
-                  <?php echo form_close(); ?>
 
 
                 </div>

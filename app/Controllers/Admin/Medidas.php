@@ -84,7 +84,7 @@ class Medidas extends BaseController
 
         $data = [
             'titulo'     => "Detalhando a medida $medida->nome",
-            'titulo_page'     => 'Detalhes de medida',
+            'titulo_page' => 'Medida',
             'medida' => $medida,
         ];
 

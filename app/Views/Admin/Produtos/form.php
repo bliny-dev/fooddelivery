@@ -23,7 +23,7 @@
         <label for="ingredientes">Ingredientes</label>
         <textarea type="text" class="form-control" name="ingredientes" id="ingredientes" rows="3" value="<?php echo old('ingredientes', esc($produto->ingredientes)); ?>"><?php echo old('ingredientes', esc($produto->ingredientes)); ?></textarea>
     </div>
-
+                    
 </div>
 
 <div class="form-check form-check-flat form-check-primary mb-4">

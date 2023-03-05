@@ -17,7 +17,7 @@ class FormasPagamento extends BaseController
     {
         $data = [
             'titulo' => 'Listando as formas de pagamento',
-            'titulo_page'     => 'Formas de pagamento',
+            'titulo_page'     => 'Pagamento',
             'formas' => $this->formaPagamentoModel->withDeleted(true)->paginate(10),
             'pager' => $this->formaPagamentoModel->pager,
         ];
@@ -84,7 +84,7 @@ class FormasPagamento extends BaseController
 
         $data = [
             'titulo'     => "Detalhando a forma de pagamento $formaPagamento->nome",
-            'titulo_page'     => 'Formas de pagamento',
+            'titulo_page'     => 'Pagamento',
             'forma' => $formaPagamento,
         ];
 

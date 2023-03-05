@@ -26,9 +26,10 @@ class Produtos extends BaseController
     }
 
     public function index()
-    {
+    {   
         $data = [
             'titulo' => 'Listando os produtos',
+            'titulo_page' => 'Produtos',
             'produtos' => $this->produtoModel->select('produtos.*, categorias.nome AS categoria')
                                             ->join('categorias', 'categorias.id = produtos.categoria_id')
                                             ->withDeleted(true)->paginate(10),
@@ -99,6 +100,7 @@ class Produtos extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o produto $produto->nome",
+            'titulo_page' => 'Produto',
             'produto' => $produto,
         ];
 

@@ -84,7 +84,7 @@ class Bairros extends BaseController
 
         $data = [
             'titulo'     => "Detalhando o bairro $bairro->nome",
-            'titulo_page'     => 'Lista de Bairros',
+            'titulo_page'     => 'Bairro',
             'bairro' => $bairro,
         ];
 
