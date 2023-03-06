@@ -168,16 +168,49 @@
             </div>
 
             <div class="header-action">
-                <button class="btn btn-primary border rounded-circle">
-                    perfil
-                </button>
+                <div class="dropdown">
+                    <button     
+                        class="btn btn-info dropdown-toggle" 
+                        type="button" id="dropdownMenuButton1" 
+                        data-bs-toggle="dropdown" 
+                        aria-expanded="false"
+                    >
+                        <?php echo usuario_logado()->nome; ?>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a href="<?php echo site_url("admin/usuarios/show/" . usuario_logado()->id); ?>" class="dropdown-item">
+                                <i class="mdi mdi-settings text-primary"></i>
+                                Meus dados
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url("login/logout"); ?>" class="dropdown-item">
+                                <i class="mdi mdi-logout text-primary"></i>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </header>
 
         <!-- Essa section renderizará os conteúdos específicos da view que estender esse layout -->
         <?php echo $this->renderSection('conteudo'); ?>
-        
+
+            <footer class="footer container">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Bliny software 2023</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center d-flex align-items-center"> 
+                        Entre em contato 
+                        <i class="ms-2 lab la-google-plus-g text-danger fs-1"></i>
+                        <i class="lab la-whatsapp text-success fs-2"></i>
+                    </span>
+                </div>
+            </footer>
     </div>
+    
     <!-- bundle js bootstrap5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
