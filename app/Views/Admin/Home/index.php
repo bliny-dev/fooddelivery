@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-12 d-lg-flex" >
 
-                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex">
                             <div class="col-2 d-flex align-items-center justify-content-center px-2">
                                 <span class="fs-1 las la-dollar-sign text-primary"></span>
@@ -43,17 +43,17 @@
                                 
                                 <div class="d-md-flex">
                                     <span class="me-2">Pedidos entregues: </span>
-                                    <span class="text-primary fw-bold  rounded-circle">2</span>
+                                    <span class="text-primary fw-bold  rounded-circle"><?php echo $valorPedidosEntregues->total; ?></span>
                                 </div>
 
-                                <h4> <strong>R$</strong> 10.30</h4>
+                                <h5> <strong>R$</strong>&nbsp;<?php echo number_format($valorPedidosEntregues->valor_pedido, 2); ?></h5>
 
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex">
                             <div class="col-2 d-flex align-items-center justify-content-center px-2">
                                 <span class="fs-1 las la-dollar-sign text-danger"></span>
@@ -63,19 +63,19 @@
                                 
                                 <div class="d-md-flex">
                                     <span class="me-2">Pedidos cancelados: </span>
-                                    <span class="text-danger fw-bold  rounded-circle">2</span>
+                                    <span class="text-danger fw-bold  rounded-circle"><?php echo $valorPedidosCancelados->total; ?></span>
                                 </div>
 
-                                <h4> <strong>R$</strong> 10.30</h4>
+                                <h5> <strong>-R$</strong>&nbsp;<?php echo number_format($valorPedidosCancelados->valor_pedido, 2); ?></h5>
 
                             </div>
 
                         </div>
                     </div>
                     
-                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2 px-3">
                         <div class="d-flex">
-                            <div class="col-2 d-flex align-items-center justify-content-center px-2">
+                            <div class="col-2 d-flex align-items-center justify-content-center px-2 ">
                                 <span class="fs-1 las la-users text-success"></span>
                             </div>
 
@@ -85,14 +85,14 @@
                                     <span class="me-2">Clientes ativos: </span>
                                 </div>
 
-                                <h4>0</h4>
+                                <h4 class="float-end"><?php echo $totalClientesAtivos; ?></h4>
 
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2 px-3">
                         <div class="d-flex">
                             <div class="col-2 d-flex align-items-center justify-content-center px-2">
                                 <span class="fs-1 las la-motorcycle text-warning"></span>
@@ -104,7 +104,7 @@
                                     <span class="me-2">Entregadores ativos: </span>
                                 </div>
 
-                                <h4>0</h4>
+                                <h4 class="float-end"><?php echo $totalEntregadoresAtivos; ?></h4>
 
                             </div>
 
@@ -121,18 +121,198 @@
 
         <div class="container-fluid">
 
-            <div class="row border border-2 rounded-3 shadow  p-3">
+            <div class="row border border-2 rounded-4 shadow  p-3">
                 <div class="col-12 d-flex justify-content-center">
                     <h5>Listando últimos pedidos</h5>
                 </div>
-
-                <div class="col-12 mb-2">
-                    <div class="col-12 border border-2 rounded-3  me-1 p-2 d-flex justify-content-between">
-                        <span class="fs-5 me-1">23459</span>
-                        <span class="fs-5 me-1">23459</span>
-                        <span class="fs-5 me-1">23459</span>
+                
+                <div class="col-12 m-2 ">
+                    <div class="col-12 border-bottom border-3 border-info me-1">
                     </div>
                 </div> 
+
+                    
+                <?php foreach ($novosPedidos as $pedido): ?>
+
+                    <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
+                        <div class="card shadow" >
+                            <div class="card-body p-2">
+
+                                
+                                <div class="card-title d-flex justify-content-center fw-bold fs-4">
+                                    <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
+                                        <span class="fs-5 me-1"><?php echo $pedido->codigo; ?></span>
+                                    </a>
+                                </div>
+
+                                <div class="d-block">
+                                    <span class="col-6 fw-bold text-nowrap bd-highlight">Valor:</span>
+                                    <span class="fs-5 me-1">R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></span>
+                                </div>
+                                
+                                <div class="d-block">
+                                    <span class="col-6 fw-bold text-nowrap bd-highlight">Data de criação:</span>
+                                    <span><?php echo $pedido->criado_em->humanize(); ?></span>
+                                </div>
+                                
+                                <div class="d-block">
+                                    <span class="col-4 fw-bold text-nowrap bd-highlight">Situação:</span>
+                                    <span>
+                                        <span class="fs-5 me-1"><?php $pedido->exibeSituacaoDoPedido(); ?></span>
+                                    </span>  
+                                </div>
+                                
+                                <div class="d-flex justify-content-center">
+                                    <span class="col-4 fw-bold text-nowrap bd-highlight">Ações:</span>
+                                </div>
+                                
+                                <!-- botões de modal -->
+                                <div class="d-flex justify-content-center">                      
+                                    <?php if ($pedido->deletado_em != null): ?>
+
+                                        
+                                        <!-- botões de fim -->
+                                        <button type="button" class="btn btn-warning btn-sm me-1 mb-1" >
+                                            Editar2
+                                        </button>
+                                    
+                                        <button type="button" class=" btn btn-danger btn-sm me-1 mb-1"  >
+                                            Excluir
+                                        </button>
+
+                                    <?php elseif($pedido->deletado_em == null):?>
+                                        <div>
+                                            <button type="button" class="btn btn-warning btn-sm me-1 mb-1" >
+                                                <span class="las la-print"></span>
+                                                Imprimir
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button type="button" class=" btn btn-primary btn-sm me-1 mb-1"  >
+                                                <span class="las la-list"></span>
+                                                Detalhes
+                                            </button>
+                                        </div>
+                                    
+                                     
+                                    <?php endif; ?>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal show 1 | mostra todos os detalhes da pedido -->
+                    <div class="modal fade" id="modalShow<?php echo $pedido->id; ?>" aria-hidden="true" aria-labelledby="ModalDeDetalhes" tabindex="-1" role="dialog">
+
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">Detalhes do produto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <div class="card-body">
+                                            
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Situação:</span>
+                                        <?php $pedido->exibeSituacaoDoPedido(); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Criado:</span>
+                                        <?php echo $pedido->criado_em->humanize(); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Atualizado:</span>
+                                        <?php echo $pedido->atualizado_em->humanize(); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Forma de pagamento:</span>
+                                        <?php echo esc($pedido->forma_pagamento); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Valor dos produtos:</span>
+                                        R$&nbsp;<?php echo esc(number_format($pedido->valor_produtos, 2)); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Valor de entrega:</span>
+                                        R$&nbsp;<?php echo esc(number_format($pedido->valor_entrega, 2)); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Valor do pedido:</span>
+                                        R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Endereço de entrega:</span>
+                                        <?php echo esc($pedido->endereco_entrega); ?>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="font-weight-bold">Observações do pedido:</span>
+                                        <?php echo esc($pedido->observacoes); ?>
+                                    </p>
+
+                                    <ul class="list-group">
+
+                                        <?php $produtos = unserialize($pedido->produtos); ?>
+
+                                        <?php foreach($produtos as $produto): ?>
+                            
+                                            <li class="list-group-item">
+                                            
+                                                <p><strong>Produto:&nbsp;</strong><?php echo $produto['nome']; ?></p>
+                                                <p><strong>Quantidade:&nbsp;</strong><?php echo $produto['quantidade']; ?></p>
+                                                <p><strong>Preço:&nbsp;</strong>R$&nbsp;<?php echo number_format($produto['preco'], 2); ?></p>
+
+                                            </li>
+
+                                        <?php endforeach; ?>
+
+                                    </ul>
+                        
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+
+                                    
+                                <div class="mt-4 d-flex">
+
+                                    <a href="" 
+                                        class=" btn btn-warning btn-sm me-1 mb-1 d-flex align-items-center">
+                                        <span class=" fs-5 las la-print"></span>                                
+                                        Imprimir
+                                    </a>
+
+                                    <a href="<?php echo site_url("admin/pedidos"); ?>" class="btn  btn-sm btn-light fw-bold">
+                                        Voltar
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?php endforeach; ?>
+
+                <?php foreach ($novosPedidos as $pedido): ?>
+
+                    <div class="col-12 mb-2 ">
+                        <div class="col-12 border border-2 rounded-pill  me-1 py-2 px-3 d-md-flex justify-content-between">
+                            <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
+                                <span class="fs-5 me-1"><?php echo $pedido->codigo; ?></span>
+                            </a>
+                            <span class="fs-5 me-1">R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></span>
+                            <span class="fs-5 me-1"><?php echo $pedido->criado_em->humanize(); ?></span>
+                            <span class="fs-5 me-1"><?php $pedido->exibeSituacaoDoPedido(); ?></span>
+
+                        </div>
+                    </div> 
+                
+                <?php endforeach; ?>
+
                 
             </div>
         </div>
@@ -146,22 +326,79 @@
             <div class="row">
                 <div class="col-12 d-lg-flex" >
 
-                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex justify-content-center">
                             <h5>Produtos + vendidos</h5>
                         </div>
+                        <ul class="list-arrow">
+                            <?php if (!isset($produtosMaisVendidos)): ?>
+
+                                <p class="card-title">Não há dados para exibir no momento</p>
+
+                            <?php else: ?>
+                                <?php foreach ($produtosMaisVendidos as $produto): ?>
+
+                                    <li class="mb-2">
+                                        <?php echo word_limiter($produto->produto, 5); ?>
+                                        <span class="badge badge-pill badge-primary float-end"><?php echo esc($produto->quantidade); ?></span>
+                                    </li>
+
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </ul>
                     </div> 
 
-                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex justify-content-center">
-                            <h5>Clientes ativos</h5>
+                            <h5>Top clientes</h5>
                         </div>
+                                                
+
+                        <ul class="list-arrow">
+                            <?php if (!isset($clintesMaisAssiduos)): ?>
+
+                                <p class="card-title">Não há dados para exibir no momento</p>
+
+                            <?php else: ?>
+
+                                <?php foreach ($clintesMaisAssiduos as $cliente): ?>
+
+                                    <li class="mb-2">
+                                        <?php echo esc($cliente->nome); ?>
+                                        <span class="badge badge-pill badge-success float-right"><?php echo esc($cliente->pedidos); ?></span>
+                                    </li>
+
+                                <?php endforeach; ?>
+
+
+                            <?php endif; ?>
+                        </ul>
                     </div> 
 
-                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-3 shadow me-1 mb-2 p-2">
+                    <div class="col-lg-4 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex justify-content-center">
-                            <h5>Entregadores ativos</h5>
+                            <h5>Top entregadores</h5>
                         </div>
+                        
+                        <ul class="list-unstyled">
+                            <?php if (!isset($entregadoresMaisAssiduos)): ?>
+
+                                <p class="card-title text-info">Não há dados para exibir no momento</p>
+
+                            <?php else: ?>
+
+                                <?php foreach ($entregadoresMaisAssiduos as $entregador): ?>
+
+                                    <li class="mb-2">
+                                        <img class="rounded-circle" width="40" src="<?php echo site_url("admin/entregadores/imagem/$entregador->imagem"); ?>" alt="alt"/>
+                                        <?php echo esc($entregador->nome); ?>
+                                        <span class="badge badge-pill badge-warning float-right"><?php echo esc($entregador->entregas); ?></span>
+                                    </li>
+
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </ul>
+
                     </div>
 
                 </div>

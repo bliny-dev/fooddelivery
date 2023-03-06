@@ -16,16 +16,16 @@ class Pedido extends Entity
 
         switch ($this->situacao) {
             case 0:
-                echo "<i class='fa fa-thumbs-up fa-lg text-primary' aria-hidden='true'></i>&nbsp;Pedido realizado";
+                echo "<span class='fs-4 las la-concierge-bell text-warning'></span>&nbsp;Em espera";
                 break;
             case 1:
-                echo "<i class='fa fa-motorcycle fa-lg text-success' aria-hidden='true'></i>&nbsp;Saiu para a entrega";
+                echo "<span class='fs-4 las la-motorcycle text-info'></span>&nbsp;Em rota";
                 break;
             case 2:
-                echo "<i class='fa fa-money fa-lg text-success' aria-hidden='true'></i>&nbsp;Pedido entregue";
+                echo "<span class='fs-4 las la-money-bill-wave text-success'></span>&nbsp;Entregue";
                 break;
             case 3:
-                echo "<i class='fa fa-thumbs-down fa-lg text-danger' aria-hidden='true'></i>&nbsp;Pedido cancelado";
+                echo "<span class='fs-4 las la-la-exclamation-triangle text-danger'></span>&nbsp;cancelado";
                 break;
         }
     }

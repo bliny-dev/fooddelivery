@@ -253,64 +253,74 @@
 
               <!-- modalEdit | edita pedido -->
               <div class="modal fade" id="Modaledit<?php echo $pedido->id;?>" aria-hidden="true" aria-labelledby="ModalEditar" tabindex="-1">
-                  <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
-                      <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalToggleLabel2">Editando o pedido: <?php echo $pedido->codigo; ?></h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body  justify-content-center">
-                      
-                      <div class="card-body text-center">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Editando o pedido: <?php echo $pedido->codigo; ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body  justify-content-center">
+                    
+                    <div class="card-body text-center">
 
-                          <?php if (session()->has('errors_model')): ?>
-                          <ul>
-                              <?php foreach (session('errors_model') as $error): ?>
-                              <li class="text-danger"><?php echo $error ?></li>
-                              <?php endforeach; ?>
-                          </ul>
-                          <?php endif; ?>
+                        <?php if (session()->has('errors_model')): ?>
+                        <ul>
+                            <?php foreach (session('errors_model') as $error): ?>
+                            <li class="text-danger"><?php echo $error ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <?php endif; ?>
 
-                          <?php echo form_open("admin/pedidos/atualizar/$pedido->codigo"); ?>
-
+                        <?php echo form_open("admin/pedidos/atualizar/$pedido->codigo"); ?>
 
                           <div class="form-check form-check-flat form-check-primary mb-4">
-                              <label for="saiu_entrega" class="form-check-label">
-                                  <input type="radio" class="form-check-input situacao" name="situacao" id="saiu_entrega" value="1" <?php echo ($pedido->situacao == 1 ? 'checked=' : ''); ?> />
-                                  Saiu para entrega
-                              </label>
+                            <label for="saiu_entrega" class="form-check-label">
+
+                                <input id="saiu_entrega" type="radio" class="form-check-input situacao" name="situacao" value="1" <?php echo ($pedido->situacao == 1 ? 'checked' : ''); ?>>
+                                Saiu para entrega
+                            </label>
+                          </div>
+                          
+                          <div id="box_entregador" class="form-group d-none">
+                            <select name="entregador_id" class="form-control text-dark">
+                                <option value="">Escolha o entregador...</option>
+                                <?php foreach ($entregadores as $entregador): ?>
+                                    <option value="<?php echo $entregador->id ?>" <?php echo ($entregador->id == $pedido->entregador_id ? 'selected' : '') ?>> <?php echo esc($entregador->nome); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                          </div>
+                          
+                          <div class="form-check form-check-flat form-check-primary mb-4">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input situacao" name="situacao" value="2" <?php echo ($pedido->situacao == 2 ? 'checked' : ''); ?>>
+                                Pedido entregue
+                            </label>
                           </div>
 
                           <div class="form-check form-check-flat form-check-primary mb-4">
-                              <label class="form-check-label">
-                                  <input type="radio" class="form-check-input situacao" name="situacao" value="2" <?php echo ($pedido->situacao == 2 ? 'checked' : ''); ?> />
-                                  Pedido entregue
-                              </label>
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input situacao" name="situacao" value="3" <?php echo ($pedido->situacao == 3 ? 'checked' : ''); ?>>
+                                Pedido cancelado
+                            </label>
                           </div>
 
-                          <div class="form-check form-check-flat form-check-primary mb-4">
-                              <label class="form-check-label">
-                                  <input type="radio" class="form-check-input situacao" name="situacao" value="3" <?php echo ($pedido->situacao == 3 ? 'checked' : ''); ?> />
-                                  Pedido cancelado
-                              </label>
-                          </div>
-
-                      </div>
+                    </div>
 
 
-                      <div class="modal-footer d-flex justify-content-center">
+                    <div class="modal-footer d-flex justify-content-center">
                       
                           
                       <input id="btn_editar_pedido" type="submit" class="btn btn-success" value="Editar Pedido">
+                      
                       <?php echo form_close(); ?>
 
                       <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
 
-                      </div>
+                    </div>
 
 
                   </div>
-                  </div>
+                </div>
               </div>
                         
               <!-- terceiro modal | exclui pedido -->
@@ -410,69 +420,54 @@
     });
   </script>
 
-  <!-- script para pedidos e edição do status-->
+    
+  <!-- Scripts de entregadores em editar e criar -->
   <script>
 
-    $(document).ready(function() {
 
-      // let pedido_id = $("#saiu_entrega").prop('checked');
+    $(document).ready(function () {
 
-      // if (pedido_id) {
-      //   $("#box_pedido").removeClass('d-none');
-      // }
+        var entregador_id = $("#saiu_entrega").prop('checked');
 
-      // $(".situacao").on('click', function () {
 
-      //   let valor = $(this).val();
-        
-      //   if (valor == 1) {
-      //     $("#box_pedido").removeClass('d-none');
-      //   } else {
-      //     $("#box_pedido").addClass('d-none');
-      //   }
+        if (entregador_id) {
 
-      // });
+            $("#box_entregador").removeClass('d-none');
+        }
+
+
+        $(".situacao").on('click', function () {
+
+            var valor = $(this).val();
+
+            if (valor == 1) {
+
+                $("#box_entregador").removeClass('d-none');
+
+            } else {
+
+                $("#box_entregador").addClass('d-none');
+            }
+
+        });
+
 
       $("form").submit(function () {
-        $(this).find(":submit").attr('disabled', 'disabled');
-        $('#btn_editar_pedido').val('Editando o perdido..');
+
+          $(this).find(":submit").attr('disabled', 'disabled');
+
+          $("#btn-editar-pedido").val('Editando o pedido...');
+
       });
 
+
+
     });
-  
+
+
+
   </script>
 
-  
-<script>
-
-  $(document).ready(function() {
-
-    var entregador_id = $("#saiu_entrega").prop('checked');
-
-    if (entregador_id) {
-      $("#box_entregador").removeClass('d-none');
-    }
-
-    $(".situacao").on('click', function () {
-
-      var valor = $(this).val();
-      
-      if (valor == 1) {
-        $("#box_entregador").removeClass('d-none');
-      } else {
-        $("#box_entregador").addClass('d-none');
-      }
-
-    });
-
-    $("form").submit(function () {
-      $(this).find(":submit").attr('disabled', 'disabled');
-      $('#btn_editar_pedido').val('Editando o perdido..');
-    });
-
-  });
-
-</script> 
 
 
 

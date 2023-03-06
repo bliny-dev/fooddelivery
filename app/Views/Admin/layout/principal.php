@@ -38,78 +38,112 @@
 
             <div class="sidebar-menu">
                 <ul>
+
+                 
                     <li>
-                        <a class="active" href="<?php echo site_url('admin/home'); ?>">
+                        <a  href="<?php echo site_url('admin/home'); ?>"
+                            <?php echo (current_url() == site_url('admin/home')) ? ' class="active"' : ''; ?>
+                        >
                           <span class="las la-home"></span>                            
                           <span>Inicio</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/pedidos'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/pedidos'); ?>"
+                            <?php echo (current_url() == site_url('admin/pedidos')) ? ' class="active"' : ''; ?>
+                        >
                           <span class="las la-shopping-bag"></span>
                             <span>Pedidos</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/categorias'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/categorias'); ?>"
+                            <?php echo (current_url() == site_url('admin/categorias')) ? ' class="active"' : ''; ?>                        
+                        >
                             <span class="las la-hamburger"></span>
                             <span>Categoria</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/extras'); ?>">
+                        <a  href="<?php echo site_url('admin/extras'); ?>"
+                            <?php echo (current_url() == site_url('admin/extras')) ? ' class="active"' : ''; ?>
+
+                        >
                             <span class="las la-bacon"></span>
                             <span>Extras</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/medidas'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/medidas'); ?>"
+                            <?php echo (current_url() == site_url('admin/medidas')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-balance-scale-right"></span>
                             <span>Medidas</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/produtos'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/produtos'); ?>"
+                            <?php echo (current_url() == site_url('admin/produtos')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-list"></span>
                             <span>Produtos</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/formas'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/formas'); ?>"
+                            <?php echo (current_url() == site_url('admin/formas')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-money-bill-wave-alt"></span>
                             <span>Formas de pagamento</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/entregadores'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/entregadores'); ?>"
+                            <?php echo (current_url() == site_url('admin/entregadores')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-biking"></span>
                             <span>Entregadores</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/bairros'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/bairros'); ?>"
+                            <?php echo (current_url() == site_url('admin/bairros')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-city"></span>
                             <span>Bairros</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/expedientes'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/expedientes'); ?>"
+                            <?php echo (current_url() == site_url('admin/expedientes')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-clock"></span>
                             <span>Expediente</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php echo site_url('admin/usuarios'); ?>">
+                        <a 
+                            href="<?php echo site_url('admin/usuarios'); ?>"
+                            <?php echo (current_url() == site_url('admin/usuarios')) ? ' class="active"' : ''; ?>
+                        >
                             <span class="las la-user"></span>
                             <span>Usuarios</span>
                         </a>
@@ -134,9 +168,8 @@
             </div>
 
             <div class="header-action">
-                <button class="btnMy btnMy-main">
-                    <span class="las la-video"></span>
-                    Upload
+                <button class="btn btn-primary border rounded-circle">
+                    perfil
                 </button>
             </div>
         </header>

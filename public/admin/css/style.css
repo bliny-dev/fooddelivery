@@ -404,11 +404,9 @@ main{
     border: 2px solid #2ec3a3;
     border-radius: 50%;
  }
-/* 
- .card-mycss{
-    height: 380px;
- } */
-
+ .rounded-4{
+    border-radius: 20px;
+ }
  
 @media only screen and (max-width: 1224px){
     .sidebar{
