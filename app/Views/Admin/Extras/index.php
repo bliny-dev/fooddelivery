@@ -123,7 +123,7 @@
                 <div class="card shadow" >
                   
                   <div class="card-body p-2">
-                    <div class="card-title d-flex justify-content-center fw-bold fs-4">
+                    <div class="card-title d-flex justify-content-center fw-bold fs-5">
                       <?php echo $extra->nome; ?>
                     </div>
                     

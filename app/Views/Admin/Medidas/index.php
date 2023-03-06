@@ -122,7 +122,7 @@
                 <div class="card shadow" >
                   
                   <div class="card-body p-2">
-                    <div class="card-title d-flex justify-content-center fw-bold fs-4">
+                    <div class="card-title d-flex justify-content-center fw-bold fs-5">
                       <?php echo $medida->nome; ?>
                     </div>
                     
@@ -219,8 +219,8 @@
                       <div class="card-body">
 
                           <p class="card-text">
-                          <span class="font-weight-bold">Nome:</span>
-                          <?php echo esc($medida->nome); ?>
+                            <span class="font-weight-bold">Nome:</span>
+                            <?php echo esc($medida->nome); ?>
                           </p>
                           <p class="card-text">
                           <span class="font-weight-bold">Ativo:</span>
