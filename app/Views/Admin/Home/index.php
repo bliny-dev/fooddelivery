@@ -163,40 +163,31 @@
                                 </div>
                                 
                                 <div class="d-flex justify-content-center">
-                                    <span class="col-4 fw-bold text-nowrap bd-highlight">Ações:</span>
+                                    <span class="col-4 fw-bold text-nowrap bd-highlight">teste:</span>
                                 </div>
-                                
+
                                 <!-- botões de modal -->
-                                <div class="d-flex justify-content-center">                      
-                                    <?php if ($pedido->deletado_em != null): ?>
-
-                                        
-                                        <!-- botões de fim -->
-                                        <button type="button" class="btn btn-warning btn-sm me-1 mb-1" >
-                                            Editar2
+                                <div class="d-flex  justify-content-center">
+                                    <div class="d-md-flex justify-content-center">                      
+                                        <button 
+                                            type="button" 
+                                            class="btn btn-primary btn-sm me-1 mb-1" 
+                                            data-bs-toggle="modal" 
+                                            href="#"
+                                            >
+                                            <i class="las la-print"></i>
+                                            Imprimir
                                         </button>
-                                    
-                                        <button type="button" class=" btn btn-danger btn-sm me-1 mb-1"  >
-                                            Excluir
-                                        </button>
 
-                                    <?php elseif($pedido->deletado_em == null):?>
-                                        <div>
-                                            <button type="button" class="btn btn-warning btn-sm me-1 mb-1" >
-                                                <span class="las la-print"></span>
-                                                Imprimir
-                                            </button>
-                                        </div>
-                                        <div>
-                                            <button type="button" class=" btn btn-primary btn-sm me-1 mb-1"  >
-                                                <span class="las la-list"></span>
-                                                Detalhes
-                                            </button>
-                                        </div>
-                                    
-                                     
-                                    <?php endif; ?>
+                                        <a href="#" 
+                                            class=" btn btn-dark btn-sm me-1 mb-1">
+                                            <i class="las la-list"></i>
+                                            Detalhes
+                                        </a>
+                                    </div>
                                 </div>
+                                 
+                                <!-- fim botões de modal -->
 
 
                             </div>
@@ -304,6 +295,7 @@
                             <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
                                 <span class="fs-5 me-1"><?php echo $pedido->codigo; ?></span>
                             </a>
+                            <span>teste</span>
                             <span class="fs-5 me-1">R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></span>
                             <span class="fs-5 me-1"><?php echo $pedido->criado_em->humanize(); ?></span>
                             <span class="fs-5 me-1"><?php $pedido->exibeSituacaoDoPedido(); ?></span>
