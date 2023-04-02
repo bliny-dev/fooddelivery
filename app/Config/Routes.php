@@ -33,8 +33,14 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('login', 'Login::novo', ['filter' => 'visitante']);
-$routes->get('registrar', 'Registrar::novo', ['filter' => 'visitante']);
+// $routes->get('login', 'Login::novo', ['filter' => 'visitante']);
+// $routes->get('registrar', 'Registrar::novo', ['filter' => 'visitante']);
+
+$routes->group("api", function ($routes) {
+    $routes->post("registrar", "Registrar::index");
+    $routes->post("login", "Login::index");
+    $routes->post("usuarios", "Usuarios::index", ['filter' => 'authFilter']);
+});
 
 $routes->group('admin', function ($routes) {
     $routes->add('formas', 'Admin\FormasPagamento::index');

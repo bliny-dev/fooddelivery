@@ -23,10 +23,11 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'login' => \App\Filters\LoginFilter::class, // Filtro de login
+        // 'login' => \App\Filters\LoginFilter::class, // Filtro de login
         'admin' => \App\Filters\AdminFilter::class, // Filtro de admin
-        'visitante' => \App\Filters\VisitanteFilter::class, // Filtro de visitante
+        // 'visitante' => \App\Filters\VisitanteFilter::class, // Filtro de visitante
         'throttle' => \App\Filters\ThrottleFilter::class, // Filtro que ajuda a previnir ataques de força bruta
+        'authFilter' => \App\Filters\AuthFilter::class, // Filtro de autenticação
     ];
 
     /**
@@ -69,17 +70,17 @@ class Filters extends BaseConfig
      * @var array
      */
     public $filters = [
-        'login' => [
-            'before' => [
-                'admin/*', // Todos os controller que estão dentro do namespace 'Admin' só serão acessados após o login.
-                'conta(/*)?',
-                'checkout(/*)?',
-            ],
-        ],
-        'admin' => [
-            'before' => [
-                'admin/*', // Todos os controller que estão dentro do namespace 'Admin' só serão acessados por um adminitrador.
-            ],
-        ]
+        // 'login' => [
+        //     'before' => [
+        //         'admin/*', // Todos os controller que estão dentro do namespace 'Admin' só serão acessados após o login.
+        //         'conta(/*)?',
+        //         'checkout(/*)?',
+        //     ],
+        // ],
+        // 'admin' => [
+        //     'before' => [
+        //         'admin/*', // Todos os controller que estão dentro do namespace 'Admin' só serão acessados por um adminitrador.
+        //     ],
+        // ]
     ];
 }
