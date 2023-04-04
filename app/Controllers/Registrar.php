@@ -21,7 +21,7 @@ class Registrar extends BaseController
         $rules = [
             'email' => ['rules' => 'required|min_length[4]|max_length[255]|valid_email|is_unique[users.email]'],
             'password' => ['rules' => 'required|min_length[8]|max_length[255]'],
-            'passwor_confirmation'  => [ 'label' => 'confirm password', 'rules' => 'matches[password]']
+            'password_confirmation'  => [ 'label' => 'confirm password', 'rules' => 'matches[password]']
         ];
             
   
