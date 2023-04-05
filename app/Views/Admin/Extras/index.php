@@ -242,10 +242,10 @@
                           <?php endif; ?>
 
                         </div>
+
                       </div>
                       <div class="modal-footer">
 
-                              
                         <div class="mt-4 ">
 
                           <?php if ($extra->deletado_em == null): ?>
@@ -309,22 +309,22 @@
 
                       <?php echo form_open("admin/extras/atualizar/$extra->id")?>
 
-                      <div class="form-row">
+                        <div class="form-row">
 
-                        <div class="form-group col-md-12">
-                            <label for="nome" class="col-form-label fs-5 text-dark">Nome</label>
-                            <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($extra->nome)); ?>">
-                        </div>
+                          <div class="form-group col-md-12">
+                              <label for="nome" class="col-form-label fs-5 text-dark">Nome</label>
+                              <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($extra->nome)); ?>">
+                          </div>
 
-                        <div class="form-group col-md-12">
-                            <label for="preco" class="col-form-label fs-5 text-dark">Preço de venda</label>
-                            <input type="text" class="money form-control" name="preco" id="nome" value="<?php echo old('preco', esc($extra->preco)); ?>">
-                        </div>
+                          <div class="form-group col-md-12">
+                              <label for="preco" class="col-form-label fs-5 text-dark">Preço de venda</label>
+                              <input type="text" class="money form-control" name="preco" id="nome" value="<?php echo old('preco', esc($extra->preco)); ?>">
+                          </div>
 
-                        <div class="form-group col-md-12">
-                            <label for="descricao" class="col-form-label fs-5 text-dark">Descrição</label>
-                            <textarea type="text" class="form-control" name="descricao" id="descricao" rows="2" value="<?php echo old('descricao', esc($extra->descricao)); ?>"><?php echo old('descricao', esc($extra->descricao)); ?></textarea>
-                        </div>
+                          <div class="form-group col-md-12">
+                              <label for="descricao" class="col-form-label fs-5 text-dark">Descrição</label>
+                              <textarea type="text" class="form-control" name="descricao" id="descricao" rows="2" value="<?php echo old('descricao', esc($extra->descricao)); ?>"><?php echo old('descricao', esc($extra->descricao)); ?></textarea>
+                          </div>
 
                         </div>
 
@@ -335,7 +335,6 @@
                               Ativo
                           </label>
                         </div>
-
 
                         </div>
 

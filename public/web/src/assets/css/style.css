@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Estilos da WEB */
+:root{
+    --color-main: #396aff;
+    --bg: #fbfefd;
+    --bg2:  #dce5ff;
+    --main-accent: #e9eefd;
+    --main-text: #4b5876;
+    --shadow: rgba(17, 17, 26, 0.1) 2px 2px 16px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.bgBody{
+    background-color:#F5F5F5;
+}
+
+/* navbar */
+.my-navbar-toggler{
+    background-color: black;
+}
+
+
+/* Banner da empresa */
+.logo-empresa{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#capa-empresa{
+    height: 320px;
+    width:  100%;
+}
+
+.image-relative{
+    position: relative;
+    height: 320px;
+    width:  100%;
+}
+
+.image-absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+@media screen and (max-width: 768px){
+    span{
+        font-size: 10px;
+    }
+
+    #btnimg-empresa{
+        margin-left: 20px;
+    }
+}
+
+
+
+/* Menu categorias  */
+.menu {
+    overflow-y: hidden;
+    overflow-x:auto ;  /*habilita o scroll vertical */
+    scrollbar-width: none; /* esconde a barra de rolagem lateral */
+    scrollbar-color: red!important;
+    scrollbar-width: 10px;
+}
+
+.menu::-webkit-scrollbar {
+width: 10px; /*  largura da barra */
+height: 10px; /* altura da barra */
+border-radius: 5px;
+background-color: orange!important; /* cor do fundo */
+}
+
+.menu::-webkit-scrollbar-thumb {
+background-color: red!important; /* cor da barra */
+border-radius: 5px; /* borda arredondada */
+}
+
+@media screen and (max-width: 768px){
+
+    .categorias{
+        background-color: #396aff;
+        position: fixed;
+        bottom: -16px;
+    }
+
+}
+
+/* 
+@media screen and (max-width: 315px){
+
+    .categorias{
+        position: fixed;
+        bottom: 30px;
+    }
+
+} */
+
+
+/* Menu produtos */
+.img-produto{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card-produto{
+    padding: 10px;
+}
+
+.textos-produto span{
+    font-size: 15px;
+}
+
+
+.margin-produto{
+    margin-bottom: 200px;
+}
+
+
+
+/* Footer */
+.footer-position{
+
+}   
+

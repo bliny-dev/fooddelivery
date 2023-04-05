@@ -38,8 +38,14 @@
 
             <div class="sidebar-menu">
                 <ul>
-
                  
+                    <li>
+                        <a  href="<?php echo site_url('/'); ?>">
+                          <span class="las la-pizza-slice"></span>                            
+                          <span>Area do cliente</span>
+                        </a>
+                    </li>
+
                     <li>
                         <a  href="<?php echo site_url('admin/home'); ?>"
                             <?php echo (current_url() == site_url('admin/home')) ? ' class="active"' : ''; ?>
@@ -148,7 +154,15 @@
                             <span>Usuarios</span>
                         </a>
                     </li>
-
+                    <li>
+                        <a 
+                            href="<?php echo site_url('login/logout'); ?>"
+                        >
+                            <span class="las la-door-closed"></span>
+                            <span>Sair</span>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
          
@@ -167,33 +181,7 @@
                 </div>
             </div>
 
-            <div class="header-action">
-                <div class="dropdown">
-                    <button     
-                        class="btn btn-info dropdown-toggle" 
-                        type="button" id="dropdownMenuButton1" 
-                        data-bs-toggle="dropdown" 
-                        aria-expanded="false"
-                    >
-                        <?php echo usuario_logado()->nome; ?>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                            <a href="<?php echo site_url("admin/usuarios/show/" . usuario_logado()->id); ?>" class="dropdown-item">
-                                <i class="mdi mdi-settings text-primary"></i>
-                                Meus dados
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo site_url("login/logout"); ?>" class="dropdown-item">
-                                <i class="mdi mdi-logout text-primary"></i>
-                                Sair
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+        
         </header>
 
         <!-- Essa section renderizará os conteúdos específicos da view que estender esse layout -->

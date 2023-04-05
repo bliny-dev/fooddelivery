@@ -83,7 +83,14 @@
                   
                   <div class="accordion-item ">
                     <h2 class="accordion-header" id="flush-heading<?php echo $dia->id; ?>">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo $dia->id; ?>" aria-expanded="false" aria-controls="flush-collapse<?php echo $dia->id; ?>">
+                      <button 
+                        class="accordion-button collapsed" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#flush-collapse<?php echo $dia->id; ?>" 
+                        aria-expanded="false" 
+                        aria-controls="flush-collapse<?php echo $dia->id; ?>"
+                      >
                         <strong>
                           <?php echo $dia->dia_descricao; ?>
                         </strong>
@@ -119,6 +126,7 @@
                     </div>
 
                   </div>
+
                 <?php endforeach; ?>
 
               </div>

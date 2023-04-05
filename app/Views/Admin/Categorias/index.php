@@ -77,7 +77,11 @@
         
         <!-- search input -->
         <div class="ui-widget">
-          <input id="query" name="query" placeholder="Pesquise por uma categoria.." class="form-control bg-light mt-5 mb-3">
+          <input 
+            id="query" 
+            name="query" 
+            placeholder="Pesquise por uma categoria.." 
+            class="form-control bg-light mt-5 mb-3">
         </div>
 
         
@@ -125,6 +129,7 @@
                   <div class="card-title d-flex justify-content-center fw-bold fs-5">
                     <?php echo $categoria->nome; ?>
                   </div>
+
                     <div class="d-block">
                       <span class="col-4 fw-bold text-nowrap bd-highlight">Nome:</span>
                       <span  href="<?php echo site_url("admin/categorias/show/$categoria->id"); ?>">
@@ -153,7 +158,7 @@
                       <span class="col-4 fw-bold text-nowrap bd-highlight">Ações:</span>
                     </div>
                     <!-- botões de modal -->
-                    <div class="d-md-flex justify-content-center">                      
+                    <dv class="d-md-flex justify-content-center">                      
                           <button 
                               type="button" 
                               class="btn btn-primary btn-sm me-1 mb-1" 
@@ -172,7 +177,13 @@
                             </a>
 
                         <?php elseif($categoria->deletado_em == null):?>
-                            <button type="button" class="btn btn-warning btn-sm me-1 mb-1" data-bs-target="#Modaledit<?php echo $categoria->id; ?>" data-bs-toggle="modal" data-bs-dismiss="modal">
+                            <button 
+                              type="button" 
+                              class="btn btn-warning btn-sm me-1 mb-1" 
+                              data-bs-target="#Modaledit<?php echo $categoria->id; ?>" 
+                              data-bs-toggle="modal" 
+                              data-bs-dismiss="modal"
+                            >
                               Editar
                             </button>
                         
@@ -180,7 +191,7 @@
                               Excluir
                             </button>
                         <?php endif; ?>
-                    </div>
+                    </dv>
 
                   </div>
                 </div>
@@ -203,14 +214,17 @@
                           <span class="font-weight-bold">Nome:</span>
                           <?php echo esc($categoria->nome); ?>
                         </p>
+
                         <p class="card-text">
                           <span class="font-weight-bold">Slug:</span>
                           <?php echo ($categoria->slug); ?>
                         </p>
+
                         <p class="card-text">
                           <span class="font-weight-bold">Ativo:</span>
                           <?php echo ($categoria->ativo ? 'Sim' : 'Não'); ?>
                         </p>
+                        
                         <p class="card-text">
                           <span class="font-weight-bold">Criado:</span>
                           <?php echo $categoria->criado_em->humanize(); ?>

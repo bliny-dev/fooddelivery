@@ -196,39 +196,39 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                      <div class="card-body">
+                        <div class="card-body">
 
-                          <p class="card-text">
-                          <span class="font-weight-bold">Nome:</span>
-                          <?php echo esc($forma->nome); ?>
-                          </p>
-                          <p class="card-text">
-                          <span class="font-weight-bold">Ativo:</span>
-                          <?php echo ($forma->ativo ? 'Sim' : 'Não'); ?>
-                          </p>
-                          <p class="card-text">
-                          <span class="font-weight-bold">Criado:</span>
-                          <?php echo $forma->criado_em->humanize(); ?>
-                          </p>
+                            <p class="card-text">
+                            <span class="font-weight-bold">Nome:</span>
+                            <?php echo esc($forma->nome); ?>
+                            </p>
+                            <p class="card-text">
+                            <span class="font-weight-bold">Ativo:</span>
+                            <?php echo ($forma->ativo ? 'Sim' : 'Não'); ?>
+                            </p>
+                            <p class="card-text">
+                            <span class="font-weight-bold">Criado:</span>
+                            <?php echo $forma->criado_em->humanize(); ?>
+                            </p>
 
-                          <?php if ($forma->deletado_em == null): ?>
+                            <?php if ($forma->deletado_em == null): ?>
 
-                          <p class="card-text">
-                              <span class="font-weight-bold">Atualizado:</span>
-                              <?php echo $forma->atualizado_em->humanize(); ?>
-                          </p>
+                            <p class="card-text">
+                                <span class="font-weight-bold">Atualizado:</span>
+                                <?php echo $forma->atualizado_em->humanize(); ?>
+                            </p>
 
-                          <?php else: ?>
+                            <?php else: ?>
 
-                          <p class="card-text">
-                              <span class="font-weight-bold text-danger">Excluído:</span>
-                              <?php echo $forma->deletado_em->humanize(); ?>
-                          </p>
+                            <p class="card-text">
+                                <span class="font-weight-bold text-danger">Excluído:</span>
+                                <?php echo $forma->deletado_em->humanize(); ?>
+                            </p>
 
-                          <?php endif; ?>
+                            <?php endif; ?>
 
-                      
-                      </div>
+                        
+                        </div>
                       </div>
                       <div class="modal-footer">
 

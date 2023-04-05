@@ -216,39 +216,40 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                      <div class="card-body">
+                        <div class="card-body">
 
-                          <p class="card-text">
-                            <span class="font-weight-bold">Nome:</span>
-                            <?php echo esc($medida->nome); ?>
-                          </p>
-                          <p class="card-text">
-                          <span class="font-weight-bold">Ativo:</span>
-                          <?php echo ($medida->ativo ? 'Sim' : 'Não'); ?>
-                          </p>
-                          <p class="card-text">
-                          <span class="font-weight-bold">Criado:</span>
-                          <?php echo $medida->criado_em->humanize(); ?>
-                          </p>
+                            <p class="card-text">
+                              <span class="font-weight-bold">Nome:</span>
+                              <?php echo esc($medida->nome); ?>
+                            </p>
+                            <p class="card-text">
+                            <span class="font-weight-bold">Ativo:</span>
+                            <?php echo ($medida->ativo ? 'Sim' : 'Não'); ?>
+                            </p>
+                            <p class="card-text">
+                            <span class="font-weight-bold">Criado:</span>
+                            <?php echo $medida->criado_em->humanize(); ?>
+                            </p>
 
-                          <?php if ($medida->deletado_em == null): ?>
+                            <?php if ($medida->deletado_em == null): ?>
 
-                          <p class="card-text">
-                              <span class="font-weight-bold">Atualizado:</span>
-                              <?php echo $medida->atualizado_em->humanize(); ?>
-                          </p>
+                            <p class="card-text">
+                                <span class="font-weight-bold">Atualizado:</span>
+                                <?php echo $medida->atualizado_em->humanize(); ?>
+                            </p>
 
-                          <?php else: ?>
+                            <?php else: ?>
 
-                          <p class="card-text">
-                              <span class="font-weight-bold text-danger">Excluído:</span>
-                              <?php echo $medida->deletado_em->humanize(); ?>
-                          </p>
+                            <p class="card-text">
+                                <span class="font-weight-bold text-danger">Excluído:</span>
+                                <?php echo $medida->deletado_em->humanize(); ?>
+                            </p>
 
-                          <?php endif; ?>
+                            <?php endif; ?>
 
-                      
-                      </div>
+                        
+                        </div>
+                        
                       </div>
                       <div class="modal-footer">
 
@@ -313,32 +314,32 @@
                       </div>
                       <div class="modal-body  justify-content-center">
 
-                      <?php echo form_open("admin/medidas/atualizar/$medida->id")?>
+                        <?php echo form_open("admin/medidas/atualizar/$medida->id")?>
 
-                      <div class="form-row">
+                          <div class="form-row">
 
-                          <div class="form-group col-md-12">
-                              <label for="nome">Nome</label>
-                              <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($medida->nome)); ?>">
+                              <div class="form-group col-md-12">
+                                  <label for="nome">Nome</label>
+                                  <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($medida->nome)); ?>">
+                              </div>
+
+                              <div class="form-group col-md-12">
+                                  <label for="descricao">Descrição</label>
+                                  <textarea type="text" class="form-control" name="descricao" id="descricao" rows="2" value="<?php echo old('descricao', esc($medida->descricao)); ?>"><?php echo old('descricao', esc($medida->descricao)); ?></textarea>
+                              </div>
+
                           </div>
 
-                          <div class="form-group col-md-12">
-                              <label for="descricao">Descrição</label>
-                              <textarea type="text" class="form-control" name="descricao" id="descricao" rows="2" value="<?php echo old('descricao', esc($medida->descricao)); ?>"><?php echo old('descricao', esc($medida->descricao)); ?></textarea>
+                          <div class="form-check form-check-flat form-check-primary mb-4">
+                              <label for="ativo" class="form-check-label">
+                                  <input type="hidden" name="ativo" value="0" />
+                                  <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" <?php if (old('ativo', $medida->ativo)): ?> checked="" <?php endif; ?> />
+                                  Ativo
+                              </label>
                           </div>
 
-                      </div>
-
-                      <div class="form-check form-check-flat form-check-primary mb-4">
-                          <label for="ativo" class="form-check-label">
-                              <input type="hidden" name="ativo" value="0" />
-                              <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" <?php if (old('ativo', $medida->ativo)): ?> checked="" <?php endif; ?> />
-                              Ativo
-                          </label>
-                      </div>
 
                       </div>
-
                       <div class="modal-footer d-flex justify-content-center">
                           
                           <button type="submit" class="btn btn-success btn-sm mr-2 ">

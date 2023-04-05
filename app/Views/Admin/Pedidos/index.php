@@ -63,6 +63,7 @@
                 <div class="card shadow" >
                   
                   <div class="card-body p-2">
+
                     <div class="card-title d-flex justify-content-center fw-bold fs-5">
                       <?php echo $pedido->codigo; ?>
                     </div>
@@ -146,6 +147,7 @@
                       </div>
 
                       <div class="modal-body">
+
                         <div class="card-body">
 
                           <p class="card-text">
@@ -214,6 +216,7 @@
 
                       
                         </div>
+
                       </div>
 
                       <div class="modal-footer">
@@ -285,7 +288,9 @@
                             <select name="entregador_id" class="form-control text-dark">
                                 <option value="">Escolha o entregador...</option>
                                 <?php foreach ($entregadores as $entregador): ?>
-                                    <option value="<?php echo $entregador->id ?>" <?php echo ($entregador->id == $pedido->entregador_id ? 'selected' : '') ?>> <?php echo esc($entregador->nome); ?></option>
+                                    <option value="<?php echo $entregador->id ?>" 
+                                    <?php echo ($entregador->id == $pedido->entregador_id ? 'selected' : '') ?>> 
+                                    <?php echo esc($entregador->nome); ?></option>
                                 <?php endforeach; ?>
                             </select>
                           </div>
@@ -332,8 +337,9 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    <h5 ><strong>Atenção!</strong>Tem certeza que deseja realizar a exclusão? </h5>
-                    <h6 ><strong >Obs:!</strong>Essa ação neste campo é reversivel </h6>
+                      
+                      <h5 ><strong>Atenção!</strong>Tem certeza que deseja realizar a exclusão? </h5>
+                      <h6 ><strong >Obs:!</strong>Essa ação neste campo é reversivel </h6>
 
                     </div>
                     

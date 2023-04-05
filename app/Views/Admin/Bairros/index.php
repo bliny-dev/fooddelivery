@@ -244,10 +244,10 @@
 
                 
                       </div>
+
                     </div>
                     <div class="modal-footer">
 
-                            
                       <div class="mt-4 ">
 
                         <?php if ($bairro->deletado_em == null): ?>

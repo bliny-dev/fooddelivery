@@ -33,6 +33,7 @@
             <div class="row">
                 <div class="col-12 d-lg-flex" >
 
+                    <!-- Primeiro -->
                     <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex">
                             <div class="col-2 d-flex align-items-center justify-content-center px-2">
@@ -53,6 +54,7 @@
                         </div>
                     </div>
 
+                    <!-- Segundo -->
                     <div class="col-lg-3 col-sm-12 col-xs-12 border border-2 rounded-4 shadow me-1 mb-2 p-2">
                         <div class="d-flex">
                             <div class="col-2 d-flex align-items-center justify-content-center px-2">
@@ -117,6 +119,7 @@
     
     </section>
 
+    
     <section class="mb-4">
 
         <div class="container-fluid">
