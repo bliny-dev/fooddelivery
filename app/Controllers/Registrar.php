@@ -18,29 +18,32 @@ class Registrar extends BaseController
  
     public function index()
     {
-        $rules = [
-            'email' => ['rules' => 'required|min_length[4]|max_length[255]|valid_email|is_unique[users.email]'],
-            'password' => ['rules' => 'required|min_length[8]|max_length[255]'],
-            'password_confirmation'  => [ 'label' => 'confirm password', 'rules' => 'matches[password]']
-        ];
+        if ($this->request->getMethod() == 'post') {
+
+            $usuario = new \App\Entities\Usuario($this->request->getPost());
+
+            $this->usuarioModel->desabilitaValidacaoTelefone();
+
+            $usuario->iniciaAtivacao();
             
-  
-        if($this->validate($rules)){
-            $model = new UserModel();
-            $data = [
-                'email'    => $this->request->getVar('email'),
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
-            ];
-            $model->save($data);
-             
-            return $this->respond(['message' => 'Registered Successfully'], 200);
-        }else{
-            $response = [
-                'errors' => $this->validator->getErrors(),
-                'message' => 'Invalid Inputs'
-            ];
-            return $this->fail($response , 409);
-             
+            if ($this->usuarioModel->insert($usuario)) {
+
+                $this->enviaEmailParaAtivarConta($usuario);
+                
+                return $this->respond(['message' => 'Registered Successfully'], 200);
+
+            } else {
+                
+                $response = [
+                    'errors' => $this->usuarioModel->errors(),
+                    'message' => 'Campos inválidos'
+                ];
+
+                return $this->fail($response , 409);
+            }
+
+        } else {
+            return $this->respond(['message' => 'Cadastro inválido'], 409);
         }
             
     }

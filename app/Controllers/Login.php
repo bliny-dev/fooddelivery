@@ -17,18 +17,26 @@ class Login extends BaseController
 
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
-           
-        $user = $usuarioModel->where('email', $email)->first();
-   
-        if(is_null($user)) {
+        
+        $autenticacao = service('autenticacao');
+            
+        if ($autenticacao->login($email, $password)) {
+            $usuario = $autenticacao->pegaUsuarioLogado();
+        } else {
             return $this->respond(['error' => 'Invalid username or password.'], 401);
         }
    
-        $pwd_verify = password_verify($password, $user['password']);
+        // $user = $usuarioModel->where('email', $email)->first();
    
-        if(!$pwd_verify) {
-            return $this->respond(['error' => 'Invalid username or password 2.'], 401);
-        }
+        // if(is_null($usuario)) {
+        //     return $this->respond(['error' => 'Invalid username or password.'], 401);
+        // }
+   
+        // $pwd_verify = password_verify($password, $usuario->password_hash);
+   
+        // if(!$pwd_verify) {
+        //     return $this->respond(['error' => 'Invalid username or password.'], 401);
+        // }
   
         $key = getenv('JWT_SECRET');
         $iat = time(); // current timestamp value
@@ -40,7 +48,7 @@ class Login extends BaseController
             "sub" => "Subject of the JWT",
             "iat" => $iat, //Time the JWT issued at
             "exp" => $exp, // Expiration time of token
-            "email" => $user['email'],
+            "email" => $usuario->email,
         );
           
         $token = JWT::encode($payload, $key, 'HS256');
