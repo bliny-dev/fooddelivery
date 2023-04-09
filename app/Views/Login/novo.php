@@ -21,7 +21,7 @@
 
     <div class="container">
 
-        <div class="row bg-white shadow-sm rounded-3 py-5 px-2" style="margin-top: 90px;">            
+        <div class="row bg-white shadow-sm rounded-3 py-5 px-2" style="margin-top: 40px;">            
 
             <div class="order-1 order-md-2 col-md-6 col-sm-12 p-2 d-flex justify-content-center align-items-center">
                 <div class="justify-content-center text-center">

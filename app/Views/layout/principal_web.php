@@ -91,64 +91,63 @@
         </div>
     </nav>
     
-    <?php if (usuarioLogado()): ?>
-        <div class='col-12 image-relative'>
-        
-            <img 
-                class=" border-bottom border-3 border-warning"
-                id="capa-empresa" 
-                src="https://cozil.com.br/wp-content/uploads/2019/05/restaurant-237060_1920-1920x960.jpg" 
-                alt="capa da empresa" 
-            />
+    <div class='col-12 image-relative'>
+    
+        <img 
+            class=" border-bottom border-3 border-warning"
+            id="capa-empresa" 
+            src="https://cozil.com.br/wp-content/uploads/2019/05/restaurant-237060_1920-1920x960.jpg" 
+            alt="capa da empresa" 
+        />
 
-            <div class='container image-absolute'>
+        <div class='container image-absolute'>
 
-                <div class="d-flex justify-content-center me-2 align-items-center">
-                    <div> 
-                        <img 
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkU1RzU7YYdBnMouQL4dmYt745zaw526mirQ&usqp=CAU"
-                            class="logo-empresa" 
-                            alt="Logo da empresa" 
-                        />
-                    </div>   
-                                                
-                    <div>
-                        <button 
-                            id="btnimg-empresa" 
-                            class="btn btn-warning bg-gradient ms-1 rounded-circle"
-                        > 
-                            <i class="las la-pen fs-3 fw-bold"></i>  
-                        </button>
-                    </div>
-                </div> 
-
-                <div class="col-12 d-flex justify-content-center my-1">
-                    <span class="fs-1 bg-white rounded-pill px-4">
-                        Birosca 
-                    </span>
-                </div>  
-                <div class="col-12 d-flex justify-content-center">
-                    <span class='bg-white p-1 px-4 rounded-pill'>
-                        Juazeiro do norte 
-                    </span>
-                </div>  
-                <div class="col-12 d-flex justify-content-center">
-                    <span class='bg-white p-1 px-4 rounded-pill'>
-                        Avenida Ernesto Geisel, N°1617
-                    </span>
-                </div>  
-                <div class="col-12 d-flex justify-content-center mb-1">
-                    <span  class='bg-white p-1 px-4 rounded-pill'>
-                        Funcionamos de 17:00 Hr as 23:00 Hr
-                    </span>
+            <div class="d-flex justify-content-center me-2 align-items-center">
+                <div> 
+                    <img 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkU1RzU7YYdBnMouQL4dmYt745zaw526mirQ&usqp=CAU"
+                        class="logo-empresa" 
+                        alt="Logo da empresa" 
+                    />
+                </div>   
+                                            
+                <div>
+                    <button 
+                        id="btnimg-empresa" 
+                        class="btn btn-warning bg-gradient ms-1 rounded-circle"
+                    > 
+                        <i class="las la-pen fs-3 fw-bold"></i>  
+                    </button>
                 </div>
-                <div class="col-12 d-flex justify-content-center ">
-                    <span class='btn btn-success bg-gradient'>Aberto</span>
-                </div>
+            </div> 
+
+            <div class="col-12 d-flex justify-content-center my-1">
+                <span class="fs-1 bg-white rounded-pill px-4">
+                    Birosca 
+                </span>
+            </div>  
+            <div class="col-12 d-flex justify-content-center">
+                <span class='bg-white p-1 px-4 rounded-pill'>
+                    Juazeiro do norte 
+                </span>
+            </div>  
+            <div class="col-12 d-flex justify-content-center">
+                <span class='bg-white p-1 px-4 rounded-pill'>
+                    Avenida Ernesto Geisel, N°1617
+                </span>
+            </div>  
+            <div class="col-12 d-flex justify-content-center mb-1">
+                <span  class='bg-white p-1 px-4 rounded-pill'>
+                    Funcionamos de 17:00 Hr as 23:00 Hr
+                </span>
             </div>
-            
-        </div>    
-    <?php endif; ?>
+            <div class="col-12 d-flex justify-content-center ">
+                <span class='btn btn-success bg-gradient'>Aberto</span>
+            </div>
+        </div>
+        
+    </div>    
+    
    
         
     <div class="main-content">  

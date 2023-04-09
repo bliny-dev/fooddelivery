@@ -166,7 +166,7 @@
                                 </div>
                                 
                                 <div class="d-flex justify-content-center">
-                                    <span class="col-4 fw-bold text-nowrap bd-highlight">teste:</span>
+                                    <span class="col-4 fw-bold text-nowrap bd-highlight">Ações:</span>
                                 </div>
 
                                 <!-- botões de modal -->
@@ -176,17 +176,20 @@
                                             type="button" 
                                             class="btn btn-primary btn-sm me-1 mb-1" 
                                             data-bs-toggle="modal" 
-                                            href="#"
-                                            >
+                                        >
                                             <i class="las la-print"></i>
                                             Imprimir
                                         </button>
 
-                                        <a href="#" 
-                                            class=" btn btn-dark btn-sm me-1 mb-1">
+                                        <button
+                                            class=" btn btn-dark btn-sm me-1 mb-1"
+                                            data-bs-target="#modalShow<?php echo $pedido->id; ?>" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-dismiss="modal"
+                                        >
                                             <i class="las la-list"></i>
                                             Detalhes
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                                  
@@ -291,23 +294,7 @@
 
                 <?php endforeach; ?>
 
-                <?php foreach ($novosPedidos as $pedido): ?>
-
-                    <div class="col-12 mb-2 ">
-                        <div class="col-12 border border-2 rounded-pill  me-1 py-2 px-3 d-md-flex justify-content-between">
-                            <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
-                                <span class="fs-5 me-1"><?php echo $pedido->codigo; ?></span>
-                            </a>
-                            <span>teste</span>
-                            <span class="fs-5 me-1">R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></span>
-                            <span class="fs-5 me-1"><?php echo $pedido->criado_em->humanize(); ?></span>
-                            <span class="fs-5 me-1"><?php $pedido->exibeSituacaoDoPedido(); ?></span>
-
-                        </div>
-                    </div> 
                 
-                <?php endforeach; ?>
-
                 
             </div>
         </div>
