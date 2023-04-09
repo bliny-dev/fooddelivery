@@ -48,11 +48,14 @@
 <?php echo $this->section('conteudo'); ?>
 
 <div class="row">
-  <div class="col-lg-12 grid-margin stretch-card">
+
+  <div class="col-lg-6 col-md-12 p-2">
     <div class="card">
+
       <div class="card-header bg-primary pb-0 pt-4">
-        <h4 class="card-title text-white"><?php echo esc($titulo); ?></h4>
+        <h6 class="card-title text-white"><?php echo esc($titulo); ?></h6>
       </div>
+      
       <div class="card-body">
 
         <?php if (session()->has('errors_model')): ?>
@@ -67,7 +70,7 @@
 
           <div class="form-row">
 
-            <div class="form-group col-md-4">
+            <div class="form-group ">
               
               <label>Escolha a medida do produto <a href="javascrip:void" class="" role="button" data-toggle="popover" data-trigger="focus" title="Medida do produto" data-content="Exemplo de uso para pizza:<br>Pizza Grande, <br>Pizza Média, <br>Pizza Família.">Entenda</a></label>
 
@@ -85,12 +88,12 @@
 
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group">
               <label for="preco">Preço</label>
               <input type="text" class="money form-control" name="preco" id="preco" value="<?php echo old('preco'); ?>">
             </div>
 
-            <div class="form-group col-md-4">
+            <div class="form-group">
               
               <label>Produto customizável <a href="javascrip:void" class="" role="button" data-toggle="popover" data-trigger="focus" title="Produto meio a meio" data-content="Exemplo de uso para pizza:<br>Metade calabresa e metade bacon.">Entenda</a></label>
 
@@ -105,16 +108,18 @@
             </div>
 
           </div>
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-sm mt-4 mr-2">
+              <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
+              Inserir especificação
+            </button>
 
-          <button type="submit" class="btn btn-primary btn-sm mt-4 mr-2">
-            <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
-            Inserir especificação
-          </button>
-
-          <a href="<?php echo site_url("admin/produtos/show/$produto->id"); ?>" class="btn btn-light text-dark btn-sm mt-4">
-            <i class="mdi mdi-arrow-left btn-icon-prepend"></i>
-            Voltar
-          </a>
+            <a href="<?php echo site_url("admin/produtos/show/$produto->id"); ?>" class="btn btn-light text-dark btn-sm mt-4">
+              <i class="mdi mdi-arrow-left btn-icon-prepend"></i>
+              Voltar
+            </a>
+          </div>
 
         <?php echo form_close(); ?>
         
@@ -122,7 +127,7 @@
 
         <div class="form-row">
 
-          <div class="col-md-8">
+          <div class="">
             
             <?php if (empty($produtoEspecificacoes)): ?>
 
@@ -134,8 +139,8 @@
               </div>
             
               <?php else: ?>
-              <h4 class="card-title">Especificações do produto</h4>
-              <p class="card-description">
+              <h4 class="card-title text-center">Especificações do produto</h4>
+              <p class="card-description text-center">
                 <code>Aproveite para gerenciar as especificações.</code>
               </p>
               <div class="table-responsive">
@@ -154,13 +159,11 @@
                       <tr>
                         <td><?php echo esc($especificacao->medida); ?></td>
                         <td>R$&nbsp;<?php echo esc(number_format($especificacao->preco, 2, ',', '.')); ?></td>
-                        <td><?php echo ($especificacao->customizavel ? '<label class="badge badge-warning">Sim</label>' : '<label class="badge badge-danger">Não</label>'); ?></td>
+                        <td><?php echo ($especificacao->customizavel ? '<label class="badge bg-success">Sim</label>' : '<label class="badge bg-danger">Não</label>'); ?></td>
                         <td class="text-center">
-
                           <a href="<?php echo site_url("admin/produtos/excluirespecificacao/$especificacao->id/$especificacao->produto_id"); ?>" class="btn btn-danger btn-sm">
                             &nbsp;X&nbsp;
                           </a>
-                          
                         </td>
                       </tr>
                     <?php endforeach; ?>
@@ -180,6 +183,9 @@
 
       </div>
     </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12 p-3 bg-danger">
   </div>
 </div>
 

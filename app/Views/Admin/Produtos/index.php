@@ -203,20 +203,15 @@
                     
                     <!-- botões de modal -->
                     <div class="d-md-flex justify-content-center">                      
-                      <button 
-                          type="button" 
-                          class="btn btn-primary btn-sm me-1 mb-1" 
-                          data-bs-toggle="modal" 
-                          href="#modalShow<?php echo $produto->id; ?>"
-                        >
-                          Preços
-                      </button>
-
-                      <a href="<?php echo site_url("admin/produtos/desfazerExclusao/$produto->id"); ?>" 
-                          class=" btn btn-dark btn-sm me-1 mb-1">
-                          <i class="mdi mdi-undo btn-icon-prepend"></i>
-                          extras
+                      <a  
+                        href="<?php echo site_url("admin/produtos/especificacoes/$produto->id"); ?>"
+                        type="button" 
+                        class="btn btn-dark btn-sm me-1 mb-1" 
+                      >
+                        <span class="las la-dollar-sign"></span>
+                        Preços e extras
                       </a>
+
                     </div>
                     <!-- fim botões de modal  especificações e extras-->
 
@@ -646,7 +641,7 @@
                       </a>
                     </td>
                     <td>                        
-</td>
+                  </td>
 
 
                     <td>
