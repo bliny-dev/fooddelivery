@@ -13,64 +13,62 @@
 
     <link rel="stylesheet" href="<?php echo site_url('web/src/assets/css/produto.css'); ?>"/>
 
-    <style>
-
-        @media only screen and (max-width: 767px) {
-            .section-title {
-                font-size: 20px !important;
-                margin-top: -6em !important;
-            }
-        }
-
-    </style>
-
 <?php echo $this->endSection(); ?>
 
 
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
 
-<div class="container section" id="menu" data-aos="fade-up" style="margin-top: 3em">
+    <div class="container mt-5" id="menu" data-aos="fade-up">
 
-    <div class="col-sm-12 col-md-12 col-lg-12">
-        <!-- product -->
-        <div class="product-content product-wrap clearfix product-deatil">
+        <div class="col-12">
+            <!-- product -->
             <div class="row">
 
-            <?php if (empty($bairros)): ?>
+                <?php if (empty($bairros)): ?>
 
-                <div class="col-xs-12 col-md-12">
-        
-                    <h2 class="section-title">Não há dados para exibir.</h2>
+                    <div class="col-12">
+            
+                        <h2 >Não há dados para exibir.</h2>
 
-                </div>
-
-            <?php else: ?>
-
-                <div class="col-xs-12 col-md-12">
-        
-                    <h2 class="section-title"><?php echo esc($titulo); ?></h2>
-
-                </div>
-
-                <?php foreach($bairros as $bairro): ?>
-
-                    <div class="col-md-4">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading panel-food"><?php echo esc($bairro->nome); ?> - <?php echo esc($bairro->cidade); ?> - CE</div>
-                            <div class="panel-body fonte-food">Taxa de entrega: R$&nbsp<?php echo esc(number_format($bairro->valor_entrega, 2)); ?></div>
-                        </div>
                     </div>
 
-                <?php endforeach; ?>
+                <?php else: ?>
 
-            <?php endif; ?>
+                    <div class="col-12 text-center">
+            
+                        <h2 class="section-title"><?php echo esc($titulo); ?></h2>
+
+                    </div>
+
+                    <?php foreach($bairros as $bairro): ?>
+
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="card p-2 m-1 bg-white size-custom d-flex align-items-center">
+                                <div class="text-center">
+                                    <div class="border-bottom border-3 border-danger">
+                                        <span class="fw-bold ">
+                                            <?php echo esc($bairro->nome); ?> - <?php echo esc($bairro->cidade); ?> - CE
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Taxa de entrega: R$&nbsp<?php echo esc(number_format($bairro->valor_entrega, 2)); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
+
+                <?php endif; ?>
 
             </div>
+            <!-- end product -->
         </div>
-        <!-- end product -->
+        
     </div>
-</div>
 <!-- End Sections -->
 
 <?php echo $this->endSection(); ?>

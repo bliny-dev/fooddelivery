@@ -27,6 +27,10 @@ a{
     text-decoration: none;
 }
 
+.rounded-4{
+    border-radius: 15px;
+}
+
 
 .bgBody{
     background-color:#F5F5F5;
@@ -137,6 +141,10 @@ border-radius: 5px; /* borda arredondada */
     margin-bottom: 200px;
 }
 
+/* Estilos bairros */
+.size-custom{
+    min-height: 120px;
+}
 
 
 /* Footer */

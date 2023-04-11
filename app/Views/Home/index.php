@@ -16,7 +16,7 @@
 
 
 <!-- Aqui enviamos para o template principal o conteúdo -->
-<?php echo $this->section('conteudo'); ?>
+<?php echo $this->section('conteudo'); ?>  
 
   <!-- Titulo da pagina -->
   <div class='container p-3'>
@@ -106,7 +106,7 @@
           <?php foreach ($produtos as $produto): ?>
             <!-- Cada card -->
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex p-2 justify-content-center">
-              <div id="<?php echo $produto->categoria_slug; ?>" class="custom-card p-2 d-flex border border-warning shadow-sm rounded-3 bg-white <?php echo $produto->categoria_slug; ?>">
+              <div id="<?php echo $produto->categoria_slug; ?>" class="custom-card p-2 d-flex border border-warning shadow-sm rounded-4 bg-white <?php echo $produto->categoria_slug; ?>">
 
                 <div class="">
                   <img 
