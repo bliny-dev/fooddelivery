@@ -73,6 +73,103 @@
                                     </div>
                                 </div>
                             </div> 
+
+                            <!-- modal show 1 | mostra todos os detalhes da pedido -->
+                            <div class="modal fade" id="modalShow<?php echo $pedido->id;?>" aria-hidden="true" aria-labelledby="ModalDeDetalhes" tabindex="-1" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalToggleLabel">Detalhes do produto</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+
+                                            <div class="card-body">
+
+                                                <h5>Situação do pedido: <?php echo $pedido->exibeSituacaoDoPedido(); ?></h5>
+                                                <ul class="list-group">
+
+                                                    <?php $produtos = unserialize($pedido->produtos); ?>
+
+                                                    <?php foreach ($produtos as $produto): ?>
+
+                                                        <li class="list-group-item">
+                                                            <div>
+                                                                <h4><?php echo ellipsize($produto['nome'], 100); ?></h4>
+                                                                <p class="text-muted">Quantidade: <?php echo $produto['quantidade']; ?></p>
+                                                                <p class="text-muted">Preço: R$ <?php echo $produto['preco']; ?></p>
+                                                            </div>
+                                                        </li>
+
+                                                    <?php endforeach; ?>
+
+                                                    <li class="list-group-item">
+                                                        <span>Data do pedido:</span>
+                                                        <strong><?php echo $pedido->criado_em->humanize(); ?></strong>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Total de produtos:</span>
+                                                        <strong><?php echo 'R$&nbsp;' . esc(number_format($pedido->valor_produtos, 2)); ?></strong>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Taxa de entrega:</span>
+                                                        <strong><?php echo 'R$&nbsp;' . esc(number_format($pedido->valor_entrega, 2)); ?></strong>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Valor final do pedido:</span>
+                                                        <strong><?php echo 'R$&nbsp;' . esc(number_format($pedido->valor_pedido, 2)); ?></strong>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Endereço de entrega:</span>
+                                                        <strong><?php echo esc($pedido->endereco_entrega); ?></strong>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Forma de pagamento na entrega:</span>
+                                                        <strong><?php echo esc($pedido->forma_pagamento); ?></strong>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <span>Observações do pedido:</span>
+                                                        <strong><?php echo esc($pedido->observacoes); ?></strong>
+                                                    </li>
+
+                                                </ul>
+
+                                                <?php if ($pedido->entregador_id != null): ?>
+
+                                                    <p class="card-text">
+                                                        <span class="font-weight-bold">Entregador:</span>
+                                                        <?php echo esc($pedido->entregador); ?>
+                                                    </p>
+                                                
+                                                <?php endif; ?>
+                                            
+                                                <ul class="list-group">
+
+                                                    <?php $produtos = unserialize($pedido->produtos); ?>
+
+                                                    <?php foreach($produtos as $produto): ?>
+                                                        
+                                                        <li class="list-group-item">
+                                                        
+                                                        <p><strong>Produto:&nbsp;</strong><?php echo $produto['nome']; ?></p>
+                                                        <p><strong>Quantidade:&nbsp;</strong><?php echo $produto['quantidade']; ?></p>
+                                                        <p><strong>Preço:&nbsp;</strong>R$&nbsp;<?php echo number_format($produto['preco'], 2); ?></p>
+
+                                                        </li>
+
+                                                    <?php endforeach; ?>
+
+                                                </ul>
+                                        
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         <?php endforeach; ?>
                     </div>
 
@@ -81,105 +178,6 @@
 
             </div>
     
-                                        
-            <!-- modal show 1 | mostra todos os detalhes da pedido -->
-            <div class="modal fade" id="modalShow<?php echo $pedido->id;?>" aria-hidden="true" aria-labelledby="ModalDeDetalhes" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">Detalhes do produto</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-
-                            <div class="card-body">
-
-                                <h5>Situação do pedido: <?php echo $pedido->exibeSituacaoDoPedido(); ?></h5>
-                                <ul class="list-group">
-
-                                    <?php $produtos = unserialize($pedido->produtos); ?>
-
-                                    <?php foreach ($produtos as $produto): ?>
-
-                                        <li class="list-group-item">
-                                            <div>
-                                                <h4><?php echo ellipsize($produto['nome'], 100); ?></h4>
-                                                <p class="text-muted">Quantidade: <?php echo $produto['quantidade']; ?></p>
-                                                <p class="text-muted">Preço: R$ <?php echo $produto['preco']; ?></p>
-                                            </div>
-                                        </li>
-
-                                    <?php endforeach; ?>
-
-                                    <li class="list-group-item">
-                                        <span>Data do pedido:</span>
-                                        <strong><?php echo $pedido->criado_em->humanize(); ?></strong>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span>Total de produtos:</span>
-                                        <strong><?php echo 'R$&nbsp;' . esc(number_format($pedido->valor_produtos, 2)); ?></strong>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span>Taxa de entrega:</span>
-                                        <strong><?php echo 'R$&nbsp;' . esc(number_format($pedido->valor_entrega, 2)); ?></strong>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span>Valor final do pedido:</span>
-                                        <strong><?php echo 'R$&nbsp;' . esc(number_format($pedido->valor_pedido, 2)); ?></strong>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span>Endereço de entrega:</span>
-                                        <strong><?php echo esc($pedido->endereco_entrega); ?></strong>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span>Forma de pagamento na entrega:</span>
-                                        <strong><?php echo esc($pedido->forma_pagamento); ?></strong>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span>Observações do pedido:</span>
-                                        <strong><?php echo esc($pedido->observacoes); ?></strong>
-                                    </li>
-
-                                </ul>
-
-                                <?php if ($pedido->entregador_id != null): ?>
-
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Entregador:</span>
-                                        <?php echo esc($pedido->entregador); ?>
-                                    </p>
-                                
-                                <?php endif; ?>
-                            
-                                <ul class="list-group">
-
-                                    <?php $produtos = unserialize($pedido->produtos); ?>
-
-                                    <?php foreach($produtos as $produto): ?>
-                                        
-                                        <li class="list-group-item">
-                                        
-                                        <p><strong>Produto:&nbsp;</strong><?php echo $produto['nome']; ?></p>
-                                        <p><strong>Quantidade:&nbsp;</strong><?php echo $produto['quantidade']; ?></p>
-                                        <p><strong>Preço:&nbsp;</strong>R$&nbsp;<?php echo number_format($produto['preco'], 2); ?></p>
-
-                                        </li>
-
-                                    <?php endforeach; ?>
-
-                                </ul>
-                        
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            
         </div>
 
     </div>

@@ -33,6 +33,7 @@ class Produtos extends BaseController
             'produtos' => $this->produtoModel->select('produtos.*, categorias.nome AS categoria')
                                             ->join('categorias', 'categorias.id = produtos.categoria_id')
                                             ->withDeleted(true)->paginate(10),
+            'categorias' => $this->categoriaModel->where('ativo', true)->findAll(),
             'especificacoes' => $this->produtoEspecificacaoModel->join('medidas', 'medida.id = produto_especificacoes.medida_id'),
             'pager' => $this->produtoModel->pager,
         ];
@@ -339,6 +340,7 @@ class Produtos extends BaseController
             'titulo'     => "Gerenciar as especificações do produto $produto->nome",
             'produto' => $produto,
             'medidas' => $this->medidaModel->where('ativo', true)->findAll(),
+            'extras' => $this->extraModel->where('ativo', true)->findAll(),
             'produtoEspecificacoes' => $this->produtoEspecificacaoModel->buscaEspecificacoesDoProduto($produto->id, 10),
             'pager' => $this->produtoEspecificacaoModel->pager,
         ];
