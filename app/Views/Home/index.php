@@ -93,9 +93,7 @@
 
   <div class="container margin-produto">
     <div class="row d-flex justify-content-center align-items-center">
-     
-      
-        
+             
         <?php if (empty($produtos)): ?>
 
           <div class="text-center">
@@ -118,7 +116,7 @@
 
                 <!-- texts card  -->
                 <div class="textos-produto d-block justify-content-center ms-2">
-                  <div class='fw-bold bg-danger rounded text-white px-1'>
+                  <div class='fw-bold bg-danger rounded text-white px-1 text-center'>
                     <span><?php echo esc($produto->nome); ?></span>
                   </div>
                   <div>

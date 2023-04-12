@@ -186,9 +186,9 @@
   </div>
 
   <div class="col-lg-6 col-md-12 p-2">
-  <div class="card">
+    <div class="card">
       <div class="card-header bg-primary pb-0 pt-4">
-        <h4 class="card-title text-white"><?php echo esc($titulo); ?></h4>
+        <h6 class="card-title text-white"><?php echo esc($titulo); ?></h6>
       </div>
       <div class="card-body">
 
@@ -203,11 +203,11 @@
         <?php echo form_open("admin/produtos/cadastrarextras/$produto->id"); ?>
 
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-12">
               
               <label>Escolha o extra do produto (opcional)</label>
 
-              <select class="form-control js-example-basic-single" name="extra_id">
+              <select class="form-control js-example-basic-single-extra" name="extra_id">
 
                 <option value="">Escolha..</option>
 
@@ -223,15 +223,17 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary btn-sm mr-2">
-            <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
-            Inserir extra
-          </button>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-sm mr-2">
+              <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
+              Inserir extra
+            </button>
 
-          <a href="<?php echo site_url("admin/produtos/show/$produto->id"); ?>" class="btn btn-light text-dark btn-sm">
-            <i class="mdi mdi-arrow-left btn-icon-prepend"></i>
-            Voltar
-          </a>
+            <a href="<?php echo site_url("admin/produtos/show/$produto->id"); ?>" class="btn btn-light text-dark btn-sm">
+              <i class="mdi mdi-arrow-left btn-icon-prepend"></i>
+              Voltar
+            </a>
+          </div>
 
         <?php echo form_close(); ?>
         
@@ -239,11 +241,12 @@
 
         <div class="form-row">
 
-          <div class="col-md-8">
+          <div class="col-12">
             
             <?php if (empty($produtoExtras)): ?>
-
-              <p>Esse produto não possui extras até o momento.</p>
+              <div class="text-center" >
+                <p>Esse produto não possui extras até o momento.</p>
+              </div>
 
             <?php else: ?>
               <h4 class="card-title">Extras do produto</h4>
@@ -300,7 +303,6 @@
 <?php echo $this->section('scripts'); ?>
 
   <script src="<?php echo site_url('admin/vendors/select2/select2.min.js') ?>"></script>
-
   <script src="<?php echo site_url('admin/vendors/mask/jquery.mask.min.js') ?>"></script>
   <script src="<?php echo site_url('admin/vendors/mask/app.js') ?>"></script>
 
@@ -332,6 +334,29 @@
         }
 
       });
+    });
+  </script>
+
+  <script>
+    // In your Javascript (external .js resource or <script> tag)
+    $(document).ready(function() {
+        $('.js-example-basic-single-extra').select2({
+
+          placeholder: 'Digite o nome do extra..',
+          allowClear: false,
+
+          "language": {
+
+            "noResults": function() {
+              return "Extra não encontrado&nbsp;&nbsp;<a class='btn btn-primary btn-sm' href='<?php echo site_url('admin/extras/criar') ?>'>Cadastrar</a>";
+            }
+
+          },
+          escapeMarkup: function(markup) {
+            return markup;
+          }
+
+        });
     });
   </script>
 
