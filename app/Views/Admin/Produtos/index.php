@@ -89,13 +89,7 @@
                         <select class="form-control" name="categoria_id">
                             <option value="">Escolha uma categoria..</option>
                             <?php foreach($categorias as $categoria): ?>
-                                <?php if ($produto->id): ?>
-                                    <option value="<?php echo $categoria->id; ?>" <?php echo ($categoria->id == $produto->categoria_id ? 'selected' : '') ?>> 
-                                      <?php echo esc($categoria->nome); ?>
-                                    </option>
-                                <?php else: ?>
                                     <option value="<?php echo $categoria->id; ?>"> <?php echo esc($categoria->nome); ?></option>
-                                <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
                     </div>
