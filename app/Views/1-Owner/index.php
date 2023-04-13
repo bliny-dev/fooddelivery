@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h5>Aqui será a dashboard da bliny que usaremos pra gerir a porra toda amor</h5>
+    <h1>Aqui será a dashboard da bliny que usaremos pra gerir a porra toda amor</h1>
 </body>
 </html>

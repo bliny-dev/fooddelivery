@@ -94,19 +94,19 @@
     <div class='col-12 image-relative'>
     
         <img 
-            class=" border-bottom border-3 border-warning"
             id="capa-empresa" 
-            src="https://cozil.com.br/wp-content/uploads/2019/05/restaurant-237060_1920-1920x960.jpg" 
-            alt="capa da empresa" 
-        />
+            src="<?php echo site_url('web/src/assets/images/capa.png') ?>" 
+            alt="Estabelecimento sem capa"
+        >
+
 
         <div class='container image-absolute'>
 
             <div class="d-flex justify-content-center me-2 align-items-center">
                 <div> 
                     <img 
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkU1RzU7YYdBnMouQL4dmYt745zaw526mirQ&usqp=CAU"
-                        class="logo-empresa" 
+                        src="<?php echo site_url('web/src/assets/images/perfil.png') ?>"
+                        class="logo-empresa border border-3 border-warning" 
                         alt="Logo da empresa" 
                     />
                 </div>   
