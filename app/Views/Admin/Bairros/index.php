@@ -108,6 +108,75 @@
         </a>
       </div>
 
+      <!-- quarto modal | cadastra bairro -->
+      <div class="modal fade" id="ModalRegister" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel2">Cadastrar uma nova bairro</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <?php echo form_open("admin/bairros/cadastrar"); ?>
+              
+
+                  <div class="mb-3">
+                      <label for="cep">CEP</label>
+                      <input type="text" class="form-control cep" name="cep" id="" >
+                      <div id="cep"></div>
+                  </div>
+
+
+                <div class="mb-3">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" name="nome" id="nome" readonly="">
+                </div>
+
+                <div class="mb-3">
+                  <label for="cidade">Cidade</label>
+                  <input type="text" class="form-control" name="cidade" id="cidade" readonly="">
+                </div>
+
+
+                  <div class="mb-3">
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control uf" name="estado" id="estado" readonly="">
+                  </div>
+
+
+                <div class="mb-3">
+                  <label for="valor_entrega">Valor de entrega</label>
+                  <input type="text" class="money form-control" name="valor_entrega" id="valor_entrega" value="">
+                </div>
+
+                <div class="text-center form-check form-check-flat form-check-primary mb-4">
+                  <label for="ativo" class="form-check-label">
+                    <input type="hidden" name="ativo" value="0" />
+                    <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" checked />
+                    Ativo
+                  </label>
+                </div>
+
+            </div>
+            <!-- end modal body -->
+            
+            <div class="modal-footer d-flex justify-content-center">
+              <button type="submit" class="btn btn-success btn-sm mr-2 ">
+                  <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
+                  Salvar
+              </button>
+              <?php echo form_close(); ?>
+
+              <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
 
       <?php if(empty($bairros)): ?> 
 
@@ -405,76 +474,6 @@
               </div>
 
             <?php endforeach; ?>
-            
-            <!-- quarto modal | cadastra bairro -->
-            <div class="modal fade" id="ModalRegister" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel2">Cadastrar uma nova bairro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-
-                    <?php echo form_open("admin/bairros/cadastrar"); ?>
-                    
-
-                        <div class="mb-3">
-                            <label for="cep">CEP</label>
-                            <input type="text" class="form-control cep" name="cep" id="" >
-                            <div id="cep"></div>
-                        </div>
-
-
-                      <div class="mb-3">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome" readonly="">
-                      </div>
-
-                      <div class="mb-3">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control" name="cidade" id="cidade" readonly="">
-                      </div>
-
-
-                        <div class="mb-3">
-                          <label for="estado">Estado</label>
-                          <input type="text" class="form-control uf" name="estado" id="estado" readonly="">
-                        </div>
-
-
-                      <div class="mb-3">
-                        <label for="valor_entrega">Valor de entrega</label>
-                        <input type="text" class="money form-control" name="valor_entrega" id="valor_entrega" value="">
-                      </div>
-
-                      <div class="text-center form-check form-check-flat form-check-primary mb-4">
-                        <label for="ativo" class="form-check-label">
-                          <input type="hidden" name="ativo" value="0" />
-                          <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" <?php if (old('ativo', $bairro->ativo)): ?> checked="" <?php endif; ?> />
-                          Ativo
-                        </label>
-                      </div>
-
-                  </div>
-                  <!-- end modal body -->
-                  
-                  <div class="modal-footer d-flex justify-content-center">
-                    <button type="submit" class="btn btn-success btn-sm mr-2 ">
-                        <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
-                        Salvar
-                    </button>
-                    <?php echo form_close(); ?>
-
-                    <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-
-                  </div>
-
-
-
-                </div>
-              </div>
-            </div>
             
             <div class="mt-3">
               <?php echo $pager->links(); ?>
