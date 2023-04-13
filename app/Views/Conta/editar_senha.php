@@ -25,12 +25,15 @@
 
     <div class="row" style="margin-top: 2em">
 
-        <div class="col-xs-12 col-md-12">
+        <div class="col-12 text-center">
         
-            <h2 class="section-title pull-left"><?php echo esc($titulo); ?></h2>
+            <h4 class="section-title pull-left"><?php echo esc($titulo); ?></h4>
 
         </div>
 
+    </div>
+
+    <div class="row d-flex justify-content-center">
         <div class="col-md-6">
 
             <?php if (session()->has('errors_model')): ?>
@@ -42,26 +45,24 @@
             <?php endif; ?>
 
             <?php echo form_open('conta/atualizarsenha'); ?>
-                <div class="panel panel-info">
+                <div class="card p-3 text-center">
                     <div class="panel-body">
                     
-                        <div>
+                        <div class="mt-3">
                             <label>Senha atual</label>
                             <input type="password" class="form-control" name="current_password">
                         </div>
-                        <hr>
-                        <div>
+                        <div class="mt-3">
                             <label>Nova senha</label>
                             <input type="password" class="form-control" name="password">
                         </div>
-                        <hr>
-                        <div>
+                        <div class="mt-3">
                             <label>Confirme a nova senha</label>
                             <input type="password" class="form-control" name="password_confirmation">
                         </div>
                     
                     </div>
-                    <div class="panel-footer">
+                    <div class="mt-3">
                         <button type="submit" class="btn btn-primary">Atualizar</button>
                         <a href="<?php echo site_url('conta/show'); ?>" class="btn btn-default">Cancelar</a>
                     </div>
@@ -69,7 +70,6 @@
             <?php echo form_close(); ?>
 
         </div>
-
     </div>
 
 </div>

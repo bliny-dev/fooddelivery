@@ -23,16 +23,20 @@
 
     <?php echo $this->include('Conta/sidebar'); ?>
 
-    <div class="row" style="margin-top: 2em">
+    <div class="row d-flex" style="margin-top: 2em">
 
-        <div class="col-xs-12 col-md-12">
+        <div class="col-12 text-center">
         
-            <h2 class="section-title pull-left"><?php echo esc($titulo); ?></h2>
+            <h4 class="fw-bold"><?php echo esc($titulo); ?></h4>
 
         </div>
 
-        <div class="col-md-6">
-            <div class="panel panel-info">
+    </div>
+
+    <div class="row d-flex justify-content-center ">
+        <div class="col-6 text-center ">
+        
+            <div class="card p-4">
                 <div class="panel-body">
                     <dl>
                         <dt>Nome completo</dt>
@@ -56,8 +60,8 @@
                     <a href="<?php echo site_url('conta/editarsenha'); ?>" class="btn btn-danger">Alterar senha</a>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
 </div>

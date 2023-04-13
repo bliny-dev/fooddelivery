@@ -43,8 +43,8 @@
 
                     <?php foreach($bairros as $bairro): ?>
 
-                        <div class="col-md-4 col-sm-12 ">
-                            <div class="card p-2 m-1 bg-white size-custom d-flex align-items-center">
+                        <div class="col-md-4 col-sm-12 mt-4">
+                            <div class="card p-2 m-1 bg-white shadow size-custom d-grid align-items-center">
                                 <div class="text-center">
                                     <div class="border-bottom border-3 border-danger">
                                         <span class="fw-bold ">
