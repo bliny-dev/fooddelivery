@@ -141,7 +141,7 @@
                     Funcionamos de 17:00 Hr as 23:00 Hr
                 </span>
             </div>
-            <div class="col-12 d-flex justify-content-center ">
+            <div class="col-12 d-flex justify-content-center">
                 <span class='btn btn-success bg-gradient'>Aberto</span>
             </div>
         </div>

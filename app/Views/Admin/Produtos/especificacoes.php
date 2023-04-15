@@ -74,7 +74,7 @@
               
               <label>Escolha a medida do produto <a href="javascrip:void" class="" role="button" data-toggle="popover" data-trigger="focus" title="Medida do produto" data-content="Exemplo de uso para pizza:<br>Pizza Grande, <br>Pizza Média, <br>Pizza Família.">Entenda</a></label>
 
-              <select class="form-control js-example-basic-single" name="medida_id">
+              <select class="form-control js-example-basic-single-medida" name="medida_id">
 
                 <option value="">Escolha..</option>
 
@@ -138,7 +138,7 @@
                 <p class="mb-0">Aproveite para cadastrar pelo menos uma especificação para o produto <strong><?php echo esc($produto->nome); ?></strong>.</p>
               </div>
             
-              <?php else: ?>
+            <?php else: ?>
               <h4 class="card-title text-center">Especificações do produto</h4>
               <p class="card-description text-center">
                 <code>Aproveite para gerenciar as especificações.</code>
@@ -317,7 +317,7 @@
         })
       })
 
-      $('.js-example-basic-single').select2({
+      $('.js-example-basic-single-medida').select2({
 
         placeholder: 'Digite o nome da medida..',
         allowClear: false,

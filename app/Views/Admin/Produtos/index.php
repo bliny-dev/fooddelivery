@@ -69,66 +69,62 @@
         <div class="modal fade" id="ModalRegister" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalToggleLabel2">Cadastrar uma nova produto</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-
-                <?php echo form_open("admin/produtos/cadastrar"); ?>
-                  
-                <div class="form-row">
-
-                    <div class="form-group col-md-8">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome">
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="categoria">Categoria</label>
-                        <select class="form-control" name="categoria_id">
-                            <option value="">Escolha uma categoria..</option>
-                            <?php foreach($categorias as $categoria): ?>
-                                    <option value="<?php echo $categoria->id; ?>"> <?php echo esc($categoria->nome); ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-12">
-                        <label for="ingredientes">Ingredientes</label>
-                        <textarea type="text" class="form-control" name="ingredientes" id="ingredientes" rows="3" ></textarea>
-                    </div>
-                                    
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Cadastrar uma nova produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body">
 
-                <div class="form-check form-check-flat form-check-primary mb-4">
-                  <label for="ativo" class="form-check-label">
-                      <input type="hidden" name="ativo" value="0" />
-                      <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" checked/>
-                      Ativo
-                  </label>  
+                  <?php echo form_open("admin/produtos/cadastrar"); ?>
+                    
+                  <div class="form-row">
+
+                      <div class="form-group ">
+                          <label for="nome">Nome</label>
+                          <input type="text" class="form-control" name="nome" id="nome">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="categoria">Categoria</label>
+                          <select class="form-control" name="categoria_id">
+                              <option value="">Escolha uma categoria..</option>
+                              <?php foreach($categorias as $categoria): ?>
+                                      <option value="<?php echo $categoria->id; ?>"> <?php echo esc($categoria->nome); ?></option>
+                              <?php endforeach; ?>
+                          </select>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="ingredientes">Ingredientes</label>
+                          <textarea type="text" class="form-control" name="ingredientes" id="ingredientes" rows="3" ></textarea>
+                      </div>
+                                      
+                  </div>
+
+                  <div class="form-check form-check-flat form-check-primary mb-4">
+                    <label for="ativo" class="form-check-label">
+                        <input type="hidden" name="ativo" value="0" />
+                        <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" checked/>
+                        Ativo
+                    </label>  
+                  </div>
+
                 </div>
-
-              </div>
-              <!-- end modal body -->
+                <!-- end modal body -->
               
-              <div class="modal-footer d-flex justify-content-center">
-                  <button type="submit" class="btn btn-success btn-sm mr-2 ">
-                      <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
-                      Salvar
-                  </button>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success btn-sm mr-2 ">
+                        <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
+                        Salvar
+                    </button>
                   <?php echo form_close(); ?>
 
-                  <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-              </div>
-
-
+                    <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+                </div>
 
               </div>
           </div>
         </div>
-
-
 
       <?php if(empty($produtos)): ?> 
 
@@ -270,9 +266,9 @@
                       <a  
                         href="<?php echo site_url("admin/produtos/especificacoes/$produto->id"); ?>"
                         type="button" 
-                        class="btn btn-dark btn-sm me-1 mb-1" 
+                        class="btn btn-info btn-sm me-1 mb-1 " 
                       >
-                        <span class="las la-dollar-sign"></span>
+                        <span class="las la-dollar-sign "></span>
                         Preços e extras
                       </a>
 
@@ -416,87 +412,72 @@
 
               <!-- modalEdit | edita produto -->
               <div class="modal fade" id="Modaledit<?php echo $produto->id; ?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                  <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
-                      <div class="modal-header">
+                    
+                    <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalToggleLabel2">Editar produto</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body  justify-content-center">
+                    </div>
+                      
+                    <div class="modal-body  justify-content-center">
 
-                      <?php echo form_open("admin/produtos/atualizar/$produto->id")?>
+                      <?php echo form_open("admin/produtos/atualizar/$produto->id"); ?>
+                  
+                        <div class="form-row">
 
-                      <div class="form-row">
-
-                          <div class="form-group col-md-12">
-                              <label for="nome">Nome</label>
-                              <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($produto->nome)); ?>">
+                          <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" id="nome" value="<?php echo old('nome', esc($produto->nome)); ?>">
                           </div>
 
-                          <div class="form-group col-md-12">
-                              <label for="cpf">CPF</label>
-                              <input type="text" class="form-control cpf" name="cpf" id="cpf" value="<?php echo old('cpf', esc($produto->cpf)); ?>">
+                          <div class="form-group">
+                            <label for="categoria">Categoria</label>
+                            <select class="form-control" name="categoria_id">
+                              <option value="">Escolha uma categoria..</option>
+                              <?php foreach($categorias as $categoria): ?>
+                                <?php if ($produto->id): ?>
+                                    <option value="<?php echo $categoria->id; ?>" <?php echo ($categoria->id == $produto->categoria_id ? 'selected' : '') ?>> <?php echo esc($categoria->nome); ?></option>
+                                <?php else: ?>
+                                    <option value="<?php echo $categoria->id; ?>"> <?php echo esc($categoria->nome); ?></option>
+                                <?php endif; ?>
+                              <?php endforeach; ?>
+                            </select>
                           </div>
 
-                          <div class="form-group col-md-12">
-                              <label for="cnh">CNH</label>
-                              <input type="text" class="form-control cnh" name="cnh" id="cnh" value="<?php echo old('cnh', esc($produto->cnh)); ?>">
+                          <div class="form-group">
+                              <label for="ingredientes">Ingredientes</label>
+                              <textarea type="text" class="form-control" name="ingredientes" id="ingredientes" rows="3" value="<?php echo old('ingredientes', esc($produto->ingredientes)); ?>"><?php echo old('ingredientes', esc($produto->ingredientes)); ?></textarea>
                           </div>
-
-                          <div class="form-group col-md-12">
-                              <label for="telefone">Telefone</label>
-                              <input type="text" class="form-control sp_celphones" name="telefone" id="telefone" value="<?php echo old('telefone', esc($produto->telefone)); ?>">
-                          </div>
-
-                          <div class="form-group col-md-12">
-                              <label for="email">E-mail</label>
-                              <input type="text" class="form-control" name="email" id="email" value="<?php echo old('email', esc($produto->email)); ?>">
-                          </div>
-
-                          <div class="form-group col-md-12">
-                              <label for="veiculo">Veículo</label>
-                              <input type="text" class="form-control" name="veiculo" id="veiculo" value="<?php echo old('veiculo', esc($produto->veiculo)); ?>">
-                          </div>
-
-                          <div class="form-group col-md-12">
-                              <label for="placa">Placa</label>
-                              <input type="text" class="form-control placa" name="placa" id="placa" value="<?php echo old('placa', esc($produto->placa)); ?>">
-                          </div>
-
-                          <div class="form-group col-md-12">
-                              <label for="endereco">Endereço</label>
-                              <input type="text" class="form-control" name="endereco" id="endereco" value="<?php echo old('endereco', esc($produto->endereco)); ?>">
-                          </div>
-
-                      </div>
-
-                      <div class="form-check form-check-flat form-check-primary mb-4">
+                    
+                        </div>
+  
+                                                
+                        <div class="form-check form-check-flat form-check-primary mb-4">
                           <label for="ativo" class="form-check-label">
                               <input type="hidden" name="ativo" value="0" />
                               <input type="checkbox" class="form-check-input" name="ativo" id="ativo" value="1" <?php if (old('ativo', $produto->ativo)): ?> checked="" <?php endif; ?> />
                               Ativo
                           </label>
-                      </div>
+                        </div>
 
-                      </div>
+                    </div>
+                    <!-- end modal body -->
+                
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button type="submit" class="btn btn-success btn-sm mr-2 ">
+                          <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
+                          Salvar
+                      </button>
+                      <?php echo form_close(); ?>
 
-                      <div class="modal-footer d-flex justify-content-center">
-                          
-                          <button type="submit" class="btn btn-success btn-sm mr-2 ">
-                              <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
-                              Salvar
-                          </button>
-
-                          <?php echo form_close(); ?>
-
-                          <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-
-                                                  
-                      </div>
+                      <button class="btn btn-light fw-bold" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+                                                
+                    </div>
 
 
                   </div>
-                  </div>
+                </div>
               </div>
 
               <!-- modalEditImage | edita foto do produto -->
