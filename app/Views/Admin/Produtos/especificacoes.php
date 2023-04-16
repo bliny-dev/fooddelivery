@@ -72,7 +72,19 @@
 
             <div class="form-group ">
               
-              <label>Escolha a medida do produto <a href="javascrip:void" class="" role="button" data-toggle="popover" data-trigger="focus" title="Medida do produto" data-content="Exemplo de uso para pizza:<br>Pizza Grande, <br>Pizza Média, <br>Pizza Família.">Entenda</a></label>
+              <label>Escolha a medida do produto 
+                <a 
+                  href="javascrip:void" 
+                  class="" 
+                  role="button" 
+                  data-toggle="popover" 
+                  data-trigger="focus" 
+                  title="Medida do produto" 
+                  data-content="Exemplo de uso para pizza:<br>Pizza Grande, <br>Pizza Média, <br>Pizza Família."
+                >
+                  Entenda
+                </a>
+              </label>
 
               <select class="form-control js-example-basic-single-medida" name="medida_id">
 
@@ -95,7 +107,19 @@
 
             <div class="form-group">
               
-              <label>Produto customizável <a href="javascrip:void" class="" role="button" data-toggle="popover" data-trigger="focus" title="Produto meio a meio" data-content="Exemplo de uso para pizza:<br>Metade calabresa e metade bacon.">Entenda</a></label>
+              <label>Produto customizável 
+                <a 
+                  href="javascrip:void" 
+                  class="" 
+                  role="button" 
+                  data-toggle="popover" 
+                  data-trigger="focus" 
+                  title="Produto meio a meio" 
+                  data-content="Exemplo de uso para pizza:<br>Metade calabresa e metade bacon."
+                >
+                  Entenda
+                </a>
+              </label>
 
               <select class="form-control" name="customizavel">
 
@@ -139,6 +163,7 @@
               </div>
             
             <?php else: ?>
+              
               <h4 class="card-title text-center">Especificações do produto</h4>
               <p class="card-description text-center">
                 <code>Aproveite para gerenciar as especificações.</code>
@@ -176,6 +201,7 @@
                 </div>
 
               </div>
+
             <?php endif; ?>
 
           </div>
@@ -294,6 +320,7 @@
       </div>
     </div>
   </div>
+
 </div>
 
 <?php echo $this->endSection(); ?>
@@ -325,7 +352,7 @@
         "language": {
 
           "noResults": function() {
-            return "Medida não encontrada&nbsp;&nbsp;<a class='btn btn-primary btn-sm' href='<?php echo site_url('admin/medidas/criar') ?>'>Cadastrar</a>";
+            return "Medida não encontrada&nbsp;&nbsp;<a class='btn btn-primary btn-sm' href='<?php echo site_url('admin/medidas') ?>'>Cadastrar</a>";
           }
 
         },
@@ -348,7 +375,7 @@
           "language": {
 
             "noResults": function() {
-              return "Extra não encontrado&nbsp;&nbsp;<a class='btn btn-primary btn-sm' href='<?php echo site_url('admin/extras/criar') ?>'>Cadastrar</a>";
+              return "Extra não encontrado&nbsp;&nbsp;<a class='btn btn-primary btn-sm' href='<?php echo site_url('admin/extras') ?>'>Cadastrar</a>";
             }
 
           },

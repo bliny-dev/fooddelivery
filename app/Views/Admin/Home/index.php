@@ -25,11 +25,11 @@
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
 
-  <main>
+<main>
+
     <section class="mb-4">
 
         <div class="container-fluid">
-
             <div class="row">
                 <div class="col-12 d-lg-flex" >
 
@@ -118,7 +118,6 @@
         </div>
     
     </section>
-
     
     <section class="mb-4">
 
@@ -134,167 +133,170 @@
                     </div>
                 </div> 
 
-                    
-                <?php foreach ($novosPedidos as $pedido): ?>
+                <?php if (!isset($novosPedidos)): ?>
 
-                    <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
-                        <div class="card shadow" >
-                            <div class="card-body p-2">
+                    <h5 class="text-info text-center">Não há novos pedidos no momento <?php echo date('d/m/Y H:i:s'); ?></h5>
+                
+                <?php else: ?>
 
-                                
-                                <div class="card-title d-flex justify-content-center fw-bold fs-4">
-                                    <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
-                                        <span class="fs-5 me-1"><?php echo $pedido->codigo; ?></span>
-                                    </a>
-                                </div>
+                    <?php foreach ($novosPedidos as $pedido): ?> 
 
-                                <div class="d-block">
-                                    <span class="col-6 fw-bold text-nowrap bd-highlight">Valor:</span>
-                                    <span class="fs-5 me-1">R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></span>
-                                </div>
-                                
-                                <div class="d-block">
-                                    <span class="col-6 fw-bold text-nowrap bd-highlight">Data de criação:</span>
-                                    <span><?php echo $pedido->criado_em->humanize(); ?></span>
-                                </div>
-                                
-                                <div class="d-block">
-                                    <span class="col-4 fw-bold text-nowrap bd-highlight">Situação:</span>
-                                    <span>
-                                        <span class="fs-5 me-1"><?php $pedido->exibeSituacaoDoPedido(); ?></span>
-                                    </span>  
-                                </div>
-                                
-                                <div class="d-flex justify-content-center">
-                                    <span class="col-4 fw-bold text-nowrap bd-highlight">Ações:</span>
-                                </div>
-
-                                <!-- botões de modal -->
-                                <div class="d-flex  justify-content-center">
-                                    <div class="d-md-flex justify-content-center">                      
-                                        <button 
-                                            type="button" 
-                                            class="btn btn-primary btn-sm me-1 mb-1" 
-                                            data-bs-toggle="modal" 
-                                        >
-                                            <i class="las la-print"></i>
-                                            Imprimir
-                                        </button>
-
-                                        <button
-                                            class=" btn btn-dark btn-sm me-1 mb-1"
-                                            data-bs-target="#modalShow<?php echo $pedido->id; ?>" 
-                                            data-bs-toggle="modal" 
-                                            data-bs-dismiss="modal"
-                                        >
-                                            <i class="las la-list"></i>
-                                            Detalhes
-                                        </button>
-                                    </div>
-                                </div>
-                                 
-                                <!-- fim botões de modal -->
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- modal show 1 | mostra todos os detalhes da pedido -->
-                    <div class="modal fade" id="modalShow<?php echo $pedido->id; ?>" aria-hidden="true" aria-labelledby="ModalDeDetalhes" tabindex="-1" role="dialog">
-
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalToggleLabel">Detalhes do produto</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                
-                                <div class="card-body">
-                                            
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Situação:</span>
-                                        <?php $pedido->exibeSituacaoDoPedido(); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Criado:</span>
-                                        <?php echo $pedido->criado_em->humanize(); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Atualizado:</span>
-                                        <?php echo $pedido->atualizado_em->humanize(); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Forma de pagamento:</span>
-                                        <?php echo esc($pedido->forma_pagamento); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Valor dos produtos:</span>
-                                        R$&nbsp;<?php echo esc(number_format($pedido->valor_produtos, 2)); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Valor de entrega:</span>
-                                        R$&nbsp;<?php echo esc(number_format($pedido->valor_entrega, 2)); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Valor do pedido:</span>
-                                        R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Endereço de entrega:</span>
-                                        <?php echo esc($pedido->endereco_entrega); ?>
-                                    </p>
-                                    <p class="card-text">
-                                        <span class="font-weight-bold">Observações do pedido:</span>
-                                        <?php echo esc($pedido->observacoes); ?>
-                                    </p>
-
-                                    <ul class="list-group">
-
-                                        <?php $produtos = unserialize($pedido->produtos); ?>
-
-                                        <?php foreach($produtos as $produto): ?>
-                            
-                                            <li class="list-group-item">
-                                            
-                                                <p><strong>Produto:&nbsp;</strong><?php echo $produto['nome']; ?></p>
-                                                <p><strong>Quantidade:&nbsp;</strong><?php echo $produto['quantidade']; ?></p>
-                                                <p><strong>Preço:&nbsp;</strong>R$&nbsp;<?php echo number_format($produto['preco'], 2); ?></p>
-
-                                            </li>
-
-                                        <?php endforeach; ?>
-
-                                    </ul>
-                        
-                                </div>
-                            </div>
-                            <div class="modal-footer">
+                        <div class="col-md-6 col-lg-4 col-xxl-3 col-sm-12 my-2 card-group">
+                            <div class="card shadow" >
+                                <div class="card-body p-2">
 
                                     
-                                <div class="mt-4 d-flex">
+                                    <div class="card-title d-flex justify-content-center fw-bold fs-4">
+                                        <a href="<?php echo site_url("admin/pedidos/show/$pedido->codigo"); ?>">
+                                            <span class="fs-5 me-1"><?php echo $pedido->codigo; ?></span>
+                                        </a>
+                                    </div>
 
-                                    <a href="" 
-                                        class=" btn btn-warning btn-sm me-1 mb-1 d-flex align-items-center">
-                                        <span class=" fs-5 las la-print"></span>                                
-                                        Imprimir
-                                    </a>
+                                    <div class="d-block">
+                                        <span class="col-6 fw-bold text-nowrap bd-highlight">Valor:</span>
+                                        <span class="fs-5 me-1">R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?></span>
+                                    </div>
+                                    
+                                    <div class="d-block">
+                                        <span class="col-6 fw-bold text-nowrap bd-highlight">Data de criação:</span>
+                                        <span><?php echo $pedido->criado_em->humanize(); ?></span>
+                                    </div>
+                                    
+                                    <div class="d-block">
+                                        <span class="col-4 fw-bold text-nowrap bd-highlight">Situação:</span>
+                                        <span>
+                                            <span class="fs-5 me-1"><?php $pedido->exibeSituacaoDoPedido(); ?></span>
+                                        </span>  
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-center">
+                                        <span class="col-4 fw-bold text-nowrap bd-highlight">Ações:</span>
+                                    </div>
 
-                                    <a href="<?php echo site_url("admin/pedidos"); ?>" class="btn  btn-sm btn-light fw-bold">
-                                        Voltar
-                                    </a>
+                                    <!-- botões de modal -->
+                                    <div class="d-flex  justify-content-center">
+                                        <div class="d-md-flex justify-content-center">                      
+                                            <button 
+                                                type="button" 
+                                                class="btn btn-primary btn-sm me-1 mb-1" 
+                                                data-bs-toggle="modal" 
+                                            >
+                                                <i class="las la-print"></i>
+                                                Imprimir
+                                            </button>
+
+                                            <button
+                                                class=" btn btn-dark btn-sm me-1 mb-1"
+                                                data-bs-target="#modalShow<?php echo $pedido->id; ?>" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-dismiss="modal"
+                                            >
+                                                <i class="las la-list"></i>
+                                                Detalhes
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- fim botões de modal -->
 
                                 </div>
-
-                            </div>
                             </div>
                         </div>
-                    </div>
 
-                <?php endforeach; ?>
+                        <!-- modal show 1 | mostra todos os detalhes da pedido -->
+                        <div class="modal fade" id="modalShow<?php echo $pedido->id; ?>" aria-hidden="true" aria-labelledby="ModalDeDetalhes" tabindex="-1" role="dialog">
 
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalToggleLabel">Detalhes do produto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    <div class="card-body">
+                                                
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Situação:</span>
+                                            <?php $pedido->exibeSituacaoDoPedido(); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Criado:</span>
+                                            <?php echo $pedido->criado_em->humanize(); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Atualizado:</span>
+                                            <?php echo $pedido->atualizado_em->humanize(); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Forma de pagamento:</span>
+                                            <?php echo esc($pedido->forma_pagamento); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Valor dos produtos:</span>
+                                            R$&nbsp;<?php echo esc(number_format($pedido->valor_produtos, 2)); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Valor de entrega:</span>
+                                            R$&nbsp;<?php echo esc(number_format($pedido->valor_entrega, 2)); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Valor do pedido:</span>
+                                            R$&nbsp;<?php echo esc(number_format($pedido->valor_pedido, 2)); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Endereço de entrega:</span>
+                                            <?php echo esc($pedido->endereco_entrega); ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <span class="font-weight-bold">Observações do pedido:</span>
+                                            <?php echo esc($pedido->observacoes); ?>
+                                        </p>
+
+                                        <ul class="list-group">
+
+                                            <?php $produtos = unserialize($pedido->produtos); ?>
+
+                                            <?php foreach($produtos as $produto): ?>
+                                
+                                                <li class="list-group-item">
+                                                
+                                                    <p><strong>Produto:&nbsp;</strong><?php echo $produto['nome']; ?></p>
+                                                    <p><strong>Quantidade:&nbsp;</strong><?php echo $produto['quantidade']; ?></p>
+                                                    <p><strong>Preço:&nbsp;</strong>R$&nbsp;<?php echo number_format($produto['preco'], 2); ?></p>
+
+                                                </li>
+
+                                            <?php endforeach; ?>
+
+                                        </ul>
+                            
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+                                        
+                                    <div class="mt-4 d-flex">
+
+                                        <a href="" 
+                                            class=" btn btn-warning btn-sm me-1 mb-1 d-flex align-items-center">
+                                            <span class=" fs-5 las la-print"></span>                                
+                                            Imprimir
+                                        </a>
+
+                                        <a href="<?php echo site_url("admin/pedidos"); ?>" class="btn  btn-sm btn-light fw-bold">
+                                            Voltar
+                                        </a>
+
+                                    </div>
+
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
                 
+                <?php endif; ?>
                 
             </div>
         </div>
@@ -385,11 +387,11 @@
 
                 </div>
             </div>
-        </div>
+        </dv>
     
     </section>
 
-  </main>
+</main>
 
 
 <?php echo $this->endSection(); ?>
