@@ -168,6 +168,7 @@
               <p class="card-description text-center">
                 <code>Aproveite para gerenciar as especificações.</code>
               </p>
+              
               <div class="table-responsive">
                 <table class="table table-hover">
                   <thead>

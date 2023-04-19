@@ -25,8 +25,11 @@
             <h2 class='text-danger border-bottom border-5 border-warning'>Pedido</h2>
             <button  
               class='btn btn-transparent border border-2 border-warning d-flex align-items-center'
+              data-bs-target="#ModalCarrinho" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
             >
-              <span class="las la-shopping-cart fs-4"></span>
+              <span class="las la-shopping-cart fs-1 text-danger"></span>
               <span class='fs-4' >0</span>
             </button>
         </div>
@@ -84,11 +87,6 @@
       <h3 id="categoria" class='p-1 px-3 bg-danger text-white rounded-pill'>Pizzas</h3>
     </div>
 
-    <!-- Verificar o  titulo da categoria -->
-    <?php if (empty($categorias)): ?>
-    <?php else: ?>
-    <?php endif; ?>
-
   </div>
 
   <div class="container margin-produto">
@@ -130,6 +128,9 @@
                   <div class='d-flex justify-content-center'>
                     <button 
                       class='btn rounded-circle btn-success m-1'
+                      data-bs-target="#ModalRegister" 
+                      data-bs-toggle="modal" 
+                      data-bs-dismiss="modal"
                     >
                       <i class="las la-plus"></i>
                     </button>
@@ -141,6 +142,212 @@
         <?php endif; ?>
       
     </div>
+
+    <!-- Modal de abrir produto -->
+    <div class="modal fade" id="ModalRegister" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Produto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Produto</h5>
+          </div>
+          <!-- end modal body -->
+          
+          <div class="modal-footer d-flex justify-content-center">
+            
+            <button 
+              class="btn btn-sm btn-danger fw-bold" 
+              data-bs-target="#exampleModalToggle" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Voltar
+            </button>
+            
+            <button 
+              class="btn btn-sm btn-primary fw-bold" 
+              data-bs-target="#ModalDoisSabores" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Dois sabores
+            </button>
+
+            <button type="submit" class="btn btn-success btn-sm mr-2 ">
+              adicionar
+              <i class="las la-plus"></i>
+            </button>
+            
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal abrir dois sabores -->
+     <div class="modal fade" id="ModalDoisSabores" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Dois sabores</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Dois sabores</h5>
+          </div>
+          <!-- end modal body -->
+          
+          <div class="modal-footer d-flex justify-content-center">
+            
+            <button 
+              class="btn btn-sm btn-danger " 
+              data-bs-target="#ModalRegister" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Voltar
+            </button>
+            
+            <button type="submit" class="btn btn-success btn-sm mr-2 ">
+              adicionar
+              <i class="las la-plus"></i>
+            </button>
+            
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal abrir carrinho -->
+     <div class="modal fade" id="ModalCarrinho" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Carrinho</h5>
+          </div>
+          <!-- end modal body -->
+          
+          <div class="modal-footer d-flex justify-content-center">
+            
+            <button 
+              class="btn btn-sm btn-danger " 
+              data-bs-target="#" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Sair
+            </button>
+            
+            <button 
+              type="submit" 
+              class="btn btn-success btn-sm mr-2 "
+              data-bs-target="#ModalFinalizarProduto" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Finalizar
+              <i class="las la-plus"></i>
+            </button>
+            
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal abrir editar produto -->
+     <div class="modal fade" id="ModalEditaProduto" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Edita produto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Edita produto</h5>
+          </div>
+          <!-- end modal body -->
+          
+          <div class="modal-footer d-flex justify-content-center">
+            
+            <button 
+              class="btn btn-sm btn-danger " 
+              data-bs-target="#" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Voltar
+            </button>
+            
+            <button type="submit" class="btn btn-success btn-sm mr-2 ">
+              Finalizar
+              <i class="las la-plus"></i>
+            </button>
+            
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal abrir finalizar produto -->
+     <div class="modal fade" id="ModalFinalizarProduto" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Finalizar produto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Finalizar produto</h5>
+          </div>
+          <!-- end modal body -->
+          
+          <div class="modal-footer d-flex justify-content-center">
+            
+            <button 
+              class="btn btn-sm btn-danger " 
+              data-bs-target="#ModalCarrinho" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              voltar
+            </button>
+            
+            <button type="submit" class="btn btn-success btn-sm mr-2 ">
+              Enviar pedido
+              <i class="las la-plus"></i>
+            </button>
+            
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
   </div>
 
 

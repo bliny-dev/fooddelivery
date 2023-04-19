@@ -115,6 +115,9 @@
                     <button 
                         id="btnimg-empresa" 
                         class="btn btn-warning bg-gradient ms-1 rounded-circle"
+                        data-bs-target="#ModalEditaImagem" 
+                        data-bs-toggle="modal" 
+                        data-bs-dismiss="modal"
                     > 
                         <i class="las la-pen fs-3 fw-bold"></i>  
                     </button>
@@ -146,6 +149,45 @@
             </div>
         </div>
         
+        
+     <!-- Modal abrir editar Imagem -->
+     <div class="modal fade" id="ModalEditaImagem" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">Edita Imagem</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+            <h5>Edita Imagem</h5>
+          </div>
+          <!-- end modal body -->
+          
+          <div class="modal-footer d-flex justify-content-center">
+            
+            <button 
+              class="btn btn-sm btn-danger " 
+              data-bs-target="#" 
+              data-bs-toggle="modal" 
+              data-bs-dismiss="modal"
+            >
+              Sair
+            </button>
+            
+            <button type="submit" class="btn btn-success btn-sm mr-2 ">
+              Salvar
+              <i class="las la-plus"></i>
+            </button>
+            
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
     </div>    
     
    
