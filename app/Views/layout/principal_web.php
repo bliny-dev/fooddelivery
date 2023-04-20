@@ -159,9 +159,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
 
-          <div class="modal-body">
-            <h5>Edita Imagem</h5>
-          </div>
+            <div class="modal-body text-center">
+
+                <form action="">
+                    <div>
+                        <span class='fs-4 fw-bold'>Foto de perfil</span>
+                        <input type="file" class='file-upload-default form-control'/>
+                    </div>
+                    <div>
+                        <span class='fs-4 fw-bold'>Foto de capa</span>
+                        <input type="file" class='file-upload-default form-control'/>
+                    </div>
+                </form>
+
+            </div>
           <!-- end modal body -->
           
           <div class="modal-footer d-flex justify-content-center">
@@ -199,16 +210,16 @@
 
     </div>
     
-<!--     
-    <footer className="container-fluid border-top border-3 border-warning">
-        <div className="row">
-            <div className="col-12 d-flex justify-content-center">
+     
+    <footer class="container-fluid border-top border-3 border-warning">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
                 <div>
-                    <p className='fw-bold'>&#169; Desenvolvido por Bliny Software</p>
+                    <p class='fw-bold'>&#169; Desenvolvido por Bliny Software</p>
                 </div> 
             </div>
         </div>
-    </footer> -->
+    </footer> 
 
     <!-- bundle js bootstrap5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

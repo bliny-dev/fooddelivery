@@ -42,6 +42,55 @@ a{
 }
 
 
+
+/* Estilos de modais produto*/
+
+.fotoModalProduto{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.inputNumber{
+    width: 130px;
+}
+
+.clicked{
+    cursor: pointer;
+}
+
+/* modal editar produto */
+.img-custom{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* modal editar produto */
+.produtoCart{
+    border: 2px solid cyan;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .span-card{
+    font-size: 13px;
+  }
+  
+  .btn-cart{
+    width: 190px;
+  }
+
+/* Modal finalizar pedido */
+.inputNumber{
+    width: 130px;
+}
+
+.clicked{
+    cursor: pointer;
+}
+
+  
 /* Banner da empresa */
 .logo-empresa{
     width: 100px;
@@ -67,6 +116,7 @@ a{
     transform: translate(-50%, -50%);
 
 }
+
 @media screen and (max-width: 768px){
     span{
         font-size: 10px;
