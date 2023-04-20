@@ -270,7 +270,7 @@
           <div class="modal-footer d-flex justify-content-center">
             
             <button 
-              class="btn btn-sm btn-danger fw-bold" 
+              class="btn btn-sm btn-danger" 
               data-bs-target="#exampleModalToggle" 
               data-bs-toggle="modal" 
               data-bs-dismiss="modal"
@@ -497,7 +497,12 @@
                 <h6> R$ 175.00 </h6>
               </div>
               <div class='d-flex justify-content-center'>
-                <button onClick={handleEditaProduto} class='btn btn-warning rounded-circle me-1'>
+                <button 
+                  class='btn btn-warning rounded-circle me-1'
+                  data-bs-target="#ModalEditaProduto" 
+                  data-bs-toggle="modal" 
+                  data-bs-dismiss="modal"                
+                >
                   <i ></i>
                 </button>
                 <button class='btn btn-danger rounded-circle'>
@@ -558,8 +563,108 @@
           </div>
 
           <div class="modal-body">
-            <h5>Edita produto</h5>
+
+            <div class='text-center'>
+              <img  class='fotoModalProduto' src="#" alt="" />
+            </div>
+            <div class='text-center'>
+              <h5 class='border-bottom border-3 border-danger'>Pizza de calabresa</h5>
+            </div> 
+
+            <!-- Ingredientes -->
+            <div class="d-flex justify-content-center">
+              <h5 class='fs-6 ms-3'>
+                calabresa, cebola, queijo, tomate, milho, azeitona, salsicha
+              </h5>   
+            </div>
+
+            <!-- Medidas -->
+            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+
+              <div class='d-flex justify-content-center border-bottom border-2 border-danger'>
+                <h5>Medidas:</h5>
+              </div>
+
+              <div class="form-check  mt-2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                <label class="form-check-label" htmlFor="flexRadioDefault1">
+                  Pequena R$ 25.00
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                <label class="form-check-label" htmlFor="flexRadioDefault2">
+                  Grande R$ 50.00
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                <label class="form-check-label" htmlFor="flexRadioDefault2">
+                  Extra grande R$ 50.00
+                </label>
+              </div>
+
+            </div>
+
+            <!-- Extras -->
+            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+
+              <div class='d-flex mb-2 justify-content-center border-bottom border-2 border-danger'>
+                <h5>Extras:</h5>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                <label class="form-check-label" htmlFor="flexCheckDefault">
+                  Sem extra
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                <label class="form-check-label" htmlFor="flexCheckDefault">
+                  Cheddar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                <label class="form-check-label" htmlFor="flexCheckDefault">
+                  Catupiry
+                </label>
+              </div>
+
+            </div>
+
+            <!-- Quantidade -->
+            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+
+              <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
+                <h5>Quantidade:</h5>
+              </div>
+
+              <div class='d-flex justify-content-center'>
+                <div class="inputNumber d-flex align-items-center">
+                  <i class='btn clicked p-2 bg-danger text-white rounded me-1'></i>
+                    <input type="number" class='form-control' />
+                  <i class='btn clicked p-2 bg-danger text-white rounded ms-1'></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Observações é uma sugestão -->
+            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+
+              <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
+                <h5>Observações:</h5>
+              </div>
+
+              <div class='d-flex justify-content-center'>
+                <textarea class='form-control' name="" id=""></textarea>
+              </div>
+            </div>
+
+
           </div>
+
           <!-- end modal body -->
           
           <div class="modal-footer d-flex justify-content-center">
