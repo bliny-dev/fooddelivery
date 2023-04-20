@@ -52,7 +52,7 @@
                     
                     <li class="nav-item ">
                         <a class="nav-link text-white" href="<?php echo site_url('admin/home'); ?>">
-                            <span class="las la-city"></span>
+                            <span class="las la-chart-pie"></span>
                             Dashboard
                         </a>
                     </li>
