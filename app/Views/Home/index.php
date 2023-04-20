@@ -128,7 +128,7 @@
                   <div class='d-flex justify-content-center'>
                     <button 
                       class='btn rounded-circle btn-success m-1'
-                      data-bs-target="#ModalRegister" 
+                      data-bs-target="#ModalDetalheProduto<?php echo esc($produto->nome); ?>" 
                       data-bs-toggle="modal" 
                       data-bs-dismiss="modal"
                     >
@@ -138,166 +138,172 @@
                 </div>
               </div>
             </div>    
-          <?php endforeach; ?>
-        <?php endif; ?>
-      
-    </div>
+            
+            <!-- Modal de abrir produto -->
+            <div class="modal fade" id="ModalDetalheProduto<?php echo esc($produto->nome); ?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Produto <?php echo esc($produto->categoria); ?> de <?php echo esc($produto->nome); ?></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
 
-    <!-- Modal de abrir produto -->
-    <div class="modal fade" id="ModalRegister" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleLabel2">Produto</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
+                  <div class="modal-body">
 
-          <div class="modal-body">
+                    <div class="row d-flex">
 
-            <div class="row d-flex">
+                    </div>
 
-            </div>
+                    <div class='text-center'>
+                      <img 
+                        src="<?php echo site_url("produto/imagem/$produto->imagem"); ?>"
+                        class="fotoModalProduto border border-3 border-danger" 
+                        alt="Nome do produto" 
+                      />
+                    </div>
+                    <div class='d-flex justify-content-center'>
+                      <h5 class='border-bottom border-3 border-danger'><?php echo esc($produto->nome); ?></h5>
+                    </div> 
 
-            <div class='text-center'>
-              <img 
-                src="<?php echo site_url("produto/imagem/$produto->imagem"); ?>"
-                class="fotoModalProduto border border-3 border-danger" 
-                alt="Nome do produto" 
-              />
-            </div>
-            <div class='d-flex justify-content-center'>
-              <h5 class='border-bottom border-3 border-danger'>Pizza de calabresa</h5>
-            </div> 
+                    <!-- ingredientes -->
+                    <div class="d-flex justify-content-center">
+                      <h5 class='fs-6 ms-3'>
+                      <?php echo esc($produto->ingredientes); ?>
+                      </h5>   
+                    </div>
 
-            <!-- ingredientes -->
-            <div class="d-flex justify-content-center">
-              <h5 class='fs-6 ms-3'>
-                calabresa, cebola, queijo, tomate, milho, azeitona, salsicha
-              </h5>   
-            </div>
+                    <!-- Medidas -->
+                    <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
 
-            <!-- Medidas -->
-            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+                      <div class='d-flex justify-content-center border-bottom border-2 border-danger'>
+                        <h5>Medidas:</h5>
+                      </div>
 
-              <div class='d-flex justify-content-center border-bottom border-2 border-danger'>
-                <h5>Medidas:</h5>
-              </div>
+                      <?php foreach ($especificacoes as $especificacao): ?>
+                        <div class="form-check  mt-2">
+                          <input 
+                            type="radio" 
+                            class="form-check-input"
+                            data-especificacao="<?php echo $especificacao->especificacao_id; ?>"
+                            name="produto[preco]" 
+                            value="<?php echo $especificacao->preco; ?>"
+                          />
+                          <label class="form-check-label" htmlFor="flexRadioDefault1">
+                            <?php echo esc($especificacao->nome); ?> 
+                            R$&nbsp;<?php echo esc(number_format($especificacao->preco, 2)); ?>
+                          </label>
+                        </div>
+                      <?php endforeach; ?>
 
-              <div class="form-check  mt-2">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-                <label class="form-check-label" htmlFor="flexRadioDefault1">
-                  Pequena R$ 25.00
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                <label class="form-check-label" htmlFor="flexRadioDefault2">
-                  Grande R$ 50.00
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
-                <label class="form-check-label" htmlFor="flexRadioDefault2">
-                  Extra grande R$ 50.00
-                </label>
-              </div>
+                    </div>
 
-            </div>
+                    <!-- Extras -->
+                    <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
 
-            <!-- Extras -->
-            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+                    <?php if (isset($extras)): ?>
+                      <div class='d-flex mb-2 justify-content-center border-bottom border-2 border-danger'>
+                        <h5>Extras:</h5>
+                      </div>
 
-              <div class='d-flex mb-2 justify-content-center border-bottom border-2 border-danger'>
-                <h5>Extras:</h5>
-              </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                        <label class="form-check-label" htmlFor="flexCheckDefault">
+                          Sem extra
+                        </label>
+                      </div>
+                      <?php foreach ($extras as $extra): ?>
+                        <div class="form-check">
+                          <input 
+                            type="checkbox" 
+                            class="form-check-input"
+                            data-extra="<?php echo $extra->id; ?>" 
+                            name="extra" 
+                            value="<?php echo $extra->preco; ?>" 
+                          />
+                          <label class="form-check-label" htmlFor="flexCheckDefault">
+                            <?php echo esc($extra->nome); ?>
+                            R$&nbsp;<?php echo esc(number_format($extra->preco, 2)); ?>
+                          </label>
+                        </div>
+                      <?php endforeach; ?>
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                <label class="form-check-label" htmlFor="flexCheckDefault">
-                  Sem extra
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                <label class="form-check-label" htmlFor="flexCheckDefault">
-                  Cheddar
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-                <label class="form-check-label" htmlFor="flexCheckDefault">
-                  Catupiry
-                </label>
-              </div>
+                    <?php endif; ?>
 
-            </div>
+                    </div>
 
-            <!-- Quantidade -->
-            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+                    <!-- Quantidade -->
+                    <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
 
-              <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
-                <h5>Quantidade:</h5>
-              </div>
+                      <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
+                        <h5>Quantidade:</h5>
+                      </div>
 
-              <div class='d-flex justify-content-center'>
-                <div class="inputNumber d-flex align-items-center">
+                      <div class='d-flex justify-content-center'>
+                        <div class="inputNumber d-flex align-items-center">
 
-                  <i class='btn clicked p-2 bg-danger text-white rounded me-1' icon={faArrowUp}></i>
-                    <input type="number"  class='form-control' />
-                  <i  class='btn clicked p-2 bg-danger text-white  rounded ms-1' icon={faArrowDown}></i>
+                          <i class='btn clicked p-2 bg-danger text-white rounded me-1' icon={faArrowUp}></i>
+                            <input type="number"  class='form-control' />
+                          <i  class='btn clicked p-2 bg-danger text-white  rounded ms-1' icon={faArrowDown}></i>
+
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <!-- Observações é uma sugestão -->
+                    <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+
+                      <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
+                        <h5>Observações:</h5>
+                      </div>
+
+                      <div class='d-flex justify-content-center'>
+                        <textarea class='form-control' name="" id=""></textarea>
+                      </div>
+                    </div>
+
+                    </div>
+
+                  <!-- end modal body -->
+                  
+                  <div class="modal-footer d-flex justify-content-center">
+                    
+                    <button 
+                      class="btn btn-sm btn-danger" 
+                      data-bs-target="#exampleModalToggle" 
+                      data-bs-toggle="modal" 
+                      data-bs-dismiss="modal"
+                    >
+                      Voltar
+                    </button>
+                    
+                    <button 
+                      class="btn btn-sm btn-primary" 
+                      data-bs-target="#ModalDoisSabores" 
+                      data-bs-toggle="modal" 
+                      data-bs-dismiss="modal"
+                    >
+                      Dois sabores
+                    </button>
+
+                    <button type="submit" class="btn btn-success btn-sm mr-2 ">
+                      adicionar
+                      <i class="las la-plus"></i>
+                    </button>
+                    
+                  </div>
+
+
 
                 </div>
               </div>
-              
             </div>
 
-            <!-- Observações é uma sugestão -->
-            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
-
-              <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
-                <h5>Observações:</h5>
-              </div>
-
-              <div class='d-flex justify-content-center'>
-                <textarea class='form-control' name="" id=""></textarea>
-              </div>
-            </div>
-
-            </div>
-
-          <!-- end modal body -->
+          <?php endforeach; ?>
           
-          <div class="modal-footer d-flex justify-content-center">
-            
-            <button 
-              class="btn btn-sm btn-danger" 
-              data-bs-target="#exampleModalToggle" 
-              data-bs-toggle="modal" 
-              data-bs-dismiss="modal"
-            >
-              Voltar
-            </button>
-            
-            <button 
-              class="btn btn-sm btn-primary" 
-              data-bs-target="#ModalDoisSabores" 
-              data-bs-toggle="modal" 
-              data-bs-dismiss="modal"
-            >
-              Dois sabores
-            </button>
 
-            <button type="submit" class="btn btn-success btn-sm mr-2 ">
-              adicionar
-              <i class="las la-plus"></i>
-            </button>
-            
-          </div>
-
-
-
-        </div>
-      </div>
+        <?php endif; ?>
+      
     </div>
 
      <!-- Modal abrir dois sabores -->
@@ -430,7 +436,7 @@
             
             <button 
               class="btn btn-sm btn-danger " 
-              data-bs-target="#ModalRegister" 
+              data-bs-target="#ModalDetalheProduto" 
               data-bs-toggle="modal" 
               data-bs-dismiss="modal"
             >
