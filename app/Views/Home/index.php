@@ -107,9 +107,11 @@
         <?php else: ?>
           
           <?php foreach ($produtos as $produto): ?>
+           
             <!-- Cada card -->
-            <div  class="col-sm-12 col-md-6 col-lg-4 d-flex p-2 justify-content-center filtr-item filter active <?php echo $produto->categoria_slug; ?>">
-              <div id="<?php echo $produto->categoria_slug; ?>" class="custom-card p-2 d-flex border border-warning shadow-sm rounded-4 bg-white <?php echo $produto->categoria_slug; ?>">
+            <div  class="col-sm-12 col-md-6 col-lg-4 d-flex p-2 justify-content-center filtr-item filter  active <?php echo $produto->categoria_slug; ?>">
+              
+              <div id="<?php echo $produto->categoria_slug; ?>" data-fancybox-group="fancybox"class="fancybox custom-card p-2 d-flex border border-warning shadow-sm rounded-4 bg-white <?php echo $produto->categoria_slug; ?>">
 
                 <div class="">
                   <img 
@@ -256,7 +258,7 @@
                             <i class='las la-arrow-down'></i>
                           </div>
 
-                            <input type="number"  class=' inputNumber' />
+                            <input type="number" class="inputNumber" name="produto[quantidade]" placeholder="Quantidade" value="1" min="1" max="10" step="1" required="">
 
                           <div class="btn clicked p-2 bg-danger text-white rounded ms-1">
                             <i  class='las la-arrow-up'></i>
@@ -287,7 +289,7 @@
                     
                     <button 
                       class="btn btn-sm btn-danger" 
-                      data-bs-target="#exampleModalToggle" 
+                      data-bs-target="#" 
                       data-bs-toggle="modal" 
                       data-bs-dismiss="modal"
                     >
