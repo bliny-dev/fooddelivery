@@ -30,7 +30,13 @@
               data-bs-dismiss="modal"
             >
               <span class="las la-shopping-cart fs-1 text-danger"></span>
-              <span class='fs-4'>0</span>
+
+              <?php if (session()->has('carrinho') && count(session()->get('carrinho')) > 0): ?>
+                <span class='fs-4'><?php echo count(session()->get('carrinho')); ?></span>
+              <?php else: ?>
+                <span class='fs-4'>0</span>
+              <?php endif; ?>
+              
             </button>
         </div>
     </div>
@@ -203,11 +209,11 @@
 
                     <!-- Extras -->
                     <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
-
-                    <?php if (isset($extras)): ?>
+                      
                       <div class='d-flex mb-2 justify-content-center border-bottom border-2 border-danger'>
                         <h5>Extras:</h5>
                       </div>
+                    <?php if (isset($extras)): ?>
 
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
@@ -243,19 +249,25 @@
                       </div>
 
                       <div class='d-flex justify-content-center'>
-                        <div class="inputNumber d-flex align-items-center">
+                        <div class=" d-flex align-items-center">
 
-                          <i class='btn clicked p-2 bg-danger text-white rounded me-1' icon={faArrowUp}></i>
-                            <input type="number"  class='form-control' />
-                          <i  class='btn clicked p-2 bg-danger text-white  rounded ms-1' icon={faArrowDown}></i>
+                          <div class="btn clicked p-2 bg-danger text-white rounded me-1">
+                            <i class='las la-arrow-down'></i>
+                          </div>
 
+                            <input type="number"  class=' inputNumber' />
+
+                          <div class="btn clicked p-2 bg-danger text-white rounded ms-1">
+                            <i  class='las la-arrow-up'></i>
+                          </div>
+                          
                         </div>
                       </div>
                       
                     </div>
 
                     <!-- Observações é uma sugestão -->
-                    <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+                    <!-- <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
 
                       <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
                         <h5>Observações:</h5>
@@ -264,7 +276,7 @@
                       <div class='d-flex justify-content-center'>
                         <textarea class='form-control' name="" id=""></textarea>
                       </div>
-                    </div>
+                    </div> -->
 
                     </div>
 
@@ -280,15 +292,27 @@
                     >
                       Voltar
                     </button>
-                    
-                    <button 
+
+                    <?php foreach ($especificacoes as $especificacao): ?>
+
+                      <?php if ($especificacao->customizavel): ?>
+
+                        <a href="<?php echo site_url("produto/customizar/$produto->slug"); ?>" class="btn btn-sm btn-primary">Dois sabores</a>
+
+                        <?php break; ?>
+
+                      <?php endif; ?>
+
+                    <?php endforeach; ?>
+
+                    <!-- <button 
                       class="btn btn-sm btn-primary" 
                       data-bs-target="#ModalDoisSabores" 
                       data-bs-toggle="modal" 
                       data-bs-dismiss="modal"
                     >
                       Dois sabores
-                    </button>
+                    </button> -->
 
                     <button type="submit" class="btn btn-success btn-sm mr-2 ">
                       adicionar
@@ -303,161 +327,164 @@
               </div>
             </div>
 
+            <!-- Modal abrir dois sabores -->
+            <div class="modal fade" id="ModalDoisSabores" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Dois sabores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+
+                    <!-- Medida -->
+                    <?php echo form_open("carrinho/especial"); ?>
+                      
+                      <div class='border border-2 border-danger rounded-4 py-2 my-1'>
+                        <div class='d-flex justify-content-center'>
+                          <h5>Medida</h5>
+                        </div>
+                        
+                        <div class='d-flex justify-content-center align-items-center px-1'>
+                          <div class='ms-1'>
+                            <select class="form-select" aria-label="Default select example">
+                              <option >Pequena</option>
+                              <option >Média</option>
+                              <option >Grande</option>
+                              <option >Extra grande</option>
+                            </select>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <!-- Primeiro sabor -->
+                      <div class='border border-2 border-danger rounded-4 py-2 my-1'>
+                        
+                        <div class='d-flex justify-content-center'>
+                          <h5>Primeiro sabor</h5>
+                        </div>
+
+                        <div class='mb-2 d-flex justify-content-center'>
+                          <img src="<?php echo site_url("produto/imagem/$produto->imagem"); ?>" class="img-custom" alt="Logo da empresa" />
+                        </div>
+
+                        <div class='px-2'>
+                          <select class="form-select" aria-label="Default select example">
+                            <option >calabresa</option>
+                            <option >4 queijos</option>
+                            <option >Portuguesa</option>
+                            <option >Frango com catupyri</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Segundo sabor -->
+                      <div class='border border-2 border-danger rounded-4 py-2 my-1'>
+                        
+                        <div class='d-flex justify-content-center'>
+                          <h5>Segundo sabor</h5>
+                        </div>
+
+                        <div class='mb-2 d-flex justify-content-center'>
+                          <img src="<?php echo site_url("produto/imagem/$produto->imagem"); ?>" class="img-custom" alt="Logo da empresa" />
+                        </div>
+
+                        <div class='px-2'>
+                          <select class="form-select" aria-label="Default select example">
+                            <option >calabresa</option>
+                            <option >4 queijos</option>
+                            <option >Portuguesa</option>
+                            <option >Frango com catupyri</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- Extras -->
+                      <div class='border border-2 border-danger rounded-4 py-2 my-1'>
+                        
+                        <div class='d-flex justify-content-center'>
+                          <h5>Extras</h5>
+                        </div>
+
+                        <div class='px-4'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault"/>
+                            <label class="form-check-label" htmlFor="flexCheckDefault">
+                              Sem extra
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault"/>
+                            <label class="form-check-label" htmlFor="flexCheckDefault">
+                              Cheddar
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="3" id="flexCheckDefault"/>
+                            <label class="form-check-label" htmlFor="flexCheckDefault">
+                              Catupiry
+                            </label>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <!-- Quantidade -->
+                      <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
+
+                        <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
+                          <h5>Quantidade:</h5>
+                        </div>
+
+                        <div class='d-flex justify-content-center'>
+                          <div class="inputNumber d-flex align-items-center">
+
+                            <i class='btn clicked p-2 bg-danger text-white rounded me-1'></i>
+                              <input type="number"  class='form-control' />
+                            <i class='btn clicked p-2 bg-danger text-white rounded ms-1'></i>
+
+                          </div>
+                        </div>
+                        
+                      </div>
+
+
+                  </div>
+                  <!-- end modal body -->
+                  
+                  <div class="modal-footer d-flex justify-content-center">
+                  
+                    <button 
+                      class="btn btn-sm btn-danger " 
+                      data-bs-target="#ModalDetalheProduto" 
+                      data-bs-toggle="modal" 
+                      data-bs-dismiss="modal"
+                    >
+                      Voltar
+                    </button>
+                    
+                    <button type="submit" class="btn btn-success btn-sm mr-2 ">
+                      adicionar
+                      <i class="las la-plus"></i>
+                    </button>
+                  
+                  </div>
+
+                    <?php echo form_close(); ?>
+
+                </div>
+              </div>
+            </div>
+
           <?php endforeach; ?>
           
 
         <?php endif; ?>
       
-    </div>
-
-     <!-- Modal abrir dois sabores -->
-     <div class="modal fade" id="ModalDoisSabores" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalToggleLabel2">Dois sabores</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-
-          <div class="modal-body">
-
-            <!-- Medida -->
-            <div class='border border-2 border-danger rounded-4 py-2 my-1'>
-              <div class='d-flex justify-content-center'>
-                <h5>Medida</h5>
-              </div>
-              <div class='d-flex justify-content-center align-items-center px-1'>
-                <div class='ms-1'>
-                  <select class="form-select" aria-label="Default select example">
-                    <option >Pequena</option>
-                    <option >Média</option>
-                    <option >Grande</option>
-                    <option >Extra grande</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Primeiro sabor -->
-            <div class='border border-2 border-danger rounded-4 py-2 my-1'>
-              
-              <div class='d-flex justify-content-center'>
-                <h5>Primeiro sabor</h5>
-              </div>
-
-              <div class='mb-2 d-flex justify-content-center'>
-                <img src="#" class="img-custom" alt="Logo da empresa" />
-              </div>
-
-              <div class='px-2'>
-                <select class="form-select" aria-label="Default select example">
-                  <option >calabresa</option>
-                  <option >4 queijos</option>
-                  <option >Portuguesa</option>
-                  <option >Frango com catupyri</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Segundo sabor -->
-            <div class='border border-2 border-danger rounded-4 py-2 my-1'>
-              
-              <div class='d-flex justify-content-center'>
-                <h5>Segundo sabor</h5>
-              </div>
-
-              <div class='mb-2 d-flex justify-content-center'>
-                <img src="#" class="img-custom" alt="Logo da empresa" />
-              </div>
-
-              <div class='px-2'>
-                <select class="form-select" aria-label="Default select example">
-                  <option >calabresa</option>
-                  <option >4 queijos</option>
-                  <option >Portuguesa</option>
-                  <option >Frango com catupyri</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Extras -->
-            <div class='border border-2 border-danger rounded-4 py-2 my-1'>
-              
-              <div class='d-flex justify-content-center'>
-                <h5>Extras</h5>
-              </div>
-
-              <div class='px-4'>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault"/>
-                  <label class="form-check-label" htmlFor="flexCheckDefault">
-                    Sem extra
-                  </label>
-                </div>
-
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault"/>
-                  <label class="form-check-label" htmlFor="flexCheckDefault">
-                    Cheddar
-                  </label>
-                </div>
-
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="3" id="flexCheckDefault"/>
-                  <label class="form-check-label" htmlFor="flexCheckDefault">
-                    Catupiry
-                  </label>
-                </div>
-              </div>
-
-            </div>
-
-
-            <!-- Quantidade -->
-            <div class='border border-2 border-danger rounded-4 py-2 px-2 mb-2'>
-
-              <div class='d-flex justify-content-center border-bottom border-2 border-danger mb-2'>
-                <h5>Quantidade:</h5>
-              </div>
-
-              <div class='d-flex justify-content-center'>
-                <div class="inputNumber d-flex align-items-center">
-
-                  <i class='btn clicked p-2 bg-danger text-white rounded me-1'></i>
-                    <input type="number"  class='form-control' />
-                  <i class='btn clicked p-2 bg-danger text-white rounded ms-1'></i>
-
-                </div>
-              </div>
-              
-            </div>
-
-
-          </div>
-          <!-- end modal body -->
-          
-          <div class="modal-footer d-flex justify-content-center">
-            
-            <button 
-              class="btn btn-sm btn-danger " 
-              data-bs-target="#ModalDetalheProduto" 
-              data-bs-toggle="modal" 
-              data-bs-dismiss="modal"
-            >
-              Voltar
-            </button>
-            
-            <button type="submit" class="btn btn-success btn-sm mr-2 ">
-              adicionar
-              <i class="las la-plus"></i>
-            </button>
-            
-          </div>
-
-
-
-        </div>
-      </div>
     </div>
 
      <!-- Modal abrir carrinho -->

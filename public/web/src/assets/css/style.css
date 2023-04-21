@@ -52,7 +52,9 @@ a{
 }
 
 .inputNumber{
-    width: 130px;
+    width: 80px;
+    height: 40px;
+    border-radius: 7px;
 }
 
 .clicked{
@@ -82,9 +84,7 @@ a{
   }
 
 /* Modal finalizar pedido */
-.inputNumber{
-    width: 130px;
-}
+
 
 .clicked{
     cursor: pointer;
