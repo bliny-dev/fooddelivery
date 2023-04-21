@@ -294,15 +294,22 @@
                     </button>
 
                     <?php foreach ($especificacoes as $especificacao): ?>
+                      <?php foreach ($especificacao as $esp): ?>
 
-                      <?php if ($especificacao->customizavel): ?>
+                        <?php if ($esp->customizavel): ?>
 
-                        <a href="<?php echo site_url("produto/customizar/$produto->slug"); ?>" class="btn btn-sm btn-primary">Dois sabores</a>
+                          <a 
+                            href="<?php echo site_url("produto/customizar/$produto->slug"); ?>" 
+                            class="btn btn-sm btn-primary"
+                          >
+                            Dois sabores
+                          </a>
 
-                        <?php break; ?>
+                          <?php break; ?>
 
-                      <?php endif; ?>
+                        <?php endif; ?>
 
+                      <?php endforeach; ?>
                     <?php endforeach; ?>
 
                     <!-- <button 
