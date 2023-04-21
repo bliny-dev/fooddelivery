@@ -227,6 +227,23 @@
     <!-- scripts referentes ao navbar -->
     <script src="<?php echo site_url('web/') ?>src/assets/js/navbar.js"></script>
     <!-- Essa section renderizará os scripts específicos da view que estender esse layout -->
+
+
+    <!-- JavaScript -->
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/jquery-2.1.1.min.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/jquery.mousewheel.min.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/jquery.easing.min.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/scrolling-nav.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/aos.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/slick.min.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/jquery.touchSwipe.min.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/moment.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/bootstrap-datepicker.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/bootstrap-datetimepicker.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/jquery.fancybox.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/loadMoreResults.js"></script>
+    <script src="<?php echo site_url('web/'); ?>src/assets/js/main.js"></script>
     <?php echo $this->renderSection('scripts'); ?>
   </body>
 

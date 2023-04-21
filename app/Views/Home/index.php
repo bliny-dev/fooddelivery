@@ -49,28 +49,28 @@
       <h4 class='py-2 px-4 bg-danger text-white rounded-pill' >Categorias</h4>
     </div>
 
-    <div class='d-flex justify-content-center'>
+    <div class='menu-filter d-flex justify-content-center'>
       <div class="d-flex menu ms-md-5">
         <?php if (empty($categorias)): ?>
           
           <p href="#categoria" class="filter-button text-center">Não há categorias para exibir</p>
           
         <?php else: ?>
-
-          <a  
-            href="#categoria" 
-            data-filter="todas"
-            class="text-nowrap bd-highlight btn btn-sm bg-white border border-2 border-warning text-danger fw-bold me-1 mb-1"
-          >
-            Todas
-          </a>
-
+          <div id="todas">
+            <a  
+              href="javascript:;" 
+              data-filter="todas"
+              class="text-nowrap bd-highlight btn btn-sm bg-white border border-2 border-warning text-danger fw-bold me-1 mb-1"
+            >
+              Todas
+            </a>
+          </div>
           <?php foreach ($categorias as $categoria): ?>
 
             <a 
-              href="#categoria" 
+              href="javascript:;"
+              class="filter-button text-nowrap bd-highlight btn btn-sm bg-white border border-2 border-warning text-danger fw-bold me-1 mb-1"
               data-filter="<?php echo $categoria->slug; ?>"
-              class="text-nowrap bd-highlight btn btn-sm bg-white border border-2 border-warning text-danger fw-bold me-1 mb-1"
             >
               <?php echo esc($categoria->nome); ?>
             </a>
@@ -95,7 +95,7 @@
 
   </div>
 
-  <div class="container margin-produto">
+  <div id="menu_items" class="container margin-produto">
     <div class="row d-flex justify-content-center align-items-center">
              
         <?php if (empty($produtos)): ?>
@@ -105,9 +105,10 @@
           </div>
 
         <?php else: ?>
+          
           <?php foreach ($produtos as $produto): ?>
             <!-- Cada card -->
-            <div class="col-sm-12 col-md-6 col-lg-4 d-flex p-2 justify-content-center">
+            <div  class="col-sm-12 col-md-6 col-lg-4 d-flex p-2 justify-content-center filtr-item filter active <?php echo $produto->categoria_slug; ?>">
               <div id="<?php echo $produto->categoria_slug; ?>" class="custom-card p-2 d-flex border border-warning shadow-sm rounded-4 bg-white <?php echo $produto->categoria_slug; ?>">
 
                 <div class="">
@@ -143,7 +144,7 @@
                   </div>
                 </div>
               </div>
-            </div>    
+            </div>   
             
             <!-- Modal de abrir produto -->
             <div class="modal fade" id="ModalDetalheProduto<?php echo esc($produto->id); ?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
