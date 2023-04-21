@@ -128,7 +128,7 @@
                   <div class='d-flex justify-content-center'>
                     <button 
                       class='btn rounded-circle btn-success m-1'
-                      data-bs-target="#ModalDetalheProduto<?php echo esc($produto->nome); ?>" 
+                      data-bs-target="#ModalDetalheProduto<?php echo esc($produto->id); ?>" 
                       data-bs-toggle="modal" 
                       data-bs-dismiss="modal"
                     >
@@ -140,7 +140,7 @@
             </div>    
             
             <!-- Modal de abrir produto -->
-            <div class="modal fade" id="ModalDetalheProduto<?php echo esc($produto->nome); ?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+            <div class="modal fade" id="ModalDetalheProduto<?php echo esc($produto->id); ?>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -180,21 +180,25 @@
                       </div>
 
                       <?php foreach ($especificacoes as $especificacao): ?>
+                        <?php foreach ($especificacao as $esp): ?>
+
+                        <?php if ($esp->produto_id == $produto->id): ?>
                         <div class="form-check  mt-2">
                           <input 
                             type="radio" 
                             class="form-check-input"
-                            data-especificacao="<?php echo $especificacao->especificacao_id; ?>"
+                            data-especificacao="<?php echo $esp->especificacao_id; ?>"
                             name="produto[preco]" 
-                            value="<?php echo $especificacao->preco; ?>"
+                            value="<?php echo $esp->preco; ?>"
                           />
                           <label class="form-check-label" htmlFor="flexRadioDefault1">
-                            <?php echo esc($especificacao->nome); ?> 
-                            R$&nbsp;<?php echo esc(number_format($especificacao->preco, 2)); ?>
+                            <?php echo esc($esp->nome); ?> 
+                            R$&nbsp;<?php echo esc(number_format($esp->preco, 2)); ?>
                           </label>
                         </div>
+                      <?php endif; ?>
                       <?php endforeach; ?>
-
+                      <?php endforeach; ?>
                     </div>
 
                     <!-- Extras -->
