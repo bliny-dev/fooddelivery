@@ -266,10 +266,18 @@
                       <a  
                         href="<?php echo site_url("admin/produtos/especificacoes/$produto->id"); ?>"
                         type="button" 
-                        class="btn btn-info btn-sm me-1 mb-1 " 
+                        class="btn btn-info btn-sm me-1 mb-1 fw-bold" 
                       >
-                        <span class="las la-dollar-sign "></span>
-                        Preços e extras
+                        <span class="las la-dollar-sign"></span>
+                        Preços
+                      </a>
+                      <a  
+                        href="<?php echo site_url("admin/produtos/extras/$produto->id"); ?>"
+                        type="button" 
+                        class="btn btn-info btn-sm me-1 mb-1 fw-bold" 
+                      >
+                        <span class="las la-dollar-sign"></span>
+                        Extras
                       </a>
 
                     </div>

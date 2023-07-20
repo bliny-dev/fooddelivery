@@ -183,6 +183,7 @@
 
         
         </header>
+        
 
         <!-- Essa section renderizará os conteúdos específicos da view que estender esse layout -->
         <?php echo $this->renderSection('conteudo'); ?>

@@ -19,8 +19,8 @@
 <!-- Aqui enviamos para o template principal o conteúdo -->
 <?php echo $this->section('conteudo'); ?>
 
-<div class="row">
-  <div class="col-lg-12 grid-margin stretch-card">
+<div class="row d-flex justify-content-center">
+  <div class="col-lg-8 grid-margin stretch-card">
     <div class="card">
       <div class="card-header bg-primary pb-0 pt-4">
         <h4 class="card-title text-white"><?php echo esc($titulo); ?></h4>
@@ -58,7 +58,7 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary btn-sm mr-2">
+          <button type="submit" class="btn btn-primary btn-sm mr-2 mt-2">
             <i class="mdi mdi-checkbox-marked-circle btn-icon-prepend"></i>
             Inserir extra
           </button>
@@ -103,7 +103,7 @@
                         <td class="text-center">
                           <?php echo form_open(site_url("admin/produtos/excluirextra/$exxtraProduto->id/$exxtraProduto->produto_id")) ?>
 
-                            <button type="submit" class="btn btn-sm badge badge-danger">&nbsp;X&nbsp;</button>
+                            <button type="submit" class="btn btn-sm badge bg-danger">&nbsp;X&nbsp;</button>
                           
                           <?php echo form_close(); ?>
                         </td>

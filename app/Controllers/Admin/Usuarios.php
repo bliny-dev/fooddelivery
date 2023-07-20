@@ -111,8 +111,7 @@ class Usuarios extends BaseController
         return view('Admin/Usuarios/editar', $data);
     }
 
-    public function atualizar($id = null)
-    {
+    public function atualizar($id = null){
         if ($this->request->getMethod() === 'post') {
             $usuario = $this->buscaUsuarioOu404($id);
 

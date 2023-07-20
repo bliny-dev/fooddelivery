@@ -76,7 +76,12 @@
         
         <!-- search input -->
         <div class="ui-widget">
-          <input id="query" name="query" placeholder="Pesquise por um usuário.." class="form-control bg-light mb-5">
+          <input 
+            id="query"
+            name="query" 
+            placeholder="Pesquise por um usuário.." 
+            class="form-control bg-light mb-5"
+          >
         </div>
 
         <!-- lista de erros de input -->

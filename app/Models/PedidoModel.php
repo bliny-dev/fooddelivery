@@ -4,8 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PedidoModel extends Model
-{
+class PedidoModel extends Model{
+    
     protected $table            = 'pedidos';
     protected $returnType       = 'App\Entities\Pedido';
     protected $useSoftDeletes   = true;
